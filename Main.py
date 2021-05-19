@@ -1,17 +1,16 @@
-# bot.py
+# YACPbot.py
 
 ### TODO LIST:
-#   * Allow bot to handle fairy/rotated pieces. (Big problem right now is that there's no canonical mapping from piece abbreviations (what YACPDB uses in "algebraic") to FFEN piece options. Dmitri might need to update API to also show the FEN below, or you might need to scrape the webpage to get the FEN and modify it to FFEN. For now, I've just added an error message.)
-#   * Fix up dateDict in sourceDict not displaying correctly.
-#   * Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits?)
-#   * Add ability to search YACPDB. (This may require work on Dmitri's part to extend the API. Currently at the halfway point of looking through Newest Edits, and returning the nth problem with a given stipulation)
+#   * Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits instead of just giving an error message?)
+#   * Expand ability to search YACPDB. (This may require work on Dmitri's part to extend the API. Currently at the halfway point of looking through Newest Edits, and returning the nth problem with a given stipulation.)
+#   * Cache "Recent Changes" to file so as to not put too much pressure on YACPDB's server.
+#   * Find hosting solution.
 
 import random
 import os
 import json
 import discord
 import urllib.request
-import xfen2img
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,116 +27,6 @@ async def on_connect():
 @client.event
 async def on_ready():
     print('{client} is ready!')
-
-# converts piece from algebraic list format to FEN
-async def AlgToFFEN(alg, message):
-    # start with an array of 1s, then get the piece coordinates and write them to the array one by one
-    position = [[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1]]
-
-    # set "valid position?" flag (immediately halts this process if this flag turns out to be false)
-    valid = True
-
-    # matrix of pieces (alg -> FFEN)
-
-    piecesMatrix = {
-        '15':'*3n', '16':'*3n', '24':'*3n', '25':'*3n', '35':'*3n', '36':'*3n', '37':'*3n', 'al':'*3b', 'am':'t', 'an':'*1n', 'ao':'*1n', 'ar':'*2b', 'b':'b', 'b1':'c', 'b2':'c', 'b3':'c', 'be':'c', 'bh':'*2b', 'bi':'c', 'bk':'*1n', 'bl':'*3b', 'bm':'c', 'bn':'*2n', 'bo':'c', 'bp':'*2p', 'br':'c', 'bs':'*2p', 'bt':'c', 'bu':'*1n', 'bw':'c', 'c':'*1b', 'ca':'*3n', 'cg':'*1q', 'ch':'*3n', 'cp':'*3p', 'cr':'*3n', 'ct':'c', 'cy':'c', 'da':'*1r', 'db':'*1b', 'dg':'*1q', 'dk':'*1r', 'do':'*3q', 'dr':'c', 'ds':'c', 'du':'*1p', 'ea':'*3q', 'eh':'*1q', 'ek':'c', 'em':'*2r', 'eq':'s', 'et':'c', 'f':'c', 'fe':'*3b', 'fr':'c', 'g':'*2q', 'g2':'*1q', 'g3':'*3q', 'ge':'c', 'gf':'c', 'gh':'*1n', 'gi':'*1n', 'gl':'c', 'gn':'*1n', 'gr':'c', 'gt':'c', 'ha':'*3q', 'k':'k', 'ka':'*3q', 'kl':'*3q', 'kh':'*2k', 'kl':'*1q', 'ko':'c', 'kp':'*2n', 'l':'*1q', 'lb':'*1b', 'le':'*3q', 'lh':'c', 'li':'*3q', 'ln':'*1n', 'lr':'*1r', 'ls':'x', 'm':'c', 'ma':'*1n', 'mg':'c', 'mh':'c', 'ml':'c', 'mm':'c', 'mo':'*3n', 'mp':'*3p', 'ms':'*3n', 'n':'*2n', 'na':'*3n', 'nd':'*3b', 'ne':'s', 'nh':'*3n', 'nl':'*3n', 'o':'c', 'oa':'*1n', 'ok':'c', 'or':'*1s', 'p':'p', 'pa':'*3r', 'po':'*3k', 'pp':'*2p', 'pr':'*2b', 'q':'q', 'qe':'s', 'qf':'s', 'qn':'c', 'qq':'c', 'r':'r', 'ra':'c', 'rb':'*3b', 're':'*1r', 'rf':'c', 'rh':'*2r', 'rk':'c', 'rl':'*3r', 'rm':'*1r', 'rn':'x', 'rp':'x', 'ro':'x', 'rr':'c', 'rt':'*1q', 'rw':'c', 's':'n', 's1':'*2n', 's2':'*2n', 's3':'*2n', 's4':'*2n', 'sh':'c', 'si':'*3q', 'sk':'t', 'so':'c', 'sp':'*1p', 'sq':'c', 'ss':'c', 'sw':'c', 'th':'c', 'tr':'*3r', 'uu':'c', 'va':'*3b', 'wa':'c', 'we':'*2r', 'wr':'c', 'z':'*3n', 'zh':'c', 'zr':'*1n', 'ze':'c', 'ms':'*3n', 'fa':'*1r', 'se':'*1q', 'sa':'*1n', 'lo':'*1b'
-    }
-    
-    
-    # getting white piece coordinates (TODO: revamp this to handle fairy/rotated pieces)
-    White = alg.get("white")
-    for x in White:
-        piece = x[0:len(x)-2].lower()
-        
-        file = ord(x[-2]) - 97
-        # WARNING: Remember to turn "10" back into "8" here.
-        rank = 8 - int(x[-1])
-        
-        # convert piece into FFEN piece format
-        try:
-            piece = piecesMatrix[piece].upper()
-        except KeyError:
-            await message.channel.send("Warning: Piece 'white " + piece + "' in diagram not recognised. Replacing with 'x'.")
-            piece = 'x'
-
-        # check to make sure there aren't any fairy pieces, throw an exception if there are
-        # if not piece in ['K','Q','R','B','S','P']:
-            # await message.channel.send("Either something has gone VERY wrong with the code, or this problem contains a fairy piece!")
-            # valid = False
-            # break
-        # convert S to N (aarrghhh inconsistent piece notation!)
-        # if piece == 'S': piece = 'N'
-		
-        # replacing 1s with pieces
-        try:
-            position[rank][file] = piece
-        # throw an error if the board is somehow NOT an 8x8 board
-        except IndexError: 
-            await message.channel.send("The board is not 8x8! Either something has gone VERY wrong with the code, or YACPDB has started s upporting non-8x8 boards.")
-            valid = False
-            break
-
-        #ditto for black
-    if valid:
-        Black = alg.get("black")
-        for x in Black:
-            piece = x[0:len(x)-2].lower()
-            file = ord(x[-2]) - 97
-            rank = 8 - int(x[-1])
-            try:
-                piece = piecesMatrix[piece].lower()
-            except KeyError:
-                await message.channel.send("Warning: Piece 'black " + piece + "' in diagram not recognised. Replacing with 'x'.")
-                piece = 'x'
-            # if not piece in ['k','q','r','b','s','p']:
-                # await message.channel.send("Either something has gone VERY wrong with the code, or this problem contains a fairy piece!")
-                # valid = False
-                # break
-            # if piece == 's': piece = 'n'
-            try:
-                position[rank][file] = piece
-            except IndexError: 
-                await message.channel.send("The board is not 8x8! Either something has gone VERY wrong with the code, or YACPDB has started supporting non-8x8 boards.")
-                valid = False
-                break
-
-        #ditto for neutral
-    if valid and alg.get("neutral"):
-        Neutral = alg.get("neutral")
-        for x in Neutral:
-            piece = x[0:len(x)-2].lower()
-            file = ord(x[-2]) - 97
-            rank = 8 - int(x[-1])
-            try:
-                piece = '-' + piecesMatrix[piece].lower()
-            except KeyError:
-                await message.channel.send("Warning: Piece 'neutral " + piece + "' in diagram not recognised. Replacing with 'x'.")
-                piece = 'x'
-            # if not piece in ['k','q','r','b','s','p']:
-                # await message.channel.send("Either something has gone VERY wrong with the code, or this problem contains a fairy piece!")
-                # valid = False
-                # break
-            # if piece == 's': piece = 'n'
-            try:
-                position[rank][file] = piece
-            except IndexError: 
-                await message.channel.send("The board is not 8x8! Either something has gone VERY wrong with the code, or YACPDB has started supporting non-8x8 boards.")
-                valid = False
-                break
-        
-    if not valid:
-        FEN = '8/8/8/8/8/8/8/8'
-    else:
-        # concatenates the board into a FEN-like string (maybe with lines of 1s)
-        for i in range(8):
-            position[i] = ''.join(str(x) for x in position[i])
-            #print(position[i])
-        FEN = '/'.join(str(x) for x in position)
-    
-        # cleans up lines of 1s in case some program decides that "11" is to be read as "eleven" and not "one, one"
-        for i in range(8,1,-1):
-            FEN=FEN.replace('1'*i,str(i))
-    return(FEN)
 
 # converts piece from algebraic list format to XFEN
 async def AlgToXFEN(alg, message):
@@ -354,10 +243,11 @@ async def prettifiedProblemEmbed(id, message):
         # DEBUG PURPOSES
         print(awardDict)
         print(tourney)
-        awardDict['tourney'] = tourney
         # concatenates dictionary into a string, hopefully (TODO: Tinker with this so that subdictionaries like "date" don't break)
         if awardDict:
+            awardDict['tourney'] = tourney
             award = ', '.join(str(awardDict.get(x)) for x in awardDict) + '\n\n'
+            print(awardDict)
         else:
             award = '\n'
         
@@ -401,7 +291,6 @@ async def prettifiedProblemEmbed(id, message):
         # converts position from algebraic into FEN
         position = data.get("algebraic")
         # FEN = await AlgToFEN(position, message)
-        FFEN = await AlgToFFEN(position, message)
         XFEN = await AlgToXFEN(position, message)
 
         # creates embed with title, author, source, stipulation, and position as image (NOTE: Doesn't really seem possible to increase image size. :C)
@@ -546,7 +435,7 @@ async def on_message(message):
             embedVar.add_field(name="Created by",value="@edderiofer#0713",inline=True)
             embedVar.add_field(name="Lucky Advertisement!",value="You've hit a lucky advertisement (it only has a 0.5% chance of turning up)! \
                                                                     Join the Chess Problems & Studies Discord today! http://discord.me/chessproblems \n\
-                                                                    Also, if you're enjoying my bot, pay me! https://ko-fi.com/edderiofer",inline=True)
+                                                                    Also, if you're enjoying my bot, consider paying me! https://ko-fi.com/edderiofer",inline=True)
         else:
             embedVar.add_field(name="Created by",value="@edderiofer#0713",inline=False)
         

@@ -2,9 +2,9 @@
 
 ### TODO LIST:
 #   * Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits instead of just giving an error message?)
-#   * Expand ability to search YACPDB. (This may require work on Dmitri's part to extend the API. Currently at the halfway point of looking through Newest Edits, and returning the nth problem with a given stipulation.)
+#   * Expand ability to search YACPDB. (This may require work on Dmitri's part to extend the API. Currently at a compromise point of looking through Newest Edits, and returning the nth problem with a given stipulation.)
 #   * Cache "Recent Changes" to file so as to not put too much pressure on YACPDB's server.
-#   * Find hosting solution.
+#   * Find hosting solution: Repl.it / your own computer aren't permanent solutions and both require you to be online.
 
 import random
 import os
@@ -335,10 +335,10 @@ async def prettifiedSolutionEmbed(id, message):
 
 # listens for new messages
 async def on_message(message):
-    print(message.content)
 
     # response to !lookup
     if message.content.startswith('y!lookup'):
+        print(message.content)
         
         # turns on typing indicator
         await message.channel.trigger_typing()
@@ -365,6 +365,7 @@ async def on_message(message):
 
     # response to !problem
     if message.content.startswith('y!problem'):
+        print(message.content)
         
         # turns on typing indicator
         await message.channel.trigger_typing()
@@ -396,6 +397,7 @@ async def on_message(message):
             
     # response to !sol
     if message.content.startswith('y!sol'):
+        print(message.content)
         
         # turns on typing indicator
         await message.channel.trigger_typing()
@@ -417,6 +419,7 @@ async def on_message(message):
 
     # response to !help
     if message.content.startswith('y!help'):
+        print(message.content)
 
         # turns on typing indicator
         await message.channel.trigger_typing()
@@ -432,12 +435,15 @@ async def on_message(message):
 		
 	# random server+payment advertisement!
         if (random.randint(1,200) == 1) & (not message.guild.id == 758334446591410196):
-            embedVar.add_field(name="Created by",value="@edderiofer#0713",inline=True)
+            embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713\n\
+            YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
+            Chess problems are by their respective constructors. Neither I nor Dmitri claim no ownership over them.",inline=False)
             embedVar.add_field(name="Lucky Advertisement!",value="You've hit a lucky advertisement (it only has a 0.5% chance of turning up)! \
-                                                                    Join the Chess Problems & Studies Discord today! http://discord.me/chessproblems \n\
-                                                                    Also, if you're enjoying my bot, consider paying me! https://ko-fi.com/edderiofer",inline=True)
+                                                                    Join the Chess Problems & Studies Discord today! http://discord.me/chessproblems",inline=True)
         else:
-            embedVar.add_field(name="Created by",value="@edderiofer#0713",inline=False)
+            embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713\n\
+            YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
+            Chess problems are by their respective constructors. Neither I nor Dmitri claim no ownership over them.",inline=False)
         
         await message.channel.send(embed=embedVar)
 

@@ -1,0 +1,158 @@
+15	1,5-leaper	s3			ibis
+16	1,6-leaper	s3			flamingo
+24	2,4-leaper	s3			
+25	2,5-leaper	s3			
+35	3,5-leaper	s3			
+36	3,6-leaper	s3			
+37	3,7-leaper	s3			
+ad	eagle	q3			
+ah	maohopper	s3		
+al	alfil	b3			2,2 leaper
+am	amazon	a	d		queen + knight
+an	antelope	s1			3,4 leaper
+ao	maorider	s1			
+ar	archbishop	b2			Bishop + knight
+b	bishop	b	d		1,1 rider
+b1	bouncer				
+b2	rook bouncer				
+b3	bishop bouncer				
+be	bishop eagle				
+bh	bishop hopper	b2	d		
+bi	bison				1,3+2,3 leaper
+bk	bouncy knight	s1			
+bl	bishop-lion	b3			
+bm	bishop moose
+bn	bouncy nightrider	s2		continues ride by bouncing in any direction from board edge				
+bo	bob				
+bp	berolina pawn	p2			
+br	bishop/rook hunter				
+bs	berolina superpawn	p2			
+bt	boyscout				
+bu	root-25-leaper (bucephale)	s1			0,5 + 3,4 leaper
+bw	bishop sparrow				
+c	cardinal	b1			Bishop which can rebound (only once) like a billiard ball when he reaches a square on the edge of the board. The rebound occurs on the edge of the board : A Cardinal on d7 can move on e8 then f8-g7-h6.
+ca	camel	s3			1,3 leaper
+cg	contra grasshopper	q1			
+ch	camelrider hopper	s3			
+cp	chinese pawn	p3			
+cr	camelrider	s3			
+ct	CAT (cavalier trojan)				
+cy	charybdis				
+da	dabbabba	r1			0,2 leaper
+db	doublebishopper	b1		
+dg	doublegrasshopper	q1			
+dk	doublerookhopper	r1		
+do	dolphin	q3			grasshopper + kangaroo
+dr	dragon				
+ds	("Diagonalspiralspringer")				
+du	dummy				
+ea	eagle	q3			Moves like a Grasshopper, but deflects 90° either way on passing over the hurdle. The arrival square is adjacent to the hurdle.
+eh	edgehog	q1			
+ek	erlking				
+em	empress				
+eq	equihopper	e	d		
+et	elephant				0,1+1,1+1,2 rider
+f	friend	o			Dummy piece which, when it is controlled, moves only like the controlling unit(s).
+fa	faro	r3		
+fe	fers	b3			1,1 leaper
+fr	fersrider				like bishop, but different rebirth square
+g	grasshopper	q2	d		queen hopper
+g2	grasshopper-2	q1			
+g3	grasshopper-3	q3			
+ge	greater treehopper			
+gf	greater leafhopper			
+gh	gnurider hopper	s1			
+gi	giraffe	s1			
+gl	gral				alfil + rookhopper
+gn	gnu				1,2 + 1,3 leaper
+gr	gnurider				1,2 + 1,3 rider
+gt	girlscout				
+ha	hamster	q3			
+k	king	k	d		
+ka	kangaroo	s3			1,2 + 2,2 leaper
+kh	kinghopper	k2			
+kl	kangaroo lion	q1		
+ko	kao			
+kp	knight hopper	s2		
+l	locust	q1	d		
+lb	bishop locust	b1			
+le	leo	q3	d		chinese queen
+lh	leaf hopper			
+li	lion	q3			(0,1)Prolonged Hopper + (1,1)Prolonged Hopper
+ln	nightrider locust	s1			
+lo	loco	b3		
+lr	rook locust	r1			
+ls	rose locust	f			
+m	moose				
+ma	mao	s1			
+mg	marguerite				g+sw+ea+m+ha
+mh	marine ship			
+ml	maorider lion				
+mm	moarider lion				
+mo	moa	s3			
+mp	marine pawn	p3		
+ms	marine knight	s3		
+n	nightrider	s2	d		1,2 rider
+na	nao	s3		chinese nightrider
+nd	nereide	b3			
+ne	nonstop equihopper	e			
+nh	nightrider hopper	s3			
+nl	nightrider lion	s3			
+o	orphan	o	d		
+oa	moarider				
+oh	moahopper	s3		
+ok	okapi				knight + zebra
+or	Orix	e1	d		English equihopper on queen lines
+p	pawn	p	d		
+pa	pao   	r3	d		chinese rook
+po	poseidon	k3		marine king
+pp	reverse pawn	p2			moves opposite to normal p and promotes at opp end of board
+pr	princess   				
+q	queen   	q	d		
+qe	equi english	e			equi approacher stopable
+qf	equi french	e			equi approacher nonstopable
+qn	quintessence			(3,1)-Zigzag Nightrider (e.g. a1-b3-d2-e4-g3...
+qq	querquisite				
+r	rook	r	d		0,1 rider
+ra	rao				chinese rose
+rb	reflecting bishop	b3			
+re	rook eagle	r1			
+rf	root-50-leaper				5,5 + 7,1 leaper
+rh	rook hopper	r2	d		
+rk	radial leaper (aka radial knight)				
+rl	rook-lion	r3			
+rm	rook moose	r1			
+rn	rose-lion	f			
+rp	rose-hopper	f			
+ro	rose   	f	d		
+rr	rook/bishop hunter				
+rt	rabbit	q1			
+rw	rook sparrow				
+s	knight   	s	d		1,2 leaper
+s1	(1,1)-Zigzag Nightrider	s2			(e.g. b1-a3-c2-b4-d3...)
+s2	(2,0)-Zigzag Nightrider	s2			(e.g. a1-b3-c1-d3-e1...)
+s3	(3,3)-Zigzag Nightrider	s2			(e.g. a1-b3-d4-e6-g7...)
+s4	(4,0)-Zigzag Nightrider	s2			(e.g. a1-c2-e1-g2...)
+sa	saltador	s3		
+se	senora	q3
+sh	ship				
+si	sirene	q3			
+sk	skylla	a			
+so	scorpion				
+sp	superpawn	p1			
+sq	squirrel   				
+ss	("Spiralspringer")				
+st	sting	k2		
+sw	sparrow				
+th	tree hopper				
+tr	triton	r3			
+uu	ubiubi	o			
+va	vao	b3	d		chinese bishop
+wa	waran				
+we	wazir	r2			0,1 leaper
+wr	wazirrider				like rook, but different rebirth square
+z	zebra	s3	d		2,3 leaper
+ze	zebu				
+zh	zebrarider hopper				
+zr	zebrarider
+X/Y	X/Y hunter				generalized hunter: away from the homebase like a n X, in direction of the homebase like an Y; horizontal moves not allowed

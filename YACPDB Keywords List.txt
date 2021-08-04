@@ -1,0 +1,4565 @@
+Changed mates
+Flight giving key
+Black correction
+Active sacrifice
+Model mates
+Transferred mates
+Play on same square
+Defences on same square
+Cooked
+Flight giving and taking key
+Battery play
+Selfblock
+Block
+Grimshaw
+Promotion
+No pawns
+Flight taking key
+Miniature
+2 flights giving key
+Switchback
+Rudenko
+Checking key
+Pseudo Le Grand
+Ideal mates
+Mutate
+Zagoruiko
+Novotny
+Barnes
+Dombrovskis
+Letters
+B2
+Fleck
+Reciprocal
+Dual
+King Y-flight
+Unpinning
+King star flight
+Le Grand
+Reversal
+Battery creation
+Unsound
+Queen sacrifice
+Model mate
+Fairy
+Selfpinning
+Allumwandlung
+White underpromotion
+Castling
+Echo mates
+Passive sacrifice
+En passant
+Hannelius
+Indirect unpinning
+Rukhlis
+Capture flight
+Somov (B1)
+Logical problem
+Retro
+White correction
+Threat reversal
+Half-pin
+Scaccografia
+Rex solus
+Critical move
+Provoked check
+Banny
+White combinations
+Cross-checks
+Levman
+Ideal mate
+Barulin (A)
+Stocchi
+Meredith
+Systematic movement
+Minimal (black)
+Urania
+Karlstrom-Fleck
+Salazar
+Dual avoidance
+Mates on same square
+Pinning
+Half-battery
+Task
+Excelsior
+Pickaninny
+Digits
+Bristol
+Black underpromotion
+3+ flights giving key
+Schiffmann
+Albino
+Interference
+Grasshopper
+Changed play
+Indian
+Pin-mates
+Aristocrat
+Stalemate avoidance
+Rundlauf
+Zilahi
+Chameleon echo mates
+Stalemate
+Nietvelt
+Duplex
+Maximummer
+Plachutta
+Anti-reversal
+Umnov
+Anticipatory interference
+King's Le Grand
+Self-interference
+Corner to corner
+Pickabish
+Clearance sacrifice
+Duel
+Vladimirov
+White minimal
+Remote selfblock
+Sacrifice key
+Shortmate
+Circe
+Ambush
+Decoy
+Focal
+King's battery
+Twin stipulation
+Change functions moves
+Sushkov
+White to play
+Pin mates
+Threat correction
+Lacny
+Underpromotion
+Phoenix
+Mirror mate
+BK star
+Royal March
+Anti-critical move
+Promoted force
+Cross-check
+Annihilation
+Valve
+Consecutive promotions
+No white pawns
+Anticipatory unpinning
+Siers battery
+Sacrificing key
+Dombrovskis paradox
+Shedey theme
+Echo
+Ideal Rukhlis
+Platzwechsel
+Latvian Novotny
+Changed functions of moves
+Line opening
+2 flights taking key
+Kindergarten
+Dombrovskis effect
+Roman theme
+Salazar double
+Valladao
+Cycle double threats
+Tempo move
+Models with pin
+Deflect
+Square clearance
+Self-pinning
+Changed mate
+Nightrider
+Attention
+Loss of tempo
+Gamage
+Bi-valve
+Cantcastler
+Ukrainian
+Pseudo Le Grand cycle
+Mirror mates
+Four corners
+Stalemates
+Pin mate
+Battery destruction
+Pseudo Salazar
+Le Grand double
+Multiple publication
+Asymmetrical solution
+Position?
+Holzhausen
+Shedey cycle
+Goethart
+Incarceration
+Sacrifice
+Flight giving and sacrifice key
+Self-blocks
+Threat anti-reversal
+Minimal
+Lender combination
+Caprice
+Quiet play
+Pelle move
+Cycle
+Cycle of 2-3 moves
+Pattaufhebung
+Plagiat
+Kharkov theme
+Vectors
+Round trip
+Pure round trip
+No solution
+Pin-mate
+Erokhin
+White move cycle
+Finnish Novotny
+Indirect battery
+Pseudo Le Grand (2x)
+Minimal (white)
+Forsberg twins
+Zugzwang
+Construction record
+Indirect pinning
+Oneliner
+Isaev
+Obtrusive material
+Checking Zigzag
+WR cross
+Wurzburg-Plachutta
+Doubling
+Check provoking key
+Bivalve
+Promotions to the same piece
+Self-obstruction
+Corner move
+White aristocrat
+BR cross
+Chameleon echo
+Dresden theme
+Double threat
+Ambush key
+Keller paradox
+Symmetrical position
+Positional draw
+Sequential sacrifice of different units
+Tanagra
+Masked battery
+King's le Grand cycle
+Cross check
+Makihovi
+King's Schiffmann
+Moscow theme
+Follow my leader
+Unblock
+Odessa theme
+Arnhem theme
+BS wheel
+White Grimshaw
+Excelsior (2x)
+BB star
+Grab
+Pendulum
+Line clearance
+Tempo duel
+Organ pipes
+Promotion (fairy)
+WS wheel
+Critical decoy
+AB-BA
+Masked interference
+Madrasi
+Self-pin
+Staircase
+Burmistrov combination
+Joke problem
+ODT
+Self-block
+Illegal position
+Retractor
+Ideal stalemate
+Defences on the threat square
+Cross checks
+Herlin
+Indirect selfpinning
+Romanian Novotny
+Rice theme
+Kniest
+Java
+Battery mates
+Radical change
+Domination
+Bikos
+Cyclic Zilahi
+Double check
+Fairy board
+Twins stipulation
+Neva theme
+Holst
+Mutual block
+Loshinski magnet
+Avanta
+WB star
+Anti-Levman
+Opposition
+Anticipated
+Change of Offers
+Babson
+BK cross
+Stocchi blocks
+Check - Non-check
+Theme B2
+Stavrinides
+Sackmann
+Anti-battery
+Promotions (changed)
+Conditional problem
+Bogdanov-Rychkov
+Corner mate
+Turton doubling
+Star Black King
+Arrival correction
+Neutral piece
+Kiss cycle
+Check
+Grotesque
+Cycle defences
+Barulin (B2)
+Seeberger
+Capture of white force
+Check to white King
+Turton
+Hideaway
+Remote knight promotion
+Symmetry
+Mousetrap
+Anticirce
+White combination
+Interchange of functions
+Adabashev
+Exchange of functions
+Tempo
+AndernachChess
+Treff-point
+Perpetual check
+Rice cycle
+Loyd clearance
+Herpai
+Brogi
+Tertiary threat correction
+Berlin theme
+Interchange
+White promotion
+Knight wheel
+Luukkonen
+Dombrovskis analog for secondary threats
+King's walk
+Anti-Bristol
+Platzwechsel (cyclic)
+No white King
+Self-unpinning
+Sacrifice of white pieces
+Battery abandonment
+Cycle double mates
+Ceriani-Frolkin
+Pendulum maneuver
+Square vacation
+Maslar
+Gate opening
+Black minimal
+White interference
+Anderssen mate
+Pseudo Lender combination
+Unpinning key
+Fata Morgana
+Kharkov 2
+Sea snake
+Odesskaya
+Choice of the first move
+Epaulette mate
+Change mate
+Grimshaw (2x)
+Asymmetry
+Multiple dual reduction
+Unpin
+PWC
+Checks
+Tema Argentino
+Siegfried
+Third-pin
+Homebase
+Threats and mates on same square
+Ellerman-Makihovi
+KoeKo
+Secondary Dombrovskis
+Perfect Novotny
+Capture Roman
+Various authors
+Chepizhny form
+Line closing
+Neutral Pawn
+Cheney-Loyd
+Area clearkeeping
+x pieces capture on one square
+Perpetuum mobile
+Triangulation
+Lion
+Pseudo Erokhin
+Monreal theme
+Multiple threat
+Self-incarceration
+Take&MakeChess
+Alleinunterhalter
+Attraction sacrifice
+Roman
+3 flights taking key
+Model echo mates
+Wrong position (see References)
+2 capture flights
+Underpromotion key
+Pin stalemate
+Popandopulo batteries
+Vertical cylinder
+ParrainCirce
+Carousel
+Mlynka
+Reti maneuver
+Exchange of roles
+Castling (2x)
+AntiZielElement
+Jurasevic cycle
+Rex Multiplex
+Proof game
+Give and take key
+Hamburg theme
+Double square vacation
+Banny cycle
+Black self-obstruction
+3 flights giving key
+English Novotny
+Shanshin dual avoidance
+Bukovina
+Changed model mates
+Leibovici Interference
+Royal battery
+ChecklessChess
+Valladao Task
+Selfblock Roman
+Ventura theme
+Kontrawechsel
+Promotion in the key
+Y-Flight
+Anti-Goethart
+Cycle of mates
+Check avoidance
+Ideal stalemates
+Striptease
+Changed continuations
+Critical Moves
+Threats on same square
+Pao
+Dombrovkis paradox
+Azerbaijani Novotny
+Zeroposition
+Camel
+Fork
+Mari
+HOTF
+Munich theme
+Masked half-pin
+Peri-critical maneuver
+Mochalkin combination
+Cycle defences and refutations
+Balbo
+Zhuravlev theme
+Soviet-French theme
+Feldmann
+Zigzag
+Greek Novotny
+Equihopper
+Black-white line clearance
+Preplan
+Cycle of white moves
+Function change
+Changed continuation
+King and two knights checkmate
+Tempo promotion
+Skittles setup
+Marseillais
+Arguelles theme
+Grab theme
+Jacobs cycle
+Allumwandlung (super)
+Promotion (pairs)
+Half check
+Model stalemate
+Tver theme
+Kraftopfer
+En passant as key
+Interference through the BK
+Reduction of threats
+Promotion to the same piece
+Rudenko paradox
+Win of tempo
+Battery
+Two step battery
+Changed blocks
+Locust
+Promotions (successive)
+Chumakov Theme
+Duals
+Pawn mate
+Zabunov battery
+Skittles
+Lacny 4-fold
+Interchange in mating position
+Theme A
+Threat reduction
+Bi-coloured Phoenix
+Wechselturme
+2 Flights giving and taking key
+Leo
+Corner mates
+Cyclic white moves
+Rex solus (White)
+White half-pin
+Anti-Dombrovskis
+Theme B
+Lepuschutz
+FunctionaryChess
+Ropke
+Deflection
+Pac-Man
+Masked battery creation
+Zebra
+Transfered mate
+Proca Retractor
+Shor theme
+WK cross
+Berolina Pawn
+Smothered mate
+Vao
+Double-check mate
+Capture flights
+Bicolor interference
+Anticipatory selfpinning
+Dentist theme
+Clearance
+Bicolor Seeberger
+Completion of position
+Support mate
+Check provocation
+Models with two pins
+Battery transformation
+Queen sacrifices
+Selfblocks
+Klasinc
+Bi-coloured Bristol
+Anticritical move
+Christmas tree
+En passant (2x)
+Sacrifice minimal
+Virrey Chess
+TransmutedKings
+Superpawn
+Half battery
+Amazone theme
+Mates with pin
+Palitzsch-Dresden theme
+3-stroke steps
+King cross flight
+Lion cage
+WhiteMaximummer
+Iwanow theme
+Mass destruction
+Visserman changes
+Option
+Brunner-Turton
+Reciprocal moves by White
+Anti-critical
+Function change of white pieces
+7th WCCT theme
+Square clearing
+Pronkin
+Capture key
+Third-battery
+Echo play
+The Love Chase
+Volgograd
+Defence on same square
+Chumakov
+Berger
+Vector theme
+Play on the same square
+3-fold cyclic block
+Keller paradox 1
+Kozhakin theme
+Brunner Dresden
+Mathematics
+Surkov-Slesarenko combination
+Only thematic moves
+Symmetrical end position
+Dual advoidance
+WK star
+Zalokotsky theme
+Double attack
+Fortress
+Indirect self-unpinning
+Zhuravlev combination
+Loyd-Turton
+Black promotion
+Pin change
+Barulin (B)
+Pseudo-twomover
+Tempo winning maneuver
+Tempo maneuver
+Rook sacrifice
+Castling (4x)
+PolishType
+Pilot problem
+Anticipatory half-pin
+Flights giving key
+Magee theme
+Theme G
+Rook hopper
+Kangaroo
+To delete
+Half-battery creation
+Rupp
+Bicolor Bristol
+Cycle defences and mates
+Festina lente
+White self-obstruction
+Sacrifice Bristol
+White constant
+Bohemian task
+Pape theme
+White homebase
+Zuk theme
+Octet
+Boros
+Umnov 1
+Change of promotion
+Swiss theme
+Elimination of obstructive black force
+Bishop hopper
+Ojanen
+Knight's tour
+Royal piece
+Flight-giving key
+Anti-Salazar
+Anticipatory self-interference
+Allumwandlung (fairy)
+Nightrider hopper
+Baltic theme
+Princess
+Twins rotation
+Theme F
+Isardam
+Anderssen's mate
+x pieces move to one square
+Tempo play
+Mansfield battery
+Cycle of 2-4 moves
+Platzwechsel (2x)
+Sentinelles
+Fers
+Indian (2x)
+Distant moves wQ
+Foschini
+Tertiary arrival threat correction
+Allumwandlung (2x)
+Neutral Bishop
+AugsburgChess
+Baterry play
+American Indian
+Half-pin creation
+Reciprocal captures
+Delayed Umnov
+Tamerlan
+Pawnee theme
+Alfil
+Battery mate
+Kling
+MarsCirce
+Stipulation?
+Distant move wQ
+Twins Strip-tease
+Howard theme
+Babushka theme
+Anticipatory Bristol
+Zajic
+Tura theme
+Self blocks
+Indirect half-battery
+Direct unpinning
+Maximal (black)
+Poltava theme
+Secondary black correction
+Shedey cycle 4-fold
+Queen's cross
+Twin stipulations
+Anti-Dombrovskis effect
+Double sacrifice
+Cycle of wQ-squares
+Changed promotion
+Reciprocal change
+Patrouille
+Magnet theme
+4 flights giving key
+Chameleon echo stalemates
+Line-opening
+No Kings
+Durbar
+Self block
+Junction point
+Anti-Novotny
+Rovno
+Pelle moves
+Play on adjacent fields
+Reciprocal changed continuations
+Castling key
+Consequent
+Echo stalemates
+Rosette
+Popular problem
+Hesitation
+Rook-lion
+Pseudo Jurasevic cycle
+Masked half-battery
+White King in check
+Change of functions
+Swiss idea
+Hoeg
+Double stalemate
+Camelrider
+Extended zugzwang
+Joker
+Exchange of moves
+Savchenko device
+Ukrainian 4-fold
+Defensive Retractor Type Proca
+Change of blocks
+Active sacrifices
+Pseudo Umnov 1
+Cristoffanini
+Mate by zugzwang
+Burkhardt mate
+Flight capture
+Provoked checks
+Klasinc Theme
+Roman theme (block)
+CapZug
+AlphabeticChess
+Pseudo Salazar double
+Double Maximummer
+magnet
+Orlimont 2
+After the key
+Interchange of white moves
+System change
+Chernet
+Remote unblock
+Theme H
+Transferred mate
+Neutral Knight
+Dobbs
+Exchange of places
+Echo model mates
+BQ star
+A posteriori
+Visserman
+EquipollentsAntiCirce
+Brunner-Dresden theme
+Excelsior (3x)
+EquipollentsCirce
+Excelsior (4x)
+Mao
+AntiAndernachChess
+Promotion to same piece
+Erlking
+Zappas
+Imitator
+Kubbel theme
+Swallow
+Symmetrical solutions
+Double interference
+Empress
+Mutual zugzwang
+Pseudo Salazar cycle
+Task (4x)
+Caterpillar
+Keller paradox 2
+Date?
+Tetra-Switch theme
+System relocation
+Promotion key
+GridChess
+Arnhem
+Anticirce Cheylan
+WQ-sacrifice
+Black-white line opening
+Discovered check
+Turton Brunner
+Pin avoidance
+Bi-color Bristol
+Black self-unpinning
+Distant self-block
+WR-sacrifice
+Secondary Dombrovskis effect
+Baterry creation
+Interferences
+Mate on same square
+Bonus Socius-Knight
+Hannelius cycle
+Antidual
+BlackMaximummer
+Vladimirov effect
+Horseblock
+Defences with 5 or more effects
+Pinning key
+Haring
+Rundlauf (2x)
+Anti-critical moves
+Shatranj
+Changed defences
+Madrasi RexInclusiv
+Push off
+Anti Bristol
+SuperCirce
+Check to white
+Peri-Turton
+Peris theme
+Volgograd theme
+Cycle double refutations
+Kontaktschack
+Obstruction
+Selfpin
+Model echo chameleon mates
+White-black line clearance
+Source?
+Masked pinning
+Ianovcic
+Crosscheck
+BlackMinimummer
+Reciprocal zugzwang
+MonochromChess
+pRA
+Dalton theme
+Larsen Task
+Model stalemates
+White magnet
+Ideal echo mates
+Reciprocal (AB-BA)
+Switchback (2x)
+Root-50-leaper
+Chess960
+Cyclic dual avoidance
+Cycle of black moves
+Royal marsh
+Anti-le Grand
+En passant avoidance
+Attraction sacrifice (2x)
+Moose
+Fleck theme
+Niesslbeck theme
+Bishop star
+Symmetrical play
+Barnes analog for secondary threats
+MirrorCirce
+Volgograd double
+Paralysing pieces
+Double Indian
+Double-check
+Neutral Rook
+Grasshopper-2
+Schnoebelen
+English Grimshaw
+Pinmate
+Double bind Novotny
+Albino (2x)
+Rotate twins
+Distant self-blocks
+Complete Lacny
+Horizontal Cylinder
+Twins continued
+Elbe
+Monkey theme
+Trial avoidance
+Rompp mates
+NIM technics
+Dalton
+Miloseski theme
+Sacrifice and ambush key
+Vladimirov paradox
+Direct battery
+GhostChess
+Threat separations
+Mates with two pins
+Anti-Indian
+3 corners
+Secondary Anti-Dombrovskis
+Giraffe
+White Goethart
+Equihopper (nonstop)
+Bristol white
+Consecutive Checks
+Twin PolishType
+Reciprocal stalemate
+Zepler-Turton
+Rose
+Chase
+Battery change
+Pseudo-Umnov 1
+Mutual self-obstruction
+Theme Malafienko
+Cyclic mates
+Beugung
+Crimean theme
+Excelsior (fairy)
+Clearing sacrifice
+Cylinder board
+Broecker-Matrix
+Anti-ambush
+Wigwag
+Promotions
+Hartong theme
+Meerane theme
+X flights
+Belen Theme
+Theme B1
+Reciprocal double
+Promotions on the same square
+Feldmann 1
+ChameleonChess
+Double serie
+Author?
+Foreplan
+Partial retro analysis
+Threat reversal double
+Construction of a legal position
+Check prevention
+Board 7x8
+Line clearance sacrifice
+Kettner
+BichromChess
+Kettner 1/2
+Consecutive Umnov
+Lev theme
+Andernach-mates
+Models with three pins
+Castling (3x)
+Dolginovich
+WhiteMinimummer
+Black knight wheel
+Allowing tempo
+Izhevsk theme
+Beschaeftigungslenkung
+Pawn play
+Non-standard material
+Maximal (white)
+Flights giving and taking key
+Anti en passant
+Triple Grimshaw
+Cycle of white pieces
+Flight giving and self-interference key
+Symmetrical solution
+EinsteinChess
+Area clearing
+Bishop-lion
+Interplay of rooks
+Sacrifices
+Anti-Dombrovskis paradox
+Parry series-mover
+Exchange of continuations
+White-black line opening
+Meerane-Thema
+Palatz theme 2
+Segal
+Shield
+Hesitation Bristol
+Task (5x)
+Areal cycle
+Pseudo-Indian
+Feldmann 2
+Ceara
+En passant (4x)
+X-ray effect
+Paradox
+Self-interference Roman
+Vladimirov theme
+5 flights giving key
+Corresponding squares
+Nolcken Theme
+Black battery
+Anti-Mirri
+Rehmer
+Velikij
+Twin after the key
+Cycle Babson
+Peri-critical decoy
+Kriegspiel
+Anticipatory pinning
+Ahues theme 1
+2 flights giving and 1 taking key
+Half-battery destruction
+Torus
+Simultaneous pin and unpin
+Hume theme
+Reciprocal Leibovici
+Ropke theme
+Self pinning
+Line closure
+WS-sacrifice
+Stooss Interference
+Kniest theme
+Pin-unpin
+2 flights giving and sacrifice key
+Half-pin (2x)
+Staggered preplans
+Mutual selfblock
+Paros
+Blackcap Zigzag
+Self-pinning key
+Tertiary black correction
+Tempo moves
+Uncastling
+Reflecting bishop
+Anderssen interference
+Pericritical decoy
+Schor
+Twins Condition
+MagicSquares
+Half-pin destruction
+Siamese Kings
+Zebrarider
+One-way Chess
+Mill
+Anticipatory line-closure
+Dual minor
+Ruhlis
+Finnish Plachutta
+Substitution
+Complete Shedey cycle
+2° Orlimont theme
+Pseudo-Le Grand
+Task (7x)
+Peri decoy
+Rex Multiplex royal promotion
+NoCapture
+Ideal echo chameleon mates
+Focus
+Kraemer theme
+Mackenzie
+Helledie theme
+Construction of position
+Models with four pins
+Doublegrasshopper
+Last move?
+Return
+Flight giving and ambush key
+Slefblock
+White Novotny
+2 Passive sacrifices
+Black King in check
+Ostsee theme
+Anti-Roman
+Symmetrical mates
+Anticirce Calvet
+Black constant
+Somov B2
+Ser-hc#
+Kings & Pawns
+Dragon
+Salazar triple
+Opferminimal
+Dolphin
+Anti-Grimshaw
+Spisska-Borovicka
+Threat change
+WQ-sacrifices
+White Plachutta
+Circe-mates
+Interchange of black moves
+Change the color moves
+Zugzwang Roman
+Complete block
+King walk
+Weissauer clearance
+Anticipatory self-pin
+Strict Circe
+Lincoln theme
+100 dollars theme
+Hannelius analog for secondary threats
+Bicolor Indian
+Flight giving
+secondary Fleck
+Hertzsprung material
+Royal battery mate
+Constant Sorokin
+Four-way theme
+C+
+Line vacation
+Tuxen theme
+Skewer
+x pieces defend on one square
+Batterie Typ Rehm
+White To Play-Indian
+DuellistChess
+Pseudo Shedey cycle
+Stipulation exact
+Anti-Holzhausen
+Cycle of squares
+Djurasevic
+Antikoeko
+Plagiarism?
+Monochrome Umnov
+Danish Idea
+WQ cross
+Name
+Evacuation sacrifice
+Model with pin
+Bristol black
+Roepke theme
+SAT
+8 moves by the White King
+Cyclic Pseudo Le Grand
+Star bishop
+Maths
+Many ways
+Lederle theme
+Double pin mates
+Duel bR/wB
+White battery
+Ambush and sacrifice key
+Reciprocal batteries
+Cyclic change of defensive motives
+Madrasi RexInclusive
+Junction-point
+Bicolor Cheney-Loyd
+Ceriani
+Circe RexInclusiv
+Secondary white correction
+Barulin 1
+Berolina superpawn
+Velimirovic attack
+Pam Krabbe castling
+Reversal 2
+Imitation
+Cycle types of pieces
+Gnu
+Brabec-Sovik
+Castling avoidance
+Roman decoy
+Reciprocal mates
+Star White King
+WhiteToPlay
+Annihilation Indian
+Marandyuk theme
+Kharkov 2 double
+Reduction of refutations
+Reciprocal continuations
+Neutral Queen
+Raindrops theme
+Roman theme (2x)
+Mirri
+Cross
+Moves on same square
+UltraSchachZwang
+Dombrovskis theme
+Switchback (k)
+BlackChecks
+Steering
+Rook's Staircase
+Cyclic moves
+Anticipatory self-unpinning
+Jespersen-Cheney
+Vorplan
+Peri-anti-critical move
+Distant blocks
+Remote selfblock 2
+Florian
+Active sacifice
+Triplet
+Reversible Promotion
+Cyclic defences
+Ser-!=
+Defences of one figure
+Mansfield
+BlackMustCapture
+Task (6x)
+Chameleon echo model mates
+Double Minimummer
+Distant move
+Peri-Cheney-Loyd
+Vienna theme
+Novotny (3x)
+Feldmann theme
+Odessa
+Reciprocal change of moves
+Schiffmann defence 2nd form
+Promotion (super)
+Cyclic Sushkov
+Preliminary Unpinning
+Special twinning
+No black King
+Peri maneuver
+Tertiary white correction
+Reciproce Moves of Black
+Zilachi
+New Year's theme
+Antiphoenix
+Secondary Novotny
+Foreplans
+Direct pinning
+Anti-Kling
+Black sacrifice
+Cyclic black moves
+Help Direct mate
+Losing chess
+White underpromotions
+Tries on same square
+Volage
+Checkmate cyclus (AB - BC - CA)
+Transferred pin
+White self-interference
+Flight taking and sacrifice key
+Defensive Retractor Type Hoeg
+Changed defensive motive
+Sushkov analog for secondary threats
+Anticipatory sacrifice
+Shedey
+Recurrence of threat
+Allowing hideaway
+Holzhausen (2x)
+Zepler-Loyd-Turton
+Schiffmann secondary
+Grashopper
+Triple avoidance
+Mates on adjacent squares
+Unpin avoidance
+Star White Bishop
+Anti-Rupp
+Chameleon piece
+Mass sacrifice
+Twin Rotation
+Cyclic change of functions
+Friend
+Board 10x10
+Urania doubled
+Parallel black & white moves
+Rovno theme
+Garzon theme
+Dual avoidance cycle
+Discovered checkmate
+Peri-ambush
+Brede
+Laitinen
+Svitek/Uris
+UltraPatrol
+Moller theme
+Double bind Grimshaw
+Superpins
+Forced mates
+Theme Pergialis
+Pseudo Vladimirov
+Figurative Problem
+Czestochowa theme
+Multiple sacrifice of a single unit
+Perpetual Chase
+Reeves cycle
+Peri-critical tries
+Option Key
+Mitrofanov's sacrifice
+Castling vs. castling
+Peri-decoy
+Line openings
+Changed sequence of white moves
+Square clearance sacrifice
+Play on same squares
+Thema A
+Para-critical maneuver
+Paracritical
+Theme Elmgren
+Geneva chess
+Dual mates
+Cross Black King
+Le Grand theme
+Babouchka
+Bi-coloured Indian
+Switchback (Q)
+Tamerlane
+Sacrifce key
+Ser-!#
+Cyclic interchange of functions
+Palitzsch dresden
+Waiting
+Anti-Somov A1
+Carousel theme
+No-Brainer
+Color Chess
+King and two bishops checkmate
+Somov
+Novotny (2x)
+Sibling
+White roman
+Pericritical maneuver
+Rook/bishop hunter
+Waiting move
+Selfpinning (direct)
+Anti-Gamage
+King's Nietvelt
+Rook cross
+Pseudo Stocchi blocks
+Transferred 2-3 moves
+Pericritical move
+Babson (fairy)
+Hannelius theme
+Correspondence move to move
+Crusader theme
+Epaulette mates
+AUW Bicolor
+Theme 4° WCCT
+Anti-battery (indirect)
+BQ cross
+Cycle of fields
+Cyclic black combination
+White Gamage
+Jonsson
+Onitiu theme
+Cyclic double threats
+Pelle
+Retrostalemate
+Royal Knight
+Berlin theme extended
+Echo mate
+En passant (6x)
+3/4-Albino
+Secondary Anti-Dombrovskis effect
+Wechsellaufer
+Line clearing
+Masked unpinning
+Wazir
+Costachel
+Sentinelles PionAdvers
+Dawson
+Pseudo Le Grand (3x)
+Fake Bristol
+Star Black Bishop
+Black Indian
+Reciprocal promotion
+Mirror stalemate
+Bern idea
+Baby
+Allen theme
+R-maneuver
+WQ star
+Taraba line combination
+Anti Somov A1
+White bi-valve
+Block change
+Drag-in sacrifice
+Masand
+RepublicanChess
+Spiralspringer
+RelegationChess
+Block-decoy
+Task record
+Change of threats
+Defensive Retractor, Type Proca
+CouscousCirce
+Separation of defensive motives
+Cycle defensive motives
+Holzhausen decoy
+Double Herlin
+4+ flights giving key
+Remote block
+Transmuting Kings
+Bahnung
+Reduction of mates
+Pseudo-Umnov 2
+Cyclic refutations
+Bristols
+Makihovi theme
+Nietvelt 2
+Archbishop
+Cycle of defences motives
+Nesic theme (2#)
+Queen's carousel
+Cycle of moves
+Papack cycle
+Snake
+Neutral pieces
+Fuehrer
+Umnov mechanism
+Nonstop equihopper
+Brochette theme
+Differentiation of threat
+Minor promotion
+Durbar theme
+Pelle theme
+Grimshaw (5x)
+Brunner-Novotny
+Theme A2
+Cross-captures
+Promoting key
+Rose-lion
+Knight Roman
+Flght giving and sacrifice key
+Triple intersection point
+Reciprocal Visserman changes
+Anticipatory self-pinning
+Peri-Anderssen
+Twin substitute
+Theme E
+Black selfpinning
+Castling prevention
+Pawn stopping Indian
+Shut-off
+Kontra problem
+Bartolovic theme
+Dual in threat
+Bishop/rook hunter
+ImmunChess
+Consecutive Double Checks
+Duel BB/WB
+Changed battery
+Double Salazar
+Draw pendulum
+Staircase up and down
+7th rank absolute
+Wild rook
+Palatz theme
+Cyclic obstruction
+Closed walk
+Hassberg theme
+Analogy
+Black Umnov
+Vahidov
+Masked Grimshaw
+Peri-doubling
+Mosaic wPe2, bBd3
+Isaev masked
+Keirans theme
+Line play
+Amazone
+Anti-Loyd clearance
+Anchor ring
+Soliloquy
+Pure mates
+Anti-dual
+Povenets
+Cycle interference
+Mosaic wQd2
+Switchbacks
+Cross Black Rook
+Eagle
+Doubled Indian
+Remote selfblock Roman
+Unusual twins
+Bristol (double setting)
+Cycle of self-interferences
+Indirect battery creation
+Schweizer Idee
+Same square
+HalfNeutral piece
+Inidan
+Reciprocal of 2-3 moves
+Pickaninny (2x)
+Dual separation
+Nissl theme
+Masked self-interference
+Change of play
+Oneliner diagonal
+Roentgen
+Pure round trip (k)
+Le Lionnais
+Black Rudenko paradox
+White-To-Play
+Black excelsior
+Orphan
+BlackTransmutedKing
+Isometric
+Arguelles
+Rex Multiplex specific illegality
+Merry-go-round
+9 variations by BB
+Peri-critical
+Sacrifice and flight giving key
+Peri-maneuver
+Mount Everest theme
+Task (9x)
+White sacrifice
+Masked Selfpinning
+Babson task
+Change defensive motifs
+Tempo creation
+Cycle of threats
+Reciprocal indian
+Cycle triple threats
+AnnanChess
+Symmetrical echo
+Proca-Retractor
+Kluver theme
+Slef-pinning
+Distant move wR
+Ecto-battery
+Cycle of threats and mates
+Reciprocal interference
+Line clearing Loyd
+Double cycle of wQ-squares
+Tura
+Brunner-Dresden
+Secondary Threat Correction
+Models with pins
+Leibovici
+Reciprocal change of threats and mates
+Zipperlin
+Opening of masked black lines
+Knight's round walk
+Make&TakeChess
+Somov B1
+Line clearkeeping
+Cycle types of black and white figures
+Pikabis
+Dombrovskis four
+16-leaper
+Clearance move
+Transformation square
+Counter-check
+Moa
+Blok
+Half-Novotny
+Long Mover
+WQ-mates
+Target Bristol
+Torus board
+Sushkov cycle
+Turn the board
+Alternation of moves of white figures
+Protection against checks
+Cycle types of defence and mates
+Anti-Roman theme
+Reciprocal self-obstruction
+Lost Pieces
+Krikheli theme
+Passive sacifice
+Hidden tempo-tries
+Dud
+Cross white King
+Key-threat reversal
+Perilenkung
+WK triangle
+White Wurzburg-Plachutta
+Promotion to queen
+Dead Reckoning
+Mutual self-interference
+Changed functions
+Helsinki theme
+ContraParrainCirce
+Game change
+Sacrifice clearance
+Grimshaw (3x)
+Azemmour 7
+Schiegl
+Nesic theme
+Ukrainian cycle
+Annihilation Cheney-Loyd
+Loyd
+No pwans
+Okapi
+Guidelli theme
+Interference on same square
+WB-sacrifice
+Z-theme
+Umnov mate
+Szoghy 3
+Distant pin
+Staggered foreplans
+Mosaic wKd3, wSf2, bKf5
+EiffelChess
+Anti-Opposition
+KoBulKings
+Barthelemy
+Cook
+Minor duals
+Zander theme
+Holzhausen interference
+Grimshaw (4x)
+Tertiary arrival correction
+Consecutive corner move
+Provked check
+4+ flights taking key
+Excelsior (5x)
+Block-threat
+Clearance sacrifices
+Gussopulo type
+5th WCCT theme
+Cyclic Rukhlis
+Change of continuation
+Mosaic bKc6, wRf3
+Eigenmatt
+3D-Chess
+Anderssen
+Unpin-pin combination
+Chain
+Quadrupel
+Circe-stalemate
+Bishop's walk
+Changed pins
+Pseudo Umnov 2
+Discovered Checks
+Hiding of black Queen
+Royal Rook
+Blockade
+HaanerChess
+Baku Novotny
+Hartong
+Pseudo Erokhin double
+Cyclic change of places
+Laitinen theme
+Board 3x8
+Hoeg-Retractor
+Tempo move (cylindric)
+Popovski theme
+Black correction (3x)
+Weissauer theme
+Zarur theme
+Rehm Battery
+Le Grand battery
+CirceAssassin
+B1
+4th degree black correction
+Vollenweider Task
+Square clearance (bK)
+Promoting mates
+Draughts theme
+Tagilskaya
+Retreat
+Change of flight
+Rangelov theme
+Twofold Bristol
+Anderssen focal theme
+Double threat split into key+mate
+Secondary Dombrovskis paradox
+Mirri (#3)
+Feather theme × 2
+Bonus Socius Knight
+Anti-Hassberg
+Preventive selfblock
+SingleBox Type2
+Interchange of moves
+exchange fields
+Treffpoint
+String
+Reciprocal defence motives
+3 pieces Dresden
+Wladimirow
+Mikulcak theme
+Neutral underpromotion
+Psycho
+Board 4x8
+Sequential Novotny
+Defence on the threat square
+Forced critical move
+Barulin
+Mirri theme
+Additional mate
+Change of pin
+Schiffmann 2
+Brunner-Zepler-Turton
+Pseudo-Herlin
+Batery play
+Anticipatory selfpin
+8th WCCT theme
+Dabbabba
+Woozles
+Military-patriotic theme
+6th WCCT theme
+Pure mate
+Board 5x5
+Cyclic self-obstruction
+Mates on the same square
+Double mates
+Mixed Phoenix
+Chepizhnyj
+Threat return
+Tema Brogi (Pure Form)
+Joke composition
+Cole mine
+Schwalbe theme
+Heathcote theme
+Check giving key
+Neva
+Double Checks
+Author's solution unknown
+Flight giving and 2 flights taking key
+Cycle refutations
+Reciprocal obstruction
+Capture Indian
+Cyclic Zagoruiko
+Grimshaw paradox
+2° Kluver theme
+SymmetryAntiCirce
+Mkhedruli
+Crosschecks
+Anti-critical key
+Lepuschutz theme
+Anti-Loyd-clearance
+Mutate total
+Logic problem
+WQ albino (Malafienko theme)
+Constrained problem
+Anti Magnet
+Kalinin theme
+AntiKings
+Valladao (2x)
+Moscow Novotny
+AlsatianCirce
+Rebirth by retro-capture
+Brojt
+Anti-Phoenix
+Hesitation Indian
+7x8 Cylinder board
+Anti-Banny
+Babson (cyclic)
+En passant (3x)
+Cyclic battery creation
+Neutral Grasshopper
+Pauly theme
+Goldschmiedt theme
+ChameleonCirce
+Monochrome echo
+Color the pieces
+Echo-mates
+Half Dombrovskis
+Mutual Anti-Bristol
+Round trips
+Preliminary interference
+AUW
+Symbol problem
+Pickaninny 3/4
+Masked self-pinning
+Buenos-Aires theme
+Changed threat
+Rukhlis combination
+Domino cycle
+Ural theme
+Quiet move
+Onitiu
+Half White baterry
+Anti-Mari
+Black zugzwang
+Active sacrifice (black)
+Pedersen theme
+Kamikaze-Circe
+Retrograde analysis
+Change of functions of white moves
+Zepler doubling
+Grimshaws
+Windmill theme
+En passant (5x)
+Pseudo carousel
+Black Sackmann
+Neutral King
+Batterietransformation
+Chernous theme
+Shinkman-Blathy matrix
+Banny double
+Black-white Bristol
+Refutation get defence
+Larsson theme
+Brunner Dresden theme
+Black Herlin
+Cycle triple mates
+Barulin (B1)
+Dombrovskis double
+12 WQ mates
+Queen sacrific
+Cycle of figures
+Defenses on same square
+MessignyChess
+Wandelschach
+Madcap Zigzag
+White Tp Play
+Combinative Separation
+Bristol clearance
+Andernach Switchback
+Diagonalspiralspringer
+Mai 2
+Somov (B1) (B2)
+Inversion of piece order
+Cyclic double-threats
+Pure roundtrip
+Board 8x8x8
+Siers battery creation
+Pseudo twomover
+No more Kings
+Ferreau
+Anti-Labai theme
+Haring theme
+Ambush and flight giving key
+En passant (7x)
+Theme B2-mates
+Systematic manoeuvre
+Hoeg pericritical move
+Quintuplet
+Bristol sacrifice
+Black Bristol
+Short mate
+3/4-Pickaninny
+Knight's options
+Help mate with variants
+Pins and unpins
+Inversion of squares
+(distant) self-block
+Self-obstruction point
+Circe Assassin
+Change of motifs
+Savchenko mechanism
+Hamburg
+Cross pin
+Chameleon mirror echo mates
+Cycle of functions of white pieces
+Chicco
+Double AB-BA
+Tempo Indian
+Double Andernach Switchback
+Separation
+Fleck cycle
+Trilling Turton
+Super-Ultra-Maximummer
+Cycle of triple threats
+Anti-mousetrap
+Mutual Holzhausen
+Reciprocal interferences
+London theme
+DiagramAntiCirce
+Paradox-Grimshaw
+Roundtrip
+Check provocation key
+Cyclic duals
+Model mates (3x)
+Board 9x8
+Karlstrom defence
+Sacrifice anti-Bristol
+Novotny vs. Novotny
+Change of motive
+Imishli
+Consecutive and reciprocal Zepler-Brunner-Turton
+Cyclic Le Grand
+Royal Pawn
+GlasgowChess
+Many Ways Theme
+Veliky theme
+Ricciardi theme
+Change of threat
+Indian (4x)
+Multiple pin-mate
+Theme C
+Slow Excelsior
+Anti-Ziel Element
+Lady's theme
+Hoeg wR
+Grabe theme
+Non stop
+ABBA
+Polish type
+2 flights giving and 2 flights taking key
+Salazar mechanism
+Edgehog
+Double threat correction
+Capture Anderssen
+PhantomChess
+Die Dame und ihr Kavalier
+Contra grasshopper
+Check provokation
+Dual advoidance in refutations
+1 flight giving 2 flights taking key
+Battery shortening
+Anti Turton
+Model mates (5x)
+Reversal (2x)
+Masked indirect unpinning
+Schachzwang
+Hamster
+Reciprocal battery transformation
+Pikabish
+Anticipatory sacrifice Bristol
+MirrorAntiCirce
+8 pure indirect guards by BS
+unsolvable
+Chameleon Pawn
+AJEC
+Stocchiblocks
+BK rosette
+Switchback (b)
+Back-to-Back
+En Passant in retro
+50-move rule
+ExclusiveChess
+Pseudo-Umnov
+Blunder mate
+Cyclic reciprocal of mates
+Hoeg-Cheney-Loyd
+Levman (3x)
+Bicolor clearance
+Mosaic wKc3, bKe3, bPf4
+Andersen
+Long mover key
+Different mates
+Weenink
+1 flight giving and 2 taking key
+Ceriani cycle
+Cyclic unblocking white moves
+White Organ pipes
+O'Rey theme
+Change of moves
+Bishop's options
+Peri-Seeberger
+WhiteSuperTransmutingKing
+move cycle
+Kings walk
+Double Zilahi
+Overload moves
+Block-Pendulum
+Dombrovskis paradox Fivefold
+Hungarian
+Lender
+Cyclone
+En passant strategy
+Pseudo Durasevic
+Draughts King
+5th degree black correction
+Coverage loss
+Extended Albino
+St. Petersburg theme
+Distant self block
+White Holzhausen
+S-Roman
+Double battery
+Bicolor Dresden
+Separation of refutations
+White Zugzwang
+Black correction (2x)
+Two steps battery
+Black-white line openings
+Invisible piece
+Actve sacrifice
+Ser-s-castling
+Prevention of pinning
+Line combinations
+Schiegl theme
+Altman Roman
+Rook Soliloquy
+Kinnunen theme
+Double-bind Novotny
+Ukrainian double
+Pin
+Remote blocks
+Play on adjacent squares
+Dombrovskis paradox triple
+1st move and threat = mating moves
+Moller
+Fight giving key
+Transposition of Moves
+Alain C. White theme
+Cyclus of White moves
+Rice cycle 4-fold
+Reciprocal changes
+Double S-Pendulum
+Burkhardt
+WK-battery
+Bajtay
+Rose-hopper
+Anti Dresden
+Model mate
+Castling dilemma
+Grasshopper star
+Urania theme
+Duel S/B
+Levman defence
+Double battery creation
+Sambor theme
+Decoy to capture square
+Phoenix × 2
+Ernst theme
+Cyclic Grimshaw
+Crock-check
+Anti-Allumwandlung
+Obstacle-pieces elimination
+Masked paracritical
+Preventive interference
+Defences on same square (e4)
+Movement towards each other
+Rook square
+Employment
+4-fold cyclic block
+Passive sacrifices
+Checks provoking key
+Length record
+White selfblock
+Change the color of moves
+The primary threat is becoming a secondary threat
+3 lines closure
+Permutation theme
+WCCT 5 theme
+Anticipated Grimshaw
+Critical
+Cyclic self-block
+Tibet
+Aufwertung
+Reciprocal move by White
+Check wins
+Home Cage
+Unpining
+Add a piece
+Dynamic Cage
+Karstedt's Position
+Cyclic vectors
+Reversal-2
+Preventive line closing
+Turton clearance
+Alvey-Berger
+Anti-Seeberger
+Loyd-Plachutta
+Excelsior (neutral)
+Dissolution of the position
+Gockel theme
+Threat dual
+Technical nightwatchman
+1st moves reappearing as mating moves
+Selfinning
+Hypervolage
+Unsymmetrical solution
+Anti-clearance
+Molnar theme
+Lennon theme
+Kiev theme
+Shedey-Lacny
+Hagemann theme
+3 Model mates
+Snowflake
+Board 4x4
+Duel WQ/BB = 9
+Mosaic wKc3, bKe3, bPf4
+Superskak
+3° Szoghy theme
+Visserman-Zagoruiko
+Mutual unpinning
+Capture flight giving
+Anticipatory Kraftopfer
+Gearing
+Malafienko Theme
+Anti-ambush key
+Dynamo
+Kasparyan Imprisonment
+CirceClone
+Masked pin
+Flight giving and ssacrifice key
+Cycle of double threats on the same square
+Cyclic Arnhem theme
+Four-Hands-Round
+Correction of mating move
+Annihilation of black forces
+Capturing key
+Symmetrical twins
+Hirlap theme
+Threat pendulum
+Untiing of white knights
+FileCirce
+Clockwork Chess
+Anti-Loveday
+Robert theme
+Theme E (Block)
+Knight tetra-switch theme
+Black Turton
+Pinmates
+Pawn-one-two
+Sackmann combination
+Lindner 2 theme
+Aurochs
+Same mate
+Triple pin mates
+4 Chameleon echo mates
+Shutt-off
+Twofold Indian
+Anticipatory line opening
+BlackEdgemover
+Cyclic Hannelius
+Cross black bishop
+Quadruple avoidance
+Steinitz-Gambit
+Octagon theme
+Grimshaw (white and black)
+Bison
+Doubled Bristol
+cyclic arrival correction
+Annihilation of guard
+Distant block
+Goethart 1
+Chepizhny theme
+Chameleon Rook
+Tema Brogi (Free Form)
+Jespersen-Cheney-Loyd
+Trial
+Bristol (3x)
+Cycle of playing white pieces
+Double selfblock
+Perpetual Novotny
+Interrupted Siers battery
+Cyclic clearance sacrifice
+Critical decoys
+CAT (cavalier trojan)
+Holland Theme
+Grazer Helpmate
+Retro problem
+Duel WS/BK = 6
+Same mate square
+Brogi theme
+4 checks by BP
+Cycle pieces
+Anti-Pericritical move
+Reciprocal Novotny
+double threats cycle
+Partial Bristol
+Model mates with pin
+Stepwise push aside
+Grimshaw Dresden
+Circular movement
+Anti-Hochberger theme
+Flight giving and unpinning key
+Pericritical Grimshaw
+Cyclic Banny
+Correction of threat with Sushkov
+Batter abandonment
+Ianovcic theme
+Ative sacrifice
+Roels
+Locuste
+Double selfpining
+Switchback (multiple)
+Perpetum Mobile
+DemotionChess
+Zagoruiko - Rukhlis
+Critical mov
+Reflecting Nightrider
+Model ideal mat
+Antiduals
+Grazer Schach
+4 distant self-blocks
+Indirect Unpinnings
+Lortap
+Erokhin (2x)
+Plachutta (4x)
+Stipulation change
+Perfect Pickabish Novotny
+White Roepke theme
+Change of pins
+Consecutive Novotny
+Interchange of squares
+Cyclic Banny theme
+Loyd-Zepler doubling
+White decoy
+Anticipatory square clearance
+Cheredovanie hodov belyh
+Ibis
+Reciprocal double Indian
+Switchback (Qk)
+Perpetuum mobile name
+Heffalumps
+Weak transformations
+Zagoruiko -Rukhlis
+Pawns mates
+Anti-excelsior
+Theme 1° WCCT/A2
+Cycle sacrifices white piece
+Erokhin double
+Kozakin theme
+Sparrow
+Royal Grasshopper
+Mirror echo mates
+Gestaffelte Vorplane
+Third pin
+Horse block
+Le Grand triple
+Bouttier
+Pergialis
+Argentine pieces
+Reciprocal change of mates
+Incomplete block
+Willmers-type
+Melnikov theme
+Bttery play
+Klett
+5 direct mates by BR
+Annihilation of white figures
+Cascades
+SymmetryCirce
+Mari theme
+Joke Problem, Ancient Rule Theme
+Alfil Rider
+Letter problem
+Vielvater
+Thema B
+Logical
+Constriction
+Weber type
+Epaulette mate × 2
+Self-interference key
+Function change wSS
+Critical move (2x)
+Pawns only
+Elimination
+Orlimont 3
+Secondary Hannelius
+Nabokov theme
+Type2
+Anderssen-mate
+Barulin (A2)
+Hesitation line clearance Loyd
+Anticipatory Loyd clearance
+Checkless
+Dual thematic
+Island theme
+Dombrovskis 4-fold
+Queen Indian
+Echo by inversion of colours
+Boyscout
+White Roman theme
+Argentinian Twins
+Double move chess
+3 Capture flights
+Defences on threat square
+Consecutive Push off
+Pseudo Burmistrov combination
+5 direct mates by WB
+Cyclic bi-valve
+Anti-Sushkov
+Exchange of mates
+Castellari
+Pawn battery
+Cyclic pinning
+Anticipatory unpin
+Mlynka theme
+Bi-coloured Zilahi
+Semi-reflex-mate
+Salamanca theme
+Mate with interference
+Super Durbar
+King flights
+Thema B (Somov)
+Double step
+Knight wheel (3/4)
+Second moves on same square
+Helledie
+Round-about
+Mahikovi
+Pinning avoidance
+Critical move (black)
+Larsen theme
+Stalemete avoidance
+Greek Novotny-Pickabish
+Anti-Gamage 2
+Saquare clearing
+King's options
+Reciprocal of playing pieces
+Loshinsky
+Passive / Active sacrifice
+Corner to corner (2x)
+Royal Indian
+Rehm-mechanism
+Task (8x)
+Horseblock theme
+Ahues 1 theme
+BiWoozles
+Babson (super)
+Hannemann Theme
+Consecutive Roman
+Changed threats
+Walker's Position
+Umnov 2
+Cyclic play
+ctive sacrifice
+Super Reduced Zagoruiko
+Virage
+Thema B2
+Reciprocal Incarceration
+3/4 Black AUW
+Knight wheel (7/8)
+Paradox Dombrovskis
+Wechsel-Vao
+Unguards
+Model mate × 2
+Stalmate avoidance
+Tempo Roman
+Line clearance sacrifices
+Big star of the black king
+Try
+Siers battery (2x)
+Orthogonal-diagonal transformation
+Andressen mate
+Evacuation sacrifices
+Anticipatory Novotny
+Mansub
+Dual-minor
+Blikeng
+Ahues 2 theme
+Peri maneuvres
+Flight squares task
+Linear cycle
+3 Echo model mates
+Pericritical Tries
+WK battery
+Multiple Grimshaw
+Twin
+Root-25-leaper (bucephale)
+Pin stalemates
+Interference (5x)
+MarsMirrorCirce
+9th WCCT theme
+Pohlheim mate
+AtomicChess (checkfree)
+Tries
+Quiet threat
+Onitiu type
+Half-battery abandonment
+Mutual Bristol
+Double switchback
+Petkov theme
+Theme Hassberg
+Zagoruiko threat
+Refutation on the threat square
+Sacrifice and pinning key
+Peri-maneuvre
+Halting theme
+Alternating moves of white pieces
+King's Staircase
+Oryx
+Exact-Maximummer
+Piece taking key
+Thirdpin
+Blikeng theme
+Dombrovskis double threat
+Anti-Belen Theme
+Chameleon Knight
+Stocchi Block
+Grunenwald theme
+Switchback (3x)
+Defensive Retractor
+Consecutive transfer of color
+Interference black pieces
+Neutral Locuste
+Frame board
+Umnov 2 theme
+Antelope
+Blocks
+Square uncovering
+Pawn double step
+Tempo decoy
+Anti-critical tries
+Bicolor bi-valve theme
+Urania double
+Salazar doubled
+King Schiffmann
+Secondary Anti-Dombrovskis paradox
+Somov 2
+Model mates (2x)
+Karlstrom
+Billard effects
+Illegal setting
+Mating cycle
+Elimination of obstructive White mass
+Theme 7° WCCT
+Oscillation
+Nao
+Fork theme
+Ukrainian 5-fold
+Barulin (C)
+Zepler-Brunner-Turton
+Selfblock (white)
+Queen sacrifice (2x)
+Kettner 3/4
+Cyclical mates
+ODT with its pair
+Switchback (5x)
+Palkoska school
+Pin-mate × 2
+Cyclic change of defences and mates
+Frankfurt Chess
+Counter exchange
+Distant moves
+Hoeg Retractor
+Repeated threat
+Martin theme
+Duel bS/wB
+Change of battery
+Polish theme
+Peri-critical defence
+White underromotion
+Salazar key mate
+Montgomery theme
+Comm.
+Mates in four corners
+Edge mate
+Bristol two-way
+Promotion only
+King Schiffmann, Antiform
+Dawson form
+Black checking battery
+Short solution
+Virtual Kubbel theme
+Rohr theme
+Folgeschach
+Thema H
+Twins?
+Double threat --> first moves
+3:5-leaper
+Capture and selfblock Roman
+Switchback (wQ)
+Petrovic theme
+Bannzuger
+Secondary Anti-Hannelius
+Help retractor
+Continued sacrifice for a tempo
+Wechselturme (2x)
+Theme K
+7 pure indirect ortogonal pins of WB
+Piran
+Inversion of white moves
+0:3 Rider
+Battery selection
+Nice theme
+Critical moves (tries)
+Unleashing the white queen
+Refutations - variants
+Fake Indian
+Ceder interference
+Active sacrifice Queen
+Latzel theme
+Dobrovskis
+Pelle move key
+Cyclic Umnov
+Ser-h!=
+Circe malefique
+Anti-Goethart 1
+Masked indirect half-pin
+Flight giving and check provoking key
+Preparing Roepke
+Double Cyclic Zilahi
+Peri-para-critical move
+Cycle of changed mates
+Avoidance of self-obstruction
+Mousetrap (2x)
+Alternation of courses
+Mating move on the same square
+Ellerman
+Brunner-Dresden (2x)
+Theme 7°WCCT
+ProteanChess
+King+Knight
+Defences on same square (c4)
+Double WR cross
+4 selfblocks by the white queen
+Interchange of ...
+Volcanic Circe
+Secondary Umnov 2 theme
+Nereide
+Ukrainian 6-fold
+Annihilation black
+Reciprocal sacrifices
+Kriegsspiel
+Direct selfpinning
+WS-battery
+Barulin (G)
+Spiral staircase
+Passive capture flights
+Hexagon
+corrected in 11-12/1952
+Mirror-Stalemate
+Checkpermitting key
+Threat and mat on same square (in 4 phases)
+Relayed unpinning
+Duals in threat
+8 pure indirect diagonal pins of WP
+Task 4x
+Platzwechsel (4x)
+Zepler-Loyd clearance
+Selfblock bR, bP
+Cross Valve theme
+Unpinning of white Rook
+Anti-Bristol Grimshaw
+Sacrifice piece
+Chameleon Novotny
+Ahues-3
+Queen sacrifice (4x)
+Stocchi combination
+Progressive threat addition
+Key reappearance
+Cyclical relief
+Guard all squares
+Cycle of keys and mates
+Mass
+Flight taking and unpinning key
+The Karelian theme
+Reciprocal change of tries and solution
+Lochet
+Double pinning
+3 flights giving and 2 taking key
+BK moves only × 2
+Switchback (9x)
+Perikritische Lenkung
+Baby theme
+Schiffmann Novotny
+Paluzie theme
+Harkov theme
+Consecutive underpromotion wB
+Twin exchange parts of the board
+Ambush and unpinning key
+Meta-critical move
+Changued mates
+Pseudo defence
+Kniest (1x)
+5-fold cyclic Zagoruiko
+Black self-interference
+Interference line
+Neutral Nonstop equihopper
+Freie Presse theme
+Umnov de
+Exchange of squares
+Szameitat theme
+Pseudo-Ukrainian
+Distant moves bQ
+Squares cycle
+Pawn mates
+Cyclic quadruple avoidance
+White Grimshaws
+Ruskhlis
+Non dualfree
+Chicco theme
+Three corners
+Replacement
+Gradual Rukhlis
+chinese wall
+Three-pin mate
+Masked anti-Bristol
+Duel bS/wS
+Change of Blockade
+Double Anti-Indian
+Zirkwitz variation
+Separation of defences
+Peri-critical Holzhausen
+Ideal mates (2x)
+White valve
+Compass
+Trio
+Mates in same square
+Superalbino
+Promotion to King
+Dawson theme
+Short solutions
+Opferloser Umkehr-Treffpunkt
+Cycle of weaken moments
+Mutual mass destruction
+Changed flights
+Switchback black
+Secondary Barulin (A)
+Paradoxical Kubbel Holzhausen
+Helpmate of the future
+Wechselzuger
+Anticipatory check avoiding
+Roundtrip (2x)
+Minimal wQ
+Theme Karabakh
+Maked pinning
+7 pure indirect ortongonal pins of WP
+Black-white line clearances
+Pirrone
+Inverted moves
+Cyclic english Grimshaw
+Self-pin, black
+Critical Pelle-move
+Refutations by promoting BPs
+Fastosky theme
+Active sacrifice white figures
+Bogdanov theme
+Star Black King 1/2
+Pelle move threat
+Karlstrom defences
+Cyclic unblock (squares d2, e2, f3)
+White octet
+AntiZielElement key
+NoWhiteCapture
+Valve Indian
+Anti-Goethart theme
+Flight giving and pinning key
+Change of move functions
+Tempo-Indian
+Double function change
+2 Place
+Peri-paracritical
+Imitating Joker
+Cycle of color changes
+Avoidance of unpinning
+Mousetrap Check provoking key
+Mating move to the same square
+Ellerman theme
+Theme 9° WCCT
+Double wS-Pendulum
+4 White promotions
+Simultaneous publication
+Oudot theme
+Interchange of 1st and 3rd White moves
+Volga
+Nesic interference,
+Forsberg-Andersson theme
+Changed motifs
+Ukrainian 8-fold
+Annihilation capture
+Capture Roman (2x2)
+WS-maneuver
+Correction
+Cyclic Mai
+Gleichstein-Langstzuger
+Many-ways
+Izhevsk
+17 different mates
+Selfblock change
+No Perpetuum Mobile
+Humour
+Anti-Brunner Turton
+Sacrifice Rex Solus
+Festive theme
+Queen sacrifice key
+Leibovici-interference
+Echo promotion
+BR cross (2x)
+Progressive threat growth
+Cyclical use of pieces
+White self-obstruction (4x)
+Shedey (2x)
+Ojanen theme
+Guidelli
+Anti-le Grand cycle
+Rice (J.M.) theme
+Reciprocal changed blocks
+Lock avoidance
+Double refutation
+3 flights giving and taking key
+Bukovinszky-Garai theme
+Indian (bicolor)
+Harmonium Pipes
+Consecutive underpromotion wR
+Metzenauer junction point
+Chanqed mates
+Theme C, 2°WCCT
+Pseudo Dombrovskis
+Kniest (White and Black)
+Slowed-down Excelsior
+Pin-stalemate
+Interference mates
+Cyclic change of function
+WB trigon
+Anti-Zugzwang
+French Defence
+Umnov delayed
+Anti capture Roman
+Recurrence of threats
+MAFF
+Moarider
+Szoghy
+Laeufer/Dame-Schuetze
+Squirrel
+Pawn mechanisms
+Hoeg-Cheney 225° (180° + 45°)
+Rybinsk theme
+Pawn phalanx
+Cyclic refutation
+White Holst
+Anticirce Equipollent
+S-opposition
+Non-capturing moves
+Chiorno-belyj "ushiol-prishiol
+Threefold line clearance
+Reserve tempo
+Masked anticipatory interference
+Duel P/Q
+Abdurahmanovic 2
+Tempo maneuver (K, waiting, 2) × 2
+2 flights giving and checking key
+Ideal mates (3x)
+Attraction sacrifice (3x)
+Fleck-Burkhardt
+Complete 3x3 Dombro-Lacny
+Radical change 3x1
+Eho pats
+Bristol x 3
+King star flight 3/4
+Shortest proof game (non-unique)
+Cycle of white batteries
+Anti-obstruction
+Roman bS
+Fontana-Plachutta
+Two steps
+Reciprocal Maslar
+Double threat Le Grand
+Capture avoidance Roman
+Switchback of threats
+Knight`s 'reversed' Excelsior
+Secondary Barulin (B2)
+Parakriticus
+anticipatory clearances
+Minimummer
+Theme Laitinen, at least twice
+Pseudo Makihovi
+7 pure ortogonal pins of WQ
+Target Bristol (2x)
+Pirrone theme
+Inverted threats
+Cyclic Feldmann
+Zamurovanie
+Critical play
+Anti Umnov
+Refutations by promotion
+Model mates (7x)
+Total cyclic triple avoidance
+Quadrangulation maneuver
+Le Grand (AaC)
+Any Move Mate
+Ser-hr#
+Circe stalemate
+Valve-Rukhlis theme
+Flight giving and sacrifice
+Temporary system change
+Prestigiacomo theme
+2 Queens mate
+Svitek cycle
+Cycle of damages
+Consecutive Checks(in one)
+Altion mats
+Reciprocal Bistol
+Rook sacrifices
+Brunner-Dresden theme (2x)
+Provisional line opening
+Black knight wheel (2x)
+Single appearance of the cyclical checkmates
+Interchange of 2nd and 3rd white moves
+Secundary threat
+Changed move sequence
+Capture two units en passant & double rebirth
+Pseudo Twomovers
+Krim
+Barulin 2
+Cyclic mate-transference
+Anticipatory sacrifice key
+Royal Princess
+Checks by Black
+8 pure orthogonal indirect pins of WQ
+Task record (4x)
+18-fold cycle
+Cross wK
+Anti-Brunner-Zepler doubling
+Sacrifice Task
+Moeller
+Fetsina lente
+Clearance sacrifice (black defence)
+Al'bom Ukrainy 2010-2012, A64
+Echo promotions
+Prokes maneuver
+White self-obstruction by rooks (4x)
+Cycle of mating moves
+Change provoked check 2x2
+The mechanism of one field
+Lock deflection (3x)
+Double rook sacrifice
+Bulgarian theme
+Switchback (b, captureless, 1)
+Perilenkungen
+Indian (black)
+WK trigon
+Schifman
+Harmonium pipes theme
+Consecutive underpromotions of same kind
+Ambush key and sacrifice
+Metzenauer theme
+Theme C1 (1° WCCT 1972-74)
+Black self-obstuction
+Anti Cheney-Loyd
+Lahti theme
+Laib theme
+Board 11x15
+Hoeg-Jespersen-Cheney-Loyd
+Anticiritical move
+Choice of key
+Threefold three phases changes
+Anti-cross-checks
+Reset
+Duel R+B/Q
+Abdurahmanovic theme
+Change of colour moves
+Levman (Sonderform)
+Zugzwang (white and black)
+Peri-critical maneuvre
+Ideal mates (b)
+Attraction sacrifice (4x)
+Salazar twins
+Fleck-Vermet theme
+Complete black Herlin
+Triple check
+Allowing tempo (B-B)
+Radical change defensive motives
+Superfluous Bishop f1
+King start flight
+Indirect self-interference
+Visserman cycle
+Fonyod theme
+Andersen mate
+Long-trip
+Double threat on same square
+Capture Durbar theme
+Switchback of wR/wB
+Phoenix {(a)}
+Different Novotny
+Weiss-schwarze Verbahnung (3x)
+Anticipatory control of flight square
+Pseudo Mochalkin combination
+7 pure rear guards
+Pituk theme
+Cyclic functions of pieces
+1,6-leaper
+Baturin
+Self-pinning (2x)
+Critical tries
+Unpin key
+Anti Zepler Turton
+Refutations or Variations
+Model mates (b, c)
+Feather
+Total Fleck
+Quadrat of mates
+Le Grand (threat and 1st variation)
+Durbar (full)
+Bogdanov-Soroka theme
+Pelle moves of the white pieces
+Karpati theme
+Cyclic use of pieces
+Obezyan'ya tema
+Van Der Ven blend
+Anti-Hamburg
+Reversal 2x
+Masked line
+Change of moves functions
+Double Holst
+2 self-blocks
+Bishop's self-block (4x)
+Svitek theme
+Imitative Knight
+Movement of the intersection piece
+Hannelius (double threat)
+Turton black and white
+Reciprocal capture
+Emil-Lukkonen-Thema
+Brunner-Dresdner
+Theme A black
+Black Loyd-Turton
+Single or double step of white pawn (2x)
+Paalanen theme
+Cycles of defences and mating moves
+Sedej cycle
+Changed pin
+Reciprocal threat correction
+Capture-Indian theme
+Symmetrical setting
+Kubbel Holzhausen
+WS-sacrifices
+Barulin's Line Combination
+Passive sacrifice (2x)
+Hiding of black forces
+Royal Reflecting Zebrarider
+Mirrored
+Gnu's tour
+Checks of white king
+Duel (rook against pawns)
+8 pure ortogonal indirect pins of BR
+Task record (5x)
+Hybrid problem
+Cross wR
+Unsound (duals)
+Anti-Cheney-Loyd
+Sacrifice wQ and wS
+Echo sacrifices
+Straitening
+White self-unpinning
+Artificial Castling
+Okapi wheel
+Version of Sergej Osincev, 2016
+Anti-Levman (2x, solution)
+Mate avoidance
+The original cicle
+Lock Indian
+BK triangle
+Switchback (B, with captures, 1)
+Indian black and white
+Schluter theme
+Hartmut Laue theme
+Consecutive White To Play
+Ambush, Mate Transfer
+Metzenauer Treff-point
+En-passant-capture Indian
+Chase theme
+Theme D
+Knight pseudo soliloquy
+Draughts Kings
+Black self-pinning
+Pin-unpin (black)
+Cyclic change of mating piece
+WB13 + BB6
+Battery combination
+Self-block bQ
+Extended Black King Star
+Szoghy theme
+Umnov move
+Model & ideal mate
+Extended cross White King
+T-L-Schuetze
+Pseudo-Zabunov
+Distant self blocks
+Board 12x12
+Pawn single/double step
+Hoeg-pericritical defence
+White Holzhausen (tries)
+Anticritical
+S-tour
+Choice of maneuvre
+Thrird-battery
+Masked battery abandonment
+Accumulation
+Tempo move (black/white)
+Bicolor FLM
+Separation of Set-mates
+Peri-critical Novotny
+Ideal mates on same square
+cycle double mates tvice
+White-black Bristol
+Attraction sacrifice key
+Flght giving and sacrfifice key
+Radical changed of defence motives
+Mates on same square (e5)
+thema Tura
+Black correction (3rd degree)
+Shortmates
+Opposition play
+Indirect self-unpin of White
+Visserman idea
+Anti-paracritical
+Football r
+Changed ideal mates
+Two tasks in one
+Reciprocal motifs
+Long-trip (B, 3) × 2
+Double threat reappear as mates
+Switchback partial
+Barthelemy theme
+Herlin Pendulum
+Rovno theme (R-r)
+theme of Rupp
+Pseudo Reversal
+Makihovi- Ellerman theme
+Dual avoidance in refutations
+7 pure selfblocks
+Black-white square clearance
+Task (13x)
+Place
+10 indirect guards (9 pure)
+Bayersdorfer theme 2
+Self-pinning (3rd degree)
+Nietvelt attack
+Holzhausen¨
+Regressive refutations theme
+Model mates (Kc5, Kd6)
+Feather maneuver
+Total parade
+le Grand analog for the secondary threats
+Dombrovkis paradox (1x)
+Karsch theme
+Cyclic vacation sacrifice
+Area clearance
+Ser-s-castling (AP)
+Anti-Hamburg theme
+Reversal order
+Change of negative motives
+2 Unpinnings
+Peri-Zepler-Turton
+Cycle of double motives against 2 threats
+WhiteTransmutedKing
+B/W Seeberger
+Schiffman 2nd form
+Hannelius (double)
+Consecutive correction
+Altschul theme
+Maximum mates
+Provoked
+Single-sguare mechanisms
+Interchange of Black Rooks
+Cycles triple and double threats
+Anti-Schiffmann 2
+Neutral Berolina pawn
+Annihilation of black figures
+Reciprocal treff-point
+Loyd clearance (3x)
+Captured flight
+Wurzburg Plachutta
+Baruln (B)
+Square clearance (3x)
+Cyclic mating permutations
+White constant theme
+Missing white tempo
+Gnurider hopper
+Threat Cumulation theme
+Margarida theme
+Duel B/B
+8 pure prospective unblocks by BB
+Taxi
+Dombrovskis sixfold
+Zever's idea
+1st moves on same square
+Selfblocks by pawn moves
+Peri-ambush key
+Hydra-Circe
+Unsymmetrical key
+Anti-ciritcal key
+Sacrifice wR & wS
+Fight taking key
+Trebuchet
+Albert H. Kniest theme
+Echo stalemate
+Brennpunktverlagerung
+Strategically neutral promotion
+Asymmetrical position
+Oktet theme
+Cycle of moves white
+Anti-Levman with changed colours
+Lock Roman
+Double S-S promotions
+Burkhardt Karlstrom
+Switchback (Bishop)
+Indian like
+Degradierung
+WK-maneuver
+Schneider interference
+Amen corner
+Mibilisation
+Endgame K+P-K+S+S
+Chech avoidance
+Theme Dimitrov
+Draughts men
+6-fold consecutive black self-interference
+Snake theme
+Pin-unpin (white)
+Interference through the BS
+Zackmann theme
+Self-block of the same square
+Fuehrer (preventive)
+Cyclic change of squares
+Battery creation (2x)
+Full cycle of wQ-squares
+Anti Finnish Novotny
+Reeves
+Model & ideal mates
+Extended Le Grand
+Castling paradox
+Taale theme
+Pseudo-Zhuravlev combination
+Pawn Soliloquy
+Anticritical defences
+NorskSjakk
+Choice of tempo-maneuver
+Urania triple
+Duel wK/bK
+Active / Passive sacrifice
+Change of defence
+Levman defences
+Zugzwang Roman (2x)
+Bicolor Goethart
+Sequence Black correction
+Peri-critical Plachutta
+Ideal mirror mate
+White-black Clearance
+Same black square
+Mosaic bKc6,wRf3
+Complete Jurasevic cycle
+Mates on same square (Poveneckaya tema-1)
+Thematic content
+Promotion tries
+Decoy white pawn
+3rd Pin/Battery
+Shunting manoeuvre
+Cycle of white pieces moves
+Visserman type
+Anti-paracritical move
+Mutual selfblock (white)
+Changed masked battery
+Two white Kings
+Anderssen (c)
+Long-trip (q, 3)
+Double threat split into key + mate
+Capture flight (Q)
+Switchback white
+Piatesi theme
+Differentiation of threats
+Bartolovic
+Somov II
+Hermanson theme
+Cooked (Gustav)
+Gavrilov Pickaninny
+Pseudo Robert
+Makihovi-Robert theme
+Dual free
+7-King Battery play
+Task (15x)
+Place exchange (bicolor, B-k)
+Isaev (special form)
+Cyclic half-defences and mates
+10 pure withdrawal guards by BQ
+BB pin mates
+Night watchman task
+Model Mates in corners
+Feather Mechanism
+Chameleon
+Total Shedey cycle
+Quadrupel avoidance
+Bonus Socius 2 times
+Stavrinides theme
+White queen phoenix
+Ser-Z
+Grimshaw (6x)
+Variables
+Anti-Hannelius
+Masked Pelle move
+Flight giving and self-pinning key
+Line opening (3x)
+Double Indian theme
+2-stroke steps
+Pericritical
+Immobilisation of white forces
+Cycle of double threats and mates
+Defences on same square (g4)
+Hannelius (form of defences)
+Consecutive deflection
+Rook's carousel
+Employment guidance (b king)
+Black Pawn's Essences
+SingleBox
+Padulli type
+Cyclic alternation of moves
+Seeberger R/R
+Four-fold check
+Correction add Black Pawn a3
+Annihilation of black force
+Capturing Grasshopper
+Kubbel-Grimshaw
+Passive victims of white figures
+Hierarchic tries
+Cyclic motifs
+RoyalDynasty
+Misteski theme
+Remote Novotny
+Duel B/S
+8 pure prospective unblocks by BS
+Blockbeugung
+Play on same square (f5)
+Jerrard theme
+Sacrifice, self-pinning and unpinning key
+Clearing sacrifices
+Queen's selfblocks
+Breuer-Kreuz
+White selfblocks
+Old German school
+Cycle of pieces
+Vertical cylindric board
+Anti-Loshinski magnet
+Riga
+Mate on flight square
+Flights taking key
+Changed batteries
+The same tactics for Black and White
+Reciprocal defence degree
+Locked
+Indian with two locking pieces
+Delayed FLM
+WK6
+Para-critical defence
+Hartong on d5,d4,d3,f3,f4
+Consequent Maximummer
+Amen Corner theme
+Michel theme
+Pseudo Fleck
+Knight star
+6-fold Vladimirov theme
+Pinijning
+Magic Kings
+Draughtsmen
+6th degree black correction
+Black square clearance
+Social distancing
+Cyclic change of three defence motifs
+Zagoruiko (4-phase)
+Battery creation (4x)
+Self-blocks on flight squares
+Neutral Royal Pawn
+Unblock × 2
+Anti Hamburger
+Model echo chameleon epaulette mates
+Extended pure round trip
+Psevdo dvuhhodovka
+Lancer
+Distant self-block × 3
+Staircase (King + Rook)
+HOFT
+K-battery
+Cyclic self-interference
+White Indian
+Sackmann (c)
+North
+Grasshopper-6
+Urania x 4
+anti-Dombrovskis fourfold
+Masked Bivalve
+Zugzwang selfblock Roman
+2 flights giving one taking key
+Bicolor Grimshaw double
+Sequence reversal II
+Cycle double secondary threats
+White-black intersection
+Same end position
+Complete Kiss cycle
+Triple mates cycle
+Mates on square white pieaces
+Einwendiger Treffpunkt
+Broecker-Schema
+Thematic dual
+Black correction (4th degree)
+Anti-peri-critical move
+Roman theme (3x)
+Forced Black self-obstruction
+Reciprocal moves
+Long-trip (R, 3)
+Switchback+
+Difficult solution
+WR-sacrifices
+Sorokin constant
+Weisse Selbstbehinderung
+Royal battery double
+Checking and flight taking key
+Theme WCCC 2006, Wageningen.
+Pseudo Rukhlis
+7th Azemmour theme
+Task (27x)
+Place exchange (bicolor, R-q) × 2
+Isaev 2
+Cyclic Hanneius
+Cross (bR)
+Rehm mechanism
+Sacrifice for a tempo
+Model mates in the actual game
+Chameleon Battery play
+Track laying
+Additional defences
+QuadrupelChess
+Cyclic white mates
+White queen promotion
+Servais theme
+Grimshaw (black)
+Reverse order of visited squares in b)
+Change of order
+Tertiary correction of mating move
+Line opening by annihilation
+25-leaper
+Swallow form
+Pericritical attack
+Defences on same square (g6)
+Wild bishop
+Schiffmann (4x)
+Muleblock theme
+Amazon
+Meerane
+Brunner-Wurzburg-Plachutta
+Theme B (Somov)
+Doubled AB-BA
+4th degree white correction
+Black Phoenix
+Palatz
+Vorausverstellung
+Anti-self-interference
+Seeberger Roman
+neutral Boat (= Rook + Pawn)
+UltraSchlagZwang
+Reciprocal white moves
+Pseudo-Cheney-Loyd
+Kuchler theme
+Distamt move wQ
+Wurzburg-Plachutta Q/Q
+Square clearance by both white bishops
+Passsive sacrifice
+White correction (2 pieces)
+Ruchlis
+Mari (White)
+8 pure unblocks by BS
+Blocking all squares of bSe5
+Chameleon Queen
+Play on same square (g3, g5)
+Dombrovskis, Meredith
+1° Bayersdorfer theme
+Bi-coloured Bristol (2x)
+Peri-anti-critical decoy
+Hyvinkaa theme
+Cross-checkes
+Anti-Costachel theme
+Mongredien theme
+Queen's square
+Echo variations
+Kievskaya
+Dabbaba
+White selfblocks (g5)
+Asymmetrical solutions
+Sheltering theme
+One threat Novotny
+Half a move
+Cycle of playing pieces
+Vertical mate
+FLM
+The theme of Zalokockogo
+Lockout
+Switchback (K, captureless, 1) × 2
+Indian with waiting move
+Delayed promotion
+Balken theme
+Schnoebelen (3x)
+Para-critical Indian
+Constant chess
+Twin Zagoruiko
+Mihajloski theme
+Pseudo Hannelius
+Entire forces
+Theme E2
+Pseudo Holzhausen
+Magic squares
+6th degree white correction
+Sola-Schiffmann defence
+Interposition
+Cyclic change the color moves
+Zagoruiko (5x2)
+Function change of white moves
+Critical decoy (2x)
+Anti Indian
+Extended Rukhlis
+Large and small squares of white rook
+Holland mate alteration
+K-Grimshaw
+Cyclic self-interferences
+Anticritical tries
+Norwegian Herpai
+Gravure
+Choice of the second move
+Vacancy square
+Masked gate opening
+Duel WS
+Change of flight squares
+Tempo moves of black King
+Double Bristol
+Zuk
+2 flights giving, one flight taking key
+Mosaic wKd3, wSf2, bKf5
+Allumwandlung (neutral)
+Rank chameleon echo
+Mates on the original squares of the mating pieces
+Ekstrom theme
+Thematical double threats
+King's Dresden theme
+Black correction 3rd degree
+Indirect unpin
+Cycle of wQ-squares A-BC B-CA C-AB
+Vissermann changes
+Anti-pericritical
+Mutual white Grimshaw
+Changed mate; half-battery, white
+Long-trip(s,3)
+Double threats
+Switchback, black
+Pickabish double
+WR14 + BB5
+Wheel
+Gemini
+Themeless Theme
+Maleika Blend
+Dual major
+Task (4)
+Isaev half-masked (A)
+Zebrahopper
+10th Kluver theme
+BB Task (7x)
+Unpinning (3x)
+Anti-Anderssen
+Rehm theme
+Sacrifice Indian
+Model mates on same square
+Fekam (Fers + Camel)
+Chameleon Bishop
+Transfered 2nd and 3rd white moves
+Le Grand Fivefold
+E
+Perfect half-Novotny
+Kassel Idea
+White queen rectangle
+Area clearkeeping wP
+Set play contradiction
+CirceDoubleAgents
+VaultingKings
+Anti-Hochberger
+Reverse pawn
+Tertiary correction of threatening and mating move
+Primary and secundary Banny
+Double Knight
+2x2 Switchbacks
+Swallow theme
+Defences on same square x2
+B2 (4x)
+Multi-intersection
+Consecutive Holst over promotion
+Turton Trilling
+Amazon theme
+Rook+Nightrider
+Theme B mate
+Prytz theme
+Klasinc theme (bk, type 2)
+4th WCCT theme
+Sirene
+Interchange of pieces
+Anti-Shedey
+Seflblock Roman
+Neutral Camel
+Four-Pin-Way theme
+Correction of mating move (set)
+Umkehr-Verstelltreffpunkt
+Reciprocal White underpromotion
+Loyd-Turton Antiform
+Kurt Laue theme
+Pater noster
+Hjelle
+White correction (3 pieces)
+Mixed interference
+Remote selfblock (3x)
+Mari doubled
+Duel bK-wK
+Blocking of a piece
+Dombrovskis-Lacny
+Zielfeld f4
+1° Kluver theme
+Bi-coloured Brunner-Turton
+Selfpin avoidance
+Untiing of white queen
+Sacrifices on same square
+Monitor theme
+Filght giving key
+Albino (super)
+Queen-Pawn Grimshaw
+Leofamily
+Echo, Turton
+String theme
+Promotion (BS, 2)
+White to move
+Black - white line clearance
+Sherlock Holmes story
+One way Novotny
+Vertical Mobius
+Anti-Loyd
+Rodovre theme
+Florence Mate
+Reciprocal Dombrovskis
+Butterfly
+Switchback (K,KQk)
+Indian, pericritical
+Hartong x10
+Constant P's
+Amnesie
+rotation 2-3 moves
+WCCT 7 theme
+Anticipated interference
+Rotterdam theme
+Epaulet pawns
+Check avoidance key
+Pseudo Indian
+Dresden Brunner
+Sola-Schiffmann theme
+Zagoruiko (quasi)
+Battery disability
+Neutral Zebra
+Undecuplet
+Anti Levman
+Reflecting CamelRider
+Extended selfblock
+Lark
+Distant underpromotion
+Pawn-play
+K/G battery
+White interference QP
+Sacrfice key (double)
+Norwegian Novotny
+Anti-domination
+Change of floor-mats
+Tempo moves of the black king
+Lindner theme
+2 flights givng and sacrifice key
+Cycle double threats (Fivefold)
+Author's first opus
+Flight giving ad sacrifice key
+Complete Laitinen
+Triple Treff-point
+Reappearance of 2nd moves as mates
+Theme 1 wcct
+Defences on the deserted square
+Black correction cyclic
+Orlimnot 2
+Forced stalemate
+Twofold Turton doubling
+Long-trip(S,4)
+Capture giving flight
+Switchback-pseudo
+Pickabish-Novotny
+Kontrawechsel, doubled
+Direct & Indirect mates with same move
+Wrong diagram?
+white - Q+RR, black - BB+SS
+Anticipatory line-clearance
+Royal Bishop
+Mirror 30772
+Checking key (b)
+Theoretical draw
+Maleika theme
+Plachutta (2x)
+Cyclic Herpai
+11 variations by BQ without checks
+Selfblock (2 squares, 2 pieces each)
+Nightrider star
+Horizontal mate
+Unpinning (a - indirect, b - direct)
+Anti-Anderssen mate
+Rehm-Lacny theme
+Transfered continuation
+After key
+Quadruple check
+E.W.W.W. theme
+Boris
+Cyclic white unblocking moves
+White Roepke
+Area paracritical maneuvre
+Set Stalemate
+Ve tors
+Reversed Treff-point
+Masked R-maneuvers
+Change of pinning
+Tertiary correction of threatening move
+2° Bayersdorfer theme
+BIT2011
+Swastika
+Inclusion
+Defences on same squares
+Wild rooks
+Schiffmann 3
+Multi-mate theme
+Hannelius cycle 4-fold
+Consecutive Indians
+Turton Zepler
+En passant (10x)
+bS star
+Przepiorka Unpin
+Klasinc theme (SK, type 2)
+Doubled Grasping purpose ("Doppelter Greifzweck")
+5 Black interferences
+Black Pseudo Umnov 1
+Six black-and-white maneuvers is gone-came
+Interchange of place of black pieces
+W-B- interference
+Anti-Somov
+Neutral Equihopper
+Annihilation of guards
+Reciprocal White underpromotions
+Loyd-Zepler
+Exchange of function
+Symmetry AntiCirce
+Pseudo-Hoeg 90°
+Kuzhaev-Fleck
+Square clearance sacrifices
+Hjelle theme
+Cyclic Odessa theme
+White correction (3rd degree)
+Goethart theme
+Mari half
+Duel bK/wK
+9 pure indirect guards by WR
+Blocking piece replacement (pr)
+Chameleon-Nightrider-Hoppers
+Play on same swuare
+Dombrovskys paradox
+Zig-Zag
+1° Orlimont theme
+Selfpin key
+Peri-anti-Turton
+Untiing of white rook
+Anti-critical defence
+Sacrificial clearance
+Alda
+Querquisite
+Echo-chameleon Battery play
+Bristol (4x)
+King and three knights checkmate
+Daisy theme
+Black active sacrifice
+Half Black baterry
+Cycle of second and checkmate moves AB-BC-CA
+VerticalMirrorCirce
+Changed checks
+Thema A dualvermeidend
+3-fold cycle of wQ-squares
+Indirect batteries
+Wotawa's idea
+Baluin (B)
+Schudel, Hans Jakob
+Denials-variants
+WP cross
+Paracritical defence
+Constantian Novotny
+WCCT6 theme
+Anticipated self-pin
+Roukhlis
+Epaulets
+Magna promoter
+7 black checks on flight squares
+Pinning (4x)
+Intersection
+Cyclic clearance sacrifices
+Battery long play
+Self-interference and 2 flights giving key
+Function change wBB
+Anti Levman King
+Extended star-flights
+Time-shifted Fleck
+Lars Larsen theme
+Distant wQ-move
+Board 5x6
+Kagan theme
+Cyclic shift of white moves
+White K-R Reciprocity
+Retro stalemate
+Duell
+Change of front piece
+Tempo moves of the black queen
+Line and square clearance
+2 flights taking and sacrifice key
+Bicolor intersection points
+Peri-Indian
+Ideal with pin
+White-black line openings (2x per Phase)
+Same promotions (Bishop)
+HalfNeutral Bishop
+Complete Rukhlis
+Reappearance of tries as mates
+Mates with a bunch of single black figure
+Elephant
+Brogi-Maleika theme
+Theme 10° WCCT
+Defences of all 8 black pawns
+Black double Cheney-Loyd
+Siamese Twins theme
+Orlimont 1
+Vladimirov (5x)
+Anti-pericritical tries
+Mutually changed promotion
+Fore-plan (double)
+Changed mates (5x)
+Twoliner
+Anderssen mates
+Double underpromotion
+Korolkov theme
+Direct an indirect battery
+Barulin (A) (2x)
+Sp. HM
+Partial Fleck
+Corner move (2x)
+White Anti Roman
+Royal Equihopper
+Mirror Chameleon echo mates
+Gerard theme
+Checking tries
+Third battery
+Manipulation
+7x8 Cylinder
+Dombrovskis (double threat)
+Zebu
+11 variations by WQ without checks
+Selfblock (6x)
+Horizontal Mobius
+Unpinning (black and white)
+Anti-annihilation
+Sacrifice key (6 fold)
+Model mates with Promotions
+After Simay-Molnar, Aladar
+Quartet
+Le Grand theme, special form
+setplay
+Octopus
+Classicus
+Anti-Holst
+Masked self-interferance
+Tertiary correction of threating move
+Proca
+Reciprocal change of function
+Swing
+Pericritical key
+Inclusion of a white queen
+Defences on the same square
+Willmers style
+Schiffmann attack
+MulticaptureChess
+Hannelius in the form of defences
+Rook-loop
+Mehanizm vektorov
+Pseudo anti-Indian
+Klasinc themee
+5 diagonal pins of WQ
+Black Queen's cross (10/12)
+Pin change, masked
+Segal theme
+Neutral Giraffe
+Four-Way-Play theme
+Correction threat with Sushkov
+Annihilation of the white pawn
+Labai
+Distant Grimshaw
+Square clearances
+Hochberger theme
+Cyclic overload theme
+Goethart white
+Mari paradox
+Duel black-white
+9 pure prospective unblocks by BQ
+Peri-Bristol
+Trial avoidance in solution
+Quiet continuations
+Echo-Manover
+Atomic Chess
+black and white mutual obstruction
+Shield (11x)
+Victims of black figures
+Roels theme
+FML
+Changed comtinuation
+Thema A effect
+Loewenton theme
+Thema A Sonderform
+Reciprocal double Zabunov
+3-steps stroke
+Camel circle
+Banny complex form
+Paracritical move
+Anchor squares theme
+Anticipated unpin
+Check giving tries
+Theme F2
+Pseudo Kiss cycle, complete
+Dresden theme (block)
+7 different selfblocks on flight squares
+Black underpromotions
+Pinning (5x)
+Intersection-Task record (11x)
+Self-interference bK
+Function change wR/wB
+Reflecting Queens
+Model ideal mates
+Extended white combinations
+CavalierMajeur
+Time-shifted Lacny
+Larsen
+Distant wQ-moves
+Board 7 x 8
+Stalemate both sides
+Cyclic squares
+Greater Leafhopper
+Chumakov Thema
+Retro-mate
+Tempo moves with promotion and Swithback
+Double checks (14 consecutive)
+Bicolor Mousetrap
+Supertransmuting King
+Peri-interference Roman
+Identical mating position
+white-black sintesis
+Triplets
+Elevator
+King's moves only
+4 distant self-blocks of the bRg8
+Black dual
+Rontgen Effect
+Myllyniemi form
+Changed mates (6x1)
+Type Pacific
+Double Valve
+Capture Jespersen-Cheney
+Sycle
+Direct and indirect batteries
+WS Star f1-e3-g4-f2-e4-g3-f5-e3-f1-g3
+Barulin (A) effect
+Corner stalemates
+White anti-block
+Anticipatory line-opening
+Plachutta (5x)
+Isayev
+Cyclic interchange of white moves
+Dombrovskis (in form of defences)
+Zeller trap theme
+11th WCCT theme
+Berger theme
+Selfblock (Bxe4, Bd6)
+Cross bR
+Unpinning (direct)
+Transfered mates cyclical
+Queen attraction sacrifice
+Sguare-vacation
+Octopus theme
+Grimshaw Roman
+Cycle of duals
+Flight giving move
+Tertiary Feldmann
+Line-clearance
+Bivalve (2x)
+Schiffmann defence
+Multiple check
+Hannelius secondary
+Theme B2 mates
+Pseudo Babson
+Doubled line opening
+Black Roman
+Skewer theme
+Interchange of W moves
+Anti-Somov A2
+Seider
+Fourfold checkmate cyclus
+Correction Y. Cheylan
+Umnov 1 and 2
+Reciprocally changed S-moves
+Exchange of Interference
+Batteries
+Cyclic Pin avoidance
+White double underpromotion
+Anticipatory square vacation
+NoBlackCapture
+CHeredovanie lozhnoj i dejstvitel'noj igr
+Remote selfblocks
+Duel bP/wK
+9 pure prospective unblocks by BR
+Tempo Anversois (20 variantes)
+Play on the same square (B3, 2)
+Domination theme
+ZigZag move
+2 critical moves on one line
+Bi-coloured Phoenix (4x)
+Iceland theme
+Crossing checks
+Unvisible symmetry
+Sacrifiece and self-pinning key
+First moves on same square
+Triangle
+Quiet key move
+Mate on self-block squares
+Bristol (pure)
+Sunflower theme
+Promotion (SS, 2)
+Black and White Roman theme
+Shield (8x)
+Anti-Loyd-Turton doubling
+Cycle of squares of threats and refutations
+Anti-Loyd-Zepler doubling
+Roepke
+Mutual anti-critical maneuvre
+Focal decoy
+Reciprocal exchange
+Switchback (R)
+Perpetuum moblie
+Indirect battery destruction
+Knight wheel (2x)
+Devalued deflection
+WQ clearing sacrifices on flight squares
+Paradewechsel
+Heinonen theme
+Anticipated unpinning
+Mined squares
+Check in diagram.
+Pseudo Kiss full cycle
+Dresden theme (Palitzsch type)
+7 flight squares
+Black Valladao
+Somov (B)
+Pinning and unpinning of white Queen
+Inverse move order
+Cyclic defences (ABC/ACB/BCA)
+Zagoruiko 3x2
+Neva theme in a circular form (2x)
+Undosund
+Anti opposition
+Reflecting ZebraRider
+Tangra
+Time-shifted Lacny, Shedey form
+Active sacrifice (8x)
+Board 7x7
+Kamikaze
+Cyclic support
+White King's Schiffmann
+Valladao (single unit)
+Retro-promotion
+Masked halfbattery
+Change of functions of black moves
+Line clearance of rooks
+Double Cheney-Loyd
+2 fllights taking key
+Ser-auto=
+SuperVariation
+Peri-Jespersen(-Cheney-Loyd)
+Igman theme
+Cycle of 2-3-4 moves
+White-black Umnov
+Same-named block and mate
+HalfNeutral Rook
+Triton
+Alternating b&w line-closure
+Reborn of promotions
+Mates with pinned white piece
+Bruch's Linienkombination (Grundform)
+Theme 3° WCCT/B2, example
+Defences on same
+Black duals
+Initial game array
+Cycle threats and mates
+Anti-Pickaninny
+Foreplan relay
+Changed mates 3x1
+Reciprocal of defensive motives
+Loshinski magnet, time-shifted
+Eternal maneuvering
+Special Comm.
+Partial self-incarceration
+White anti-Holzhausen
+Royal Grimshaw
+Mirror floor-mat
+7° WCCT
+BlackSuperTransmutingKing
+Cyclic interference
+Zepler Brunner Turton
+12 pure prospective unblocks
+Berhausen theme
+Selfblock (Re4)
+Nitvelt
+Unpinning avoidance
+Sacrifice of black pieces
+Chameleon echo play
+Ahues
+Stipulation pyramid
+Cyclical
+Shanshin cycle
+Grimshaw, black
+Clearance (of h2 and h-line)
+Cycle of evacuation sacrifices
+Vectors (6x)
+Anti-Ianovcic theme
+Flight into battery line
+Line-clearing Loyd
+Bivalve (bB-wR-bR)
+Incomplete block-change
+Multiple dual
+Twente
+Ambush (bR)
+Rookhopper
+Theme B2, 2° WCCT
+Doubled Roepke theme
+Waiting moves
+Seider theme
+neutral Gryphon
+Fourfold pin
+Umnov 1 theme
+Annihilation white
+ReciprocalMutate
+Luukkonen theme
+Pseudo-paracritical
+Lacny 3x3
+Distant move bR
+Batteries with wPP
+Square clearing e3
+Hoeg critical move
+White Dresden theme
+Good-bad-defence
+Duel bP/wS
+9 refutations by promotion
+Change foreplan - mainplan
+Tempo check
+Play on the same squares
+ZigZag-Indian
+2 flight captures
+Peri-clearance
+Anti-critical move (white)
+first task realisation
+Coloring problem
+AliceChess
+Echo-Stalemates
+Bristol (threat)
+Dame/Springer-Schutze
+Black anticipatory interference
+Shield (9x)
+Onemover record
+Half Grimshaw
+Black B-star
+Shift of focus
+Cycle of the black combinations
+Vilka
+Roepke (3#)
+Mutual B/S-block (square g3)
+Changed continuations theme in 3 variants
+Reciprocal Holst
+Logical Maximummer
+3-stroke steps (2x)
+Cannibal Chess
+Switchback (r, captureless, 1)
+Persecuting Umnov
+Indirect battery mates
+Devalued self-interference
+Banny distributed
+Wechsel-Nightrider
+Anticipatory attraction sacrifice key
+mini-maxi selfmates
+Theme G, doubled masked form
+Pseudo Lacny
+Drilling
+7 king flights
+Inverse third degree theme
+Cyclic double mates
+Zagoruiko 3x3
+New continuation
+Unguard mates
+Anti Plachutta
+Reflex
+Model mate with pin
+F (Sonderform)
+Ceara theme
+Time-shifted Reciprocal change
+Pure round trip (Q)
+Djurasevic theme
+AntiPatrouille
+Sacrifice and check provoking key
+Novotny (4x)
+Chumakov theme (qp, 2, 1)
+Valladao cycle
+Masked Herpai
+Durasevic
+Double cross-checks
+2 functions' changes (2nd x 3rd moves)
+Big bR cross
+Ser-dr#
+Peri-Loyd-Turton
+Illegal Cluster
+Mosiaschwili combination
+Hallstrom-Novotny
+Completion the position
+Troitsky theme
+Alternating knight
+Elimination of masked checks
+4 flights taking and 1 giving key
+Initial release
+Cycle total defences in 4 phases
+Anti-Plachutta theme
+Secondary Le Grand
+Foreplan-Indian
+Changed mates 3x2
+Ubiubi
+Anderssen-promotion-mate
+Capture of black force
+Symbolics
+Piece force sacrifice
+Direct mates
+WS wheel (7/8)
+Hesitation line clearing Loyd
+White Anti-King's Schiffmann
+Anticipatory masked interference
+Giegold style
+Third-battery creation
+Pseudo Turton Brunner
+Mansfield Couplet
+Dual threat
+8 flight squares
+12 recapture mates
+Selfblock (Re4, e5)
+Unpinning in 4 phases
+Sacrifice of different units
+Fencing
+Transferred 2-3 moves x2
+Queen pseudo Soliloquy
+Le Lionnais theme
+Echo change between selfblocks and flights
+Keller theme
+Cyclical blocks
+White Rudenko paradox
+Clearance motion
+Vectors cycle
+Masked self-pins
+Flight king star double
+Change of promotion (2x3)
+Reciprocal change of promotion
+Double phoenix
+Pericritical seducement
+Incomplete block-threat
+Schiffmann defence 2nd form like
+Twente theme
+Ambush (Hoeg)
+Root-25-leaper
+Theme B2, 3° WCCT
+Klinke Treff-point
+Doubled Wurzburg-Plachutta
+Anti-Switchback
+Seilberger interference
+Fourfold uncapture
+Annihilation × 3
+Exchange of move effects
+Castellari-Mari theme
+System choice
+Pseudo-Pickaninny
+Distant move wB
+X-ray-effect
+Blocking Sd4, Sf4
+Square knights
+Pawn Bristol
+Hoeg periciritcal move
+Gooderson
+Threat unsound
+Remove a piece
+Duel bP/wS+wK
+Change defensive motif
+Tempo Cheney-Loyd
+Pni mate
+Donati
+2 flight captures key
+Semi-reflexmate
+Anti-critical move wR
+Monreal Peugeot theme
+Fisher-theme
+Combination attraction-diversion
+Triangulation (2x)
+All black pieces are moving
+Quiet moves
+Letters, Pinmates
+Material
+Echoes on d-line
+Bristol avoidance
+Super Durbar theme
+Promotion cycle
+Material transmutation
+Eclipse theme
+King hunting
+Cycle of threat and two mates
+Fokin
+Changed continuaton
+Double Step Chess
+Switchback (S)
+Peter Kniest theme
+Indirect battery play
+Devalued staggered deflection
+WQ promotion
+Anticipatory battery creation
+Round-trip
+Epaulette stalemate
+Check provocating key
+Mai 1
+Drohzuwachse-Lenkung
+7 Promotions
+Somov (B1) (2x, try)
+Inversion of moves
+Zagoruiko 3x4
+Battery play with interference
+Self-interference trap
+Holst over promotion
+Critical move bR
+Anti push off
+Ceder
+Time-shiftes reciprocal change
+Active sacrifice (black) × 2
+Pure round trip orthogonal and diagonal
+Dmbrovskis effect
+Board 8x6
+Cyclic transfered mates
+White magnit
+Novotny (5x)
+Greek Plachutta
+Chumakov's theme
+Valladao refutations
+Anti-Gamage themes
+Masked Indian
+Durasevic theme
+Flight giving and 2 taking key
+Change of guard
+Preparing an Anderssen-mate
+Double cutoff of both black rooks
+2 more flights giving
+Support mate (2x)
+Cycle of 3-4 moves
+White-To-Play-Indian
+Halpin ceartion
+Compressed Ideal Rukhlis
+Alternating line-closure
+Theme 4° WCCT 1989-1992
+Proof game, Fairy
+Defences on same square (3x)
+4 flights taking key
+Innaccessible passage theme
+Vladimirov theme (6x)
+Anti-Pronkin
+Rook locust
+Name?
+Changed mates 6x6
+Reciprocal pins
+Loshinsky magnet (4x)
+Capture of black piece
+Symmetric positions
+Piece sacrifices
+Kraemer-Thema
+WS wheel (second moves, non-checking)
+Specific battery
+Passive and active sacrifices of black pieces
+Hesitation Meta-Indian
+Corner to corner (3x)
+White anti-Plachutta
+Mirror mate (1)
+Checkmate by every white piece + ph7
+Pseudo Tver
+Ivanovo
+Zepler theme
+Selfblock (Rxc6)
+Cross of St. Peter
+Anti-battery (self)
+Sacrifice of white and black knight
+Fernblock 2
+Chameleon echo tries
+Leave-take theme
+BQ rosette
+Cyclical change of four second and checkmate moves
+Sharp theme
+Velikhanov theme.
+Change of protection
+Reciprocal change of selfblocks
+Double pin change
+Inderect pinning
+Schiffmann form 2
+Consecutive sacrifices
+Ambush (r)
+Bukovina (inverse)
+Changes mates;
+Theme B2-mate
+Pseudo castling
+Kluver 10 theme
+5 Models with 4 pin
+Skylla
+Anti-Turton black
+Seilberger theme
+Fourth-pin
+Cosmos theme
+Umnov 2 paradox
+Annihliation-Cheney-Loyd
+Reciproce Moves of White
+Castellari-Schor theme
+Pseudo-symmetry
+Lacny 6-fold
+Blocking the same square
+Square obstruction
+Pawn defences
+Hoeg pericritical defence
+Anticipatory unpinning (white)
+Nolcken Theme (3x)
+Gosman-Seneca
+Chess painting
+Remove of 2 obstacles
+Duel bQ/wQ
+Jonsson cycle
+Donati (2x)
+2 flights changing key
+Seneca theme
+Peri-critical ambush move
+Ideal echo stalemates
+Urania (Qd2-g5)
+Salazar (2x)
+Five-Knight mate theme
+Combinations in tries
+All model mates
+Attack on same square
+Monreal-Longwy theme
+Fkight giving and taking key
+Tries and key on same square
+all-sacrifice
+Mates from four directions
+Eclipse theme (3#)
+Super Tura theme
+King long star flight
+Davaine theme
+Black bishop tour
+Anti-Monreal theme
+Rohr
+Fokin theme
+Changed contiuations
+Thema E Blockform
+Logical try
+Switchback (S, captureless, 1)
+Knight's giant leap
+WQ quadrate
+Banny-like
+Paradox Holzhausen
+Anticipatory bicolor interference
+Round-trip (rectangle, rhomboid)
+Epaulette stalemates
+Drumare theme
+7 pure diagonal indirect pins of WB
+Black-White Brunner-Turton
+Pinning of white queen
+Battery play x 2
+Neyman (or Neuman) type
+Gamage 2
+Holst over promotion (2x)
+Uniform
+Anti Salazar
+Ceder (3 interfered lines)
+Active sacrifice of white Q
+Pelle mov
+Kardos type
+Cyclic transference
+AntipodeanAntiCirce
+Novotny (g2)
+Grid board
+Anti-Gamge, Type 2
+Retrostalemate avoidance
+Masked indirect battery
+Flight giving and 3 flights taking key
+Change of intersectionpoint
+Tempo rundlauf
+Preparing an Anderssenmate
+Double Cycle
+2 Orlimont theme
+Illegal promotion
+Cycle of Andernach Switchbacks
+White-white interference
+Avoidance of adverse check
+Mouse trap
+Conditional Pins
+Try play
+Reciprocal Anderssen interference
+Elimination of obstructive mass
+Brunner Turton
+Theme 6° WCCT
+Proofgame of the future
+Defences on same square (6x)
+Double WB star
+4 models with two pins
+Black Holst
+Vladimirov theme consecutive
+Anti-Quintuple theme
+Secondary Novotny Q/B
+Nanning theme
+Changed model chameleon echo mates (3x6)
+Reciprocal play
+Capture of selfpinned piece
+Direct self-interference
+WS wheel 5/8
+Specific change functions moves
+Passive annihilation
+Hesitation theme
+Corners
+Anticipatory Phoenix
+Checkmate cyclus (AB - BC - CA - AB)
+Rehmer, reciprocal
+Dualfree
+8 ortogonal indirect pins of WP (6 pure)
+Task (big size)
+Ivanovo Theme
+Zepler Turton
+15-leaper
+Berlin theme inverse
+Selfblock (Sf4, Se3, Sf3)
+Cross patch theme
+Unpinning of black Queen
+Ahues mechanism type 3
+BQ self-blocks
+Peri meneuver
+Cyclical checkmates (AB - BC - CA)
+White Schiffmann
+Cycle of functions
+Flight Taking
+Change of roles
+Than theme
+Reciprocal change of threats
+3 flights giving 1 flight taking key
+BK cross almost(3 flights)
+Pericritical try
+Schiffmann inverse
+Multiple intersection points e5, f4, g3
+Palitzsch-Dresen theme
+Meta Cheney-Loyd
+Changing function
+Pseudo critical move
+DoubleTibet
+5 Promotions
+Black self-block
+Cyclic block
+Anti-Turton doubling
+Selectiv separation
+Reconstruction of position
+Pseudo-threemover
+Lacny like
+Yaroslavcev theme
+Cyclic Pseudo-Le Grand
+Anticipatroy interference
+Rundlauf (3x)
+Nolcken theme (5x)
+Renaud theme
+Martin
+A change of subject
+PointReflection
+Jonsson cycle (2x)
+Doppelzugschach
+Zilahi active
+2 flights ging and ambush key
+Bicolor anti-Bristol
+Peri-critical attack
+Ideal echo try
+Urania (Sf4)
+2 flights giving 1 taking key
+Anti-critikus
+Monreal-Michel theme
+Combinative separation of 4 threats
+Mates in 4 corners
+Super Urania
+Promotion on 4 coherent squares
+Virtual Gavrilov Pickaninny
+Anti-Moscow theme
+Rohr battery
+Mutual change of squares
+Foldeak theme
+Thema F
+Twins substitution
+Andernach Zilahi
+Logocal problem
+Capture
+Switchback (w1 & w3)
+Petrovic Task
+Diagram Switchback
+WQ sacrifice
+Bannyi
+Paradox Latvian Plachutta
+Constrution of a legal position
+Anticipatory bivalve
+Roundabout
+Check provocation 2x
+Theme Indian
+Majeurspringerlicher Bauer
+7 pure indirect diagonal pins of WS
+Black-white half-battery
+Tanielyan theme
+Zahvala za sudelovanje
+Battery play, Mutate
+Nice Problem
+Holst-Phoenix
+Critical moves (2x)
+Unit Grimshaw
+Anti Seeberger
+Refutation reduction
+Ceder (triple)
+Torngren theme
+Active sacrifice of wQ
+Pure Swallow
+Dobbs theme
+Board 8x9
+Cyclic trial avoidance
+AntipodeanCirce
+Sacrifice and unpinning key
+Novotny (threat and real play)
+Valuska theme
+Masked indirect half-battery
+Durbar (2x)
+Tempo sacrifice
+Preparing an Andersson mate
+2 Passive capture flights
+Peri-meneuvre
+WhiteEdgemover
+Avoidance of perpetual check
+Alternating threats
+Reciprocal anti-Bristol theme
+Prositional draw
+Defences on same square (b4)
+Double weakening theme
+4 pure prospective unblocks by BP
+Similar movements
+Cycle turns white
+Changed model mate
+LosingChess
+Pieces wreath 3x4 f5h8
+Direct self-unpinning
+WS wheel 6/8
+Spike
+Passive Annihilation black and white
+Hess theme
+Corners Model matt
+Cyclic interferences
+Give and take sacrifice key
+Threat = secondary threat = mating moves
+Relayed foreplans
+Many ways (K, 2)
+8 pure diagonal indirect pins of WR
+Task (Four mates by a line-pinned Rook)
+Platzwechsel (3x)
+Ivanovski theme
+16 dual free captures
+No orthodox pieces
+Hronec theme
+Unpinning of white queen
+Sacrifice peri-Bristol
+Peri Zepler Brunner Turton
+Progressive increase of defensive motifs
+Aristocrat, Ideal mate
+Sheck
+Gryphon
+Veliky defence
+Anti-Latvian Nowotny
+RexInclusiv
+Change of second and third white moves
+The alternation of mats
+Double pin-mate
+3 flights giving and 1 taking key
+BK flight
+Perikritical decoy
+WK rosette
+Schiffmann like
+Multiple mutual zugzwangs
+Haring theme (#3)
+Twin by board rotation
+Rope theme
+Meta Indian
+Changing functions of white piecies
+Theme Balken
+Pseudo cycle
+5+ flights giving key
+Black self-blocks
+Interference cycle
+Wazir king
+Anti-Zepler doubling
+Neutral Nightrider
+Umnov chain
+Antelope's tour
+Rectangle round trip
+Mlynka-theme
+Lacny theme
+Blocks on 6 squares
+Cyclic PW
+White Grimshaw (2x)
+Non castling
+Threats reappearing as mating moves
+Duel bR/wR
+Polish Rukhlis theme
+Jugoslawische Studentenmeisterschaft
+Zilakhi

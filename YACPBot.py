@@ -4,48 +4,52 @@
 
 ### TODO LIST:
 
-#   * Detect when a problem doesn't have a solution, or when its solution isn't in Popeye Output Format. (Figure out how to call the file, because Python is being annoying and can't seem to find it.)
 #   * Consider reformatting/trimming long solutions.
-#   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
-#   * Comment code better; you've changed it quite a bit since last time.
-#   * Add some check for fairy problems??
+#   * Check properly if code is commented well enough
+#   * Add some check for fairy problems when newesting or searching
 #   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920)
 #   * Allow a way for the person who typed a command to delete YACPBot messages.
+#   * Check for bugs with Popeye Output Format parser
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
+#   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
 
-
+#   * REFACTOR ENTIRE CODE SO THAT IT WORKS WHEN DISCORD NO LONGER ALLOWS READ MESSAGE COMMANDS
 #   * Figure out why the bot is so slow (and what can be done to speed it up). (This is probably because calling YACPDB's API is slow, but I'm not 100% sure on this; using MongoDB from below might help.)
 #   * Download the entirety of YACPDB and load it into MongoDB. Find some way to sync it. Use MongoDB's API instead.
 #   * Cache "Recent Changes" to file so as to not put too much pressure on YACPDB's server.
 
 #   * Fix y!search bug involving some sort of web encoding error (e.g. `y!search Matrix(“bSa8”)`)
+#       * UPDATE: This is not really a bug, people just need to learn to use symmetrical quotation marks ("") instead of asymmetrical quotation marks (“”); still probably needs some usability correction though.
 #   * Improve y!search functionality to give something OTHER than just the first result. Maybe try reverse chronological order?
 #       * Add exception for if there are no search results.
 #       * Else: Add a y!random command, or maybe make y!search return a random result.
 #   * If possible, deprecate y!newest? Or alias it to y!search?
 #       * Else: add failsafe for if YACPDB has too few new problems for y!newest (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
 #   * Find hosting solution: Repl.it / your own computer aren't permanent solutions and both require you to be online.
-#   * Add other sources for problems (e.g. PDB, (Lichess, Chess.com, ChessTempo) (these last three are sacreligious))
-#    * Since you're probably going to be putting the bot on other servers at some point, consider translating stipulations?
+#   * Add other sources for problems (e.g. PDB, EG Didok, (Lichess, Chess.com, ChessTempo) (these last three are sacreligious))
+#   * Since you're probably going to be putting the bot on other servers at some point, consider translating stipulations into English? (e.g. "White to mate in two" instead of "#2")
 
 ### BUG + QOL LIST:
 #    * y!help is case-sensitive. Should this be the case?
-#     * Alias e.g. `Directmate` to `#.*` or whatever.
+#    * Alias e.g. `Directmate` to `#.*` or whatever.
 
 
 import random
 import os
+import sys
 import json
 import discord
 import urllib.request
 from dotenv import load_dotenv
+sys.path.append(os.path.join(os.path.dirname(__file__), 'olive_gui_master'))
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
+# this and the next section prints to the command line that YACPBot is online and ready
 @client.event
 async def on_connect():
     print('YACPBot is online!')
@@ -174,12 +178,12 @@ async def AlgToXFEN(alg, message):
 
 
 # UPDATE: API is something like this: https://www.yacpdb.org/gateway/ql?q=Stip(%22h%232%22)&p=1 (URL is encoded)
+# Note: I'm not too sure why this section of code is here, but I'm keeping it here just in case.
 async def searchForProblem(stip, n):
     return 0;
     
 # gets the problem ID of the nth newest problem on YACPDB (if n < 1, clamps to 1)
 # TODO: Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
-
 async def newProblemID(stip, n):
     with urllib.request.urlopen('https://www.yacpdb.org/json.php?changes&p=1') as url:
         
@@ -218,6 +222,7 @@ async def prettifiedSearchEmbed(query, message):
             print(encodedQuery)
             print(data)
         
+		# if fail to get data about the problem, throw error
         if not data.get('success'):
             await message.channel.send('ERROR: search failed. The error given was: ```\n'\
                 + data.get('error')\
@@ -225,6 +230,8 @@ async def prettifiedSearchEmbed(query, message):
             print(encodedQuery)
             print(data)
             return
+
+		# else output the first entry in search results? I can't remember what this does, why didn't I comment this earlier, aaaaaaaa
         else:
             queryResult = data.get("result")
             queryCount = queryResult.get("count")
@@ -257,6 +264,7 @@ async def prettifyDate(date):
     
     try:
         return prettyDate
+	#otherwise throw some error if the date is invalid (not sure why it ever would be though)
     except UnboundLocalError:
         print('INVALID DATE ERROR')
         return 'INVALID DATE ERROR'
@@ -392,17 +400,18 @@ async def prettifiedProblemEmbed(id, message):
         else:
             twins = ''
         
-        # # gets solution
-        # solution = data.get('solution')
-        # # calls parser
-        # from olive_gui_master.p2w.parser import parser
-        # try:
-        #     solution = parser.parse(data["solution"], debug=0)
-        #     solutionWarning = ""
-        # except Exception as ex:
-        #   # we could not parse it, write id to file
-        #   solutionWarning = "\n\
-        #     **WARNING! Problem's solution is not in Popeye Output Format! Please edit the entry accordingly.**"
+        # gets solution
+        solution = data.get('solution')
+        # calls parser
+        from p2w.parser import parser
+        try:
+            solution = parser.parse(data["solution"], debug=0)
+            solutionWarning = "apparently solution is in output format?"
+        except Exception as ex:
+          # we could not parse it, write id to file
+          solutionWarning = "\n\
+            **WARNING! Problem's solution is not in Popeye Output Format! Please edit the entry accordingly.**\
+			\n"
 
         # converts position from algebraic into FEN
         position = data.get("algebraic")
@@ -414,11 +423,11 @@ async def prettifiedProblemEmbed(id, message):
                                 authors + source\
                                 + award\
                                 + keywords\
-                                #+ solutionWarning\
                                 + stip\
                                 + options\
                                 + legend\
                                 + twins\
+                                + solutionWarning\
                                 , url='https://www.yacpdb.org/#'+id)
         # embedVar.set_image(url='https://www.janko.at/Retros/d.php?ff='+FFEN)
         embedVar.set_image(url='https://yacpdb.org/xfen/?'+XFEN)

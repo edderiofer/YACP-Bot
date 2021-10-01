@@ -4,13 +4,13 @@
 
 ### TODO LIST:
 
+#   * Detect when a problem doesn't have a solution, or when its solution isn't in Popeye Output Format. (Figure out how to call the file, because Python is being annoying and can't seem to find it.)
 #   * Consider reformatting/trimming long solutions.
 #   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
-#    * Comment code better; you've changed it quite a bit since last time.
-#    * Add some check for fairy problems??
-#    * Allow for parsing Magic Queen as fairy piece (e.g. >>411920)
-#    * Detect when a problem doesn't have a solution, or when its solution isn't in Popeye Output Format. (Figure out how to call the file, because Python is being annoying and can't seem to find it.)
-#    * Allow a way for the person who typed a command to delete YACPBot messages.
+#   * Comment code better; you've changed it quite a bit since last time.
+#   * Add some check for fairy problems??
+#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920)
+#   * Allow a way for the person who typed a command to delete YACPBot messages.
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
 

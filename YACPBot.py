@@ -630,7 +630,7 @@ async def on_message(message):
              options=[
                create_option(
                  name="id",
-                 description="Input your ID after this",
+                 description="Input the YACPDB entry ID after this",
                  option_type=3,
                  required=True
                )

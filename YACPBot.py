@@ -42,12 +42,16 @@ import json
 import discord
 import urllib.request
 from dotenv import load_dotenv
+from discord_slash import SlashCommand
+from discord_slash.utils.manage_commands import create_option
 sys.path.append(os.path.join(os.path.dirname(__file__), 'olive_gui_master'))
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+GUILDS = os.getenv('GUILD_IDS') 
 
 client = discord.Client()
+slash = SlashCommand(client, sync_commands=True)
 
 # this and the next section prints to the command line that YACPBot is online and ready
 @client.event
@@ -60,6 +64,9 @@ async def on_connect():
 async def on_ready():
     print('YACPBot is ready!')
 
+
+	
+	
 # converts piece from algebraic list format to XFEN
 async def AlgToXFEN(alg, message):
     # start with an array of 1s, then get the piece coordinates and write them to the array one by one
@@ -406,7 +413,7 @@ async def prettifiedProblemEmbed(id, message):
         from p2w.parser import parser
         try:
             solution = parser.parse(data["solution"], debug=0)
-            solutionWarning = "apparently solution is in output format?"
+            solutionWarning = ""
         except Exception as ex:
           # we could not parse it, write id to file
           solutionWarning = "\n\
@@ -618,4 +625,41 @@ async def on_message(message):
         
         await message.channel.send(embed=embedVar)
 
+@slash.slash(name="lookup",
+             description="Look up a YACPDB entry by ID",
+             options=[
+               create_option(
+                 name="id",
+                 description="Input your ID after this",
+                 option_type=3,
+                 required=True
+               )
+             ], guild_ids=GUILDS)
+async def lookup(message, id: int): # Defines a new "context" (ctx) command called "lookup"
+    print("lookup: " + id)
+    print(message)
+
+        
+    # turns on typing indicator
+    await message.channel.trigger_typing()
+    # throw an error if problemid isn't an integer; else, get prettified problem as embed
+    try: 
+        await prettifiedProblemEmbed(id, message)
+    except ValueError:
+        await message.channel.send('**WARNING**: Specified YACPDB problem ID "' + problemid + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + problemid + '` instead?')
+        print(problemid)
+    except UnboundLocalError:
+        await message.channel.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        print(problemid)
+    except TimeoutError:    
+        await message.channel.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+    except urllib.error.URLError:    
+        await message.channel.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+	
+	
+	
+	
+	
+	
+		
 client.run(TOKEN)

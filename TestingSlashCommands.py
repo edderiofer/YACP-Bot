@@ -1,4 +1,5 @@
 import os
+import ast
 import discord
 from dotenv import load_dotenv
 from discord_slash import SlashCommand # Importing the newly installed library.
@@ -6,7 +7,7 @@ from discord_slash.utils.manage_commands import create_option
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-GUILDS = os.getenv('GUILD_IDS') 
+GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
 
 client = discord.Client()
 slash = SlashCommand(client, sync_commands=True) # Declares slash commands through the client.

@@ -198,6 +198,7 @@ async def searchForProblem(stip, n):
 # gets the problem ID of the nth newest problem on YACPDB (if n < 1, clamps to 1)
 # TODO: Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
 async def newProblemID(stip, n):
+    n = int(n)
     with urllib.request.urlopen('https://www.yacpdb.org/json.php?changes&p=1') as url:
         
         # loads JSON from https://www.yacpdb.org/json.php?changes&p=1 as a long dictionary, sifts through the "changes" array to find a problem with diff_len == 12 (indicates new problem and not edit to previous problem)
@@ -446,7 +447,9 @@ async def prettifiedProblemEmbed(id, channel):
         embedVar.set_image(url='https://yacpdb.org/xfen/?'+XFEN)
 
         # sends embed
+        print(embedVar)
         await channel.send(embed=embedVar)
+        print("Embed send")
 
 # takes problem ID and info about y!sol command, spits out a prettified embed of the problem in the channel where the command was run
 async def prettifiedSolutionEmbed(id, channel):
@@ -651,13 +654,12 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         await prettifiedProblemEmbed(id, ctx)
-        await ctx.send('ping')
     except ValueError:
-        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + problemid + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + problemid + '` instead?')
-        print(problemid)
+        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead?')
+        print(id)
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
-        print(problemid)
+        print(id)
     except TimeoutError:    
         await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
     except urllib.error.URLError:    
@@ -683,13 +685,12 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         await prettifiedSolutionEmbed(id, ctx)
-        await ctx.send('ping')
     except ValueError:
-        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + problemid + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + problemid + '` instead?')
-        print(problemid)
+        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead?')
+        print(id)
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
-        print(problemid)
+        print(id)
     except TimeoutError:    
         await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
     except urllib.error.URLError:    
@@ -702,36 +703,36 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
                  name="stip",
                  description="Input the problem stipulation",
                  option_type=3,
-                 required=False
+                 required=True
                ),
                create_option(
                  name="n",
                  description="Find the nth newest problem",
-                 option_type=4,
-                 required=False
+                 option_type=3,
+                 required=True
                )
              ], guild_ids=GUILDS)	
-async def newest(ctx, stip='-', n=1): # Defines a new "context" (ctx) command called "newest"
+async def newest(ctx, stip: str, n: int): # Defines a new "context" (ctx) command called "newest"
     print("newest: " + stip + ", index: " + str(n))
     print("stip is a " + str(type(stip)) + ", index is a " + str(type(n)))
     print(ctx)
 
         
     # turns on typing indicator
-    await ctx.channel.trigger_typing()
+    # await ctx.channel.trigger_typing()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
-        problemid = await newProblemID(stip,n)
-        # await ctx.send('ping')
-        if problemid == 0:
+        id = await newProblemID(stip,n)
+        await ctx.send('ping')
+        if id == 0:
             await ctx.channel.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.**')
         else:
-            await print("Pre-success!")
-            await prettifiedProblemEmbed(problemid, ctx)
-            await print("Success!")
+            print("Pre-success!")
+            await prettifiedProblemEmbed(id, ctx)
+            print("Success!")
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
-        print(problemid)
+        print(id)
     except TimeoutError:    
         await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
     except urllib.error.URLError:    
@@ -769,7 +770,7 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
         await ctx.send(embed=embedVar)
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
-        print(problemid)
+        print(id)
     except TimeoutError:    
         await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
     except urllib.error.URLError:    

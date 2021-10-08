@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# YACP Bot
-A repository for YACP Bot, a Discord bot that draws from YACPDB.
-
-
-please help me develop this bot, i can't code aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-=======
 # YACPBot
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
@@ -66,10 +59,3 @@ v1.7: Fully implement `/search`, using reaction commands to page results.
 
 v2.0: Transition the bot to a permanent host instead of running it off my own computer.
 v2.1: Hook up the bot to cache YACPDB using something like MongoDB, to improve the speed of the bot.
-
-
-
-
-
-
->>>>>>> beta

@@ -41,9 +41,8 @@
 #   * Alias e.g. `Directmate` to `#.*` or whatever.
 
 
-import random
 import os
-import ast
+#import ast
 import sys
 import json
 import discord
@@ -60,7 +59,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 # note: .env files don't support lists natively, so we have to use this code to turn the guild IDs into a list
-GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
+#GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
 
 client = discord.Client()
 slash = SlashCommand(client, sync_commands=True)
@@ -649,7 +648,7 @@ async def on_message(message):
                  option_type=3,
                  required=True
                )
-             ], guild_ids=GUILDS)
+             ])
 async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "lookup"
     print("lookup: " + id)
     print(ctx)
@@ -680,7 +679,7 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
                  option_type=3,
                  required=True
                )
-             ], guild_ids=GUILDS)
+             ])
 async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol"
     print("sol: " + id)
     print(ctx)
@@ -717,7 +716,7 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
                  option_type=3,
                  required=False
                )
-             ], guild_ids=GUILDS)	
+             ])	
 async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command called "newest"
     print("newest: " + stip + ", index: " + str(n))
 
@@ -748,7 +747,7 @@ async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command ca
                  option_type=3,
                  required=False
                )
-             ], guild_ids=GUILDS)	
+             ])	
 async def search(ctx, query: str): # Defines a new "context" (ctx) command called "search"
     print("search: " + query)
     
@@ -766,8 +765,7 @@ async def search(ctx, query: str): # Defines a new "context" (ctx) command calle
         await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
 	
 @slash.slash(name="help",
-             description="Help for using this bot",
-			 guild_ids=GUILDS)	
+             description="Help for using this bot")	
 async def help(ctx): # Defines a new "context" (ctx) command called "help"
     print("help")
     print(ctx)

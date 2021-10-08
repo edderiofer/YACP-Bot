@@ -1,5 +1,5 @@
 import os
-import ast
+#import ast
 import json
 import discord
 import urllib.request
@@ -13,7 +13,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 # note: .env files don't support lists natively, so we have to use this code to turn the guild IDs into a list
-GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
+#GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
 
 client = discord.Client()
 slash = SlashCommand(client, sync_commands=True)
@@ -93,8 +93,7 @@ async def on_message(message):
 
 	
 @slash.slash(name="newest",
-             description="Post the newest YACPDB problem",
-             guild_ids=GUILDS)	
+             description="Post the newest YACPDB problem")	
 async def newest(ctx): # Defines a new "context" (ctx) command called "newest"
     await ctx.defer()
     print(ctx)
@@ -110,5 +109,25 @@ async def newest(ctx): # Defines a new "context" (ctx) command called "newest"
     # send prettified problem as an embed
     await prettifiedProblemEmbed(id, ctx)
 
+@slash.slash(name="help",
+             description="Help for using this bot")	
+async def help(ctx): # Defines a new "context" (ctx) command called "help"
+    print("help")
+    print(ctx)
+
+        
+    # turns on typing indicator
+    await ctx.defer()
+	
+    # creates help embed
+    embedVar = discord.Embed(title="YACPBot Help")
+    embedVar.add_field(name="YACPBot Commands", value="`y!newest` or `/newest`: Get the latest problem from YACPDB. \n\
+        `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
+        `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
+        `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+        `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
+        `y!help` or `/help`: Displays these commands.")
+
+    await ctx.send(embed=embedVar)
 		
 client.run(TOKEN)

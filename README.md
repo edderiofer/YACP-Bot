@@ -2,11 +2,11 @@
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
 # To run this:
-1. Download the repository.
-2. Put your environment variables into the `.env` file.
-3. Make sure the bot has the right permissions in the Discord Developer Portal (see `Required Permissions.txt`), and invite it to any server necessary.
-4. Run YACPBot.py.
-5. Type /help in Discord to start things off.
+1. Download the repository.  
+2. Put your environment variables into the `.env` file.  
+3. Make sure the bot has the right permissions in the Discord Developer Portal (see `Required Permissions.txt`), and invite it to any server necessary.  
+4. Run YACPBot.py.  
+5. Type /help in Discord to start things off.  
 
 # FAQ:
 **Q: Why aren't you using FEN to store the positions/PGN to store the solutions?**
@@ -53,11 +53,11 @@ A: This one's on me. Some of this is just test files you can ignore and some of 
 # Planned future updates:
 The following is a rough outline of planned future updates. This is not set in stone and very much subject to change.
 
-v1.5: Add reaction-commands, so that users can delete the bot's responses to them.
-v1.6: Prettify stipulations into more readable English (for the benefit of people who don't do chess problems very often).
-v1.7: Fully implement `/search`, using reaction commands to page results.
+v1.5: Add reaction-commands, so that users can delete the bot's responses to them.  
+v1.6: Prettify stipulations into more readable English (for the benefit of people who don't do chess problems very often).  
+v1.7: Fully implement `/search`, using reaction commands to page results.  
 
-v2.0: Transition the bot to a permanent host instead of running it off my own computer.
+v2.0: Transition the bot to a permanent host instead of running it off my own computer.  
 v2.1: Hook up the bot to cache YACPDB using something like MongoDB, to improve the speed of the bot.
 
 

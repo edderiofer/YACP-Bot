@@ -37,7 +37,6 @@ A: See "Planned future updates" below. In the meantime, Marken Foo's [Introducti
 
 A: This is a twin stipulation. Once you solve the problem, go back to the original position and remove the white knight on e4, then solve it again.
 
-
 **Q: Your bot is slow!**
 
 A: Yes, it unfortunately is. This will be improved in a later update once I cache YACPDB and host the bot externally. If you know how to make it faster other than this, please let me know.
@@ -54,8 +53,11 @@ A: This one's on me. Some of this is just test files you can ignore and some of 
 The following is a rough outline of planned future updates. This is not set in stone and very much subject to change.
 
 v1.5: Add reaction-commands, so that users can delete the bot's responses to them.
+
 v1.6: Prettify stipulations into more readable English (for the benefit of people who don't do chess problems very often).
+
 v1.7: Fully implement `/search`, using reaction commands to page results.
 
 v2.0: Transition the bot to a permanent host instead of running it off my own computer.
+
 v2.1: Hook up the bot to cache YACPDB using something like MongoDB, to improve the speed of the bot.

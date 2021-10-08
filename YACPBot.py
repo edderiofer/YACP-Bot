@@ -2,37 +2,43 @@
 
 ### CHANGELOG FROM PREVIOUS VERSION: 
 
+#	* Added support for slash commands.
+#	* Added a warning for if a problem's database entry lacks the solution.
+#	* Updated help command to point to GitHub and the Chess Problems & Studies Discord.
+
 ### TODO LIST:
 
 #   * Consider reformatting/trimming long solutions.
-#   * Check properly if code is commented well enough
-#   * Add some check for fairy problems when newesting or searching
-#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920)
-#   * Allow a way for the person who typed a command to delete YACPBot messages.
-#   * Check for bugs with Popeye Output Format parser
+#   * Check properly if code is commented well enough.
+#   * Add some check for fairy problems when newesting or searching.
+#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920).
+#   * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
+#	* When /lookup [random number] yields a nonexistent problem, consider posting the problem with the next highest ID that exists?
+#   * Check for bugs involving Popeye Output Format parser
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
 #   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
 
-#   * REFACTOR ENTIRE CODE SO THAT IT WORKS WHEN DISCORD NO LONGER ALLOWS READ MESSAGE COMMANDS
 #   * Figure out why the bot is so slow (and what can be done to speed it up). (This is probably because calling YACPDB's API is slow, but I'm not 100% sure on this; using MongoDB from below might help.)
 #   * Download the entirety of YACPDB and load it into MongoDB. Find some way to sync it. Use MongoDB's API instead.
 #   * Cache "Recent Changes" to file so as to not put too much pressure on YACPDB's server.
 
-#   * Fix y!search bug involving some sort of web encoding error (e.g. `y!search Matrix(“bSa8”)`)
+#   * Fix /search bug involving some sort of web encoding error (e.g. `/search Matrix(“bSa8”)`)
 #       * UPDATE: This is not really a bug, people just need to learn to use symmetrical quotation marks ("") instead of asymmetrical quotation marks (“”); still probably needs some usability correction though.
-#   * Improve y!search functionality to give something OTHER than just the first result. Maybe try reverse chronological order?
+#   * Improve /search functionality to give something OTHER than just the first result. Maybe try reverse chronological order?
 #       * Add exception for if there are no search results.
-#       * Else: Add a y!random command, or maybe make y!search return a random result.
-#   * If possible, deprecate y!newest? Or alias it to y!search?
-#       * Else: add failsafe for if YACPDB has too few new problems for y!newest (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
+#       * Else: Add a /random command, or maybe make /search return a random result.
+#       * Else: Use reaction roles to allow users to page through results (but this is probably really really inefficient!)
+#   * If possible, deprecate /newest? Or alias it to /search?
+#       * Else: add failsafe for if YACPDB has too few new problems for /newest (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
 #   * Find hosting solution: Repl.it / your own computer aren't permanent solutions and both require you to be online.
 #   * Add other sources for problems (e.g. PDB, EG Didok, (Lichess, Chess.com, ChessTempo) (these last three are sacreligious))
-#   * Since you're probably going to be putting the bot on other servers at some point, consider translating stipulations into English? (e.g. "White to mate in two" instead of "#2")
+#   * Consider translating stipulations into English, for the benefit of other servers? (e.g. "White to mate in two" instead of "#2")
 
 ### BUG + QOL LIST:
-#    * y!help is case-sensitive. Should this be the case?
-#    * Alias e.g. `Directmate` to `#.*` or whatever.
+#   * y!help is case-sensitive. Should this be the case?
+#		* This is no longer an issue since y! commands will be deprecated.
+#   * Alias e.g. `Directmate` to `#.*` or whatever.
 
 
 import random
@@ -421,11 +427,15 @@ async def prettifiedProblemEmbed(id, channel):
         try:
             solution = parser.parse(data["solution"], debug=0)
             solutionWarning = ""
+            if solution == "":
+                solutionWarning = "\n\
+                    **WARNING! Problem's solution is not in the database! Please edit the entry to add the solution.**\
+                    \n"
         except Exception as ex:
-          # we could not parse it, write id to file
-          solutionWarning = "\n\
-            **WARNING! Problem's solution is not in Popeye Output Format! Please edit the entry accordingly.**\
-			\n"
+            # we could not parse it, write id to file
+            solutionWarning = "\n\
+                **WARNING! Problem's solution is not in Popeye Output Format! Please edit the entry accordingly.**\
+                \n"
 
         # converts position from algebraic into FEN
         position = data.get("algebraic")
@@ -611,26 +621,22 @@ async def on_message(message):
         # turns on typing indicator
         await message.channel.trigger_typing()
 
+        # creates help embed
         embedVar = discord.Embed(title="YACPBot Help")
-        embedVar.add_field(name="YACPBot Commands", value="`y!newest`: Get the latest problem from YACPDB. \n\
-        `y!newest [stipulation] [n]`: Get the [n]th latest problem with stipulation [stipulation] ([stipulation] may optionally be replaced with -).\n\
-        `y!sol [n]`: Gives the solution to YACPDB problem >>n in spoilers.\n\
-        `y!lookup [n]`: Displays the nth problem in the database.\n\
-        `y!search [search]`: **NOT FULLY IMPLEMENTED.** Search for the given query on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
-        `y!help`: Displays these commands.")
+        embedVar.add_field(name="YACPBot Commands", value="`y!newest` or `/newest`: Get the latest problem from YACPDB. \n\
+            `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
+            `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
+            `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+            `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
+            `y!help` or `/help`: Displays these commands.")
         
-    # random server+payment advertisement!
-    
-        #if (random.randint(1,200) == 1) & (not message.guild.id == 758334446591410196):
-        #    embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713\n\
-        #    YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
-        #    Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=True)
-        #    embedVar.add_field(name="Lucky Advertisement!",value="You've hit a lucky advertisement (it only has a 0.5% chance of turning up)! \
-        #                                                            Join the Chess Problems & Studies Discord today! http://discord.me/chessproblems",inline=True)
-        #else:
-        embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713\n\
-        YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
-        Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=False)
+        # credits
+        embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713, using discord.py, discord-interactions.py, and Python (many thanks to the volunteers who helped me out when I got stuck while coding this bot).\n\
+            YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
+            Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=False)
+
+        # bug reports and suggestions server
+        embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (http://discord.me/chessproblems) or to the GitHub (https://github.com/edderiofer/YACP-Bot)!",inline=True)
         
         await message.channel.send(embed=embedVar)
 
@@ -650,7 +656,7 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
 
         
     # turns on typing indicator
-    await ctx.channel.trigger_typing()
+    await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         await prettifiedProblemEmbed(id, ctx)
@@ -681,7 +687,7 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
 
         
     # turns on typing indicator
-    await ctx.channel.trigger_typing()
+    await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         await prettifiedSolutionEmbed(id, ctx)
@@ -703,36 +709,57 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
                  name="stip",
                  description="Input the problem stipulation",
                  option_type=3,
-                 required=True
+                 required=False
                ),
                create_option(
                  name="n",
                  description="Find the nth newest problem",
                  option_type=3,
-                 required=True
+                 required=False
                )
              ], guild_ids=GUILDS)	
-async def newest(ctx, stip: str, n: int): # Defines a new "context" (ctx) command called "newest"
+async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command called "newest"
     print("newest: " + stip + ", index: " + str(n))
-    print("stip is a " + str(type(stip)) + ", index is a " + str(type(n)))
-    print(ctx)
 
         
     # turns on typing indicator
-    # await ctx.channel.trigger_typing()
+    await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         id = await newProblemID(stip,n)
-        await ctx.send('ping')
         if id == 0:
             await ctx.channel.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.**')
         else:
-            print("Pre-success!")
             await prettifiedProblemEmbed(id, ctx)
-            print("Success!")
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
         print(id)
+    except TimeoutError:    
+        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+    except urllib.error.URLError:    
+        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+		
+@slash.slash(name="search",
+             description="Search YACPDB using the YACPDB Search Query Language",
+             options=[
+               create_option(
+                 name="query",
+                 description="Input the search query",
+                 option_type=3,
+                 required=False
+               )
+             ], guild_ids=GUILDS)	
+async def search(ctx, query: str): # Defines a new "context" (ctx) command called "search"
+    print("search: " + query)
+    
+    # turns on typing indicator
+    await ctx.defer()
+    # throw an error if problemid isn't an integer; else, get prettified problem as embed
+    try: 
+        await prettifiedSearchEmbed(query, ctx)
+    except UnboundLocalError:
+        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        print(query)
     except TimeoutError:    
         await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
     except urllib.error.URLError:    
@@ -747,35 +774,26 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
 
         
     # turns on typing indicator
-    await ctx.channel.trigger_typing()
+    await ctx.defer()
 	
     # creates help embed
     embedVar = discord.Embed(title="YACPBot Help")
-    embedVar.add_field(name="YACPBot Commands", value="`y!newest`: Get the latest problem from YACPDB. \n\
-        `y!newest [stipulation] [n]`: Get the [n]th latest problem with stipulation [stipulation] ([stipulation] may optionally be replaced with -).\n\
-        `y!sol [n]`: Gives the solution to YACPDB problem >>n in spoilers.\n\
-        `y!lookup [n]`: Displays the nth problem in the database.\n\
-        `y!search [search]`: **NOT FULLY IMPLEMENTED.** Search for the given query on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
-        `y!help`: Displays these commands.")
+    embedVar.add_field(name="YACPBot Commands", value="`y!newest` or `/newest`: Get the latest problem from YACPDB. \n\
+        `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
+        `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
+        `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+        `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
+        `y!help` or `/help`: Displays these commands.")
         
-    # random server+payment advertisement!
-    embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713\n\
+    # credits
+    embedVar.add_field(name="Credits",value="Bot created by @edderiofer#0713, using discord.py, discord-interactions.py, and Python (many thanks to the volunteers who helped me out when I got stuck while coding this bot).\n\
         YACPDB developed by Dmitri Turevski (many thanks to him for letting me use his API).\n\
         Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=False)
-    if (not ctx.guild.id == 758334446591410196):
-            embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed: http://discord.me/chessproblems",inline=True)
-	
-    # throw an error if problemid isn't an integer; else, get prettified problem as embed
-    try: 
-        await ctx.send(embed=embedVar)
-    except UnboundLocalError:
-        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
-        print(id)
-    except TimeoutError:    
-        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
-    except urllib.error.URLError:    
-        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
-	
+
+    # bug reports and suggestions server
+    embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (http://discord.me/chessproblems) or to the GitHub (https://github.com/edderiofer/YACP-Bot)!",inline=True)
+
+    await ctx.send(embed=embedVar)
 	
 	
 		

@@ -6,8 +6,7 @@ import urllib.request
 from dotenv import load_dotenv
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
-from discord import Intents
-from discord.ext import commands
+
 # loads up environment variables like the Discord token and list of guild IDs
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -63,8 +62,8 @@ async def prettifiedProblemEmbed(id, channel):
     print(id)
     print(str(type(id)))
     with urllib.request.urlopen('https://www.yacpdb.org/json.php?entry&id='+id) as url:
-	    # sends a test ping to make sure this function is working(?)
-        # await channel.send("Ping!")
+        # sends a test ping to make sure this function is working(?)
+        await channel.send("Ping!")
 
         # creates embed with title, link, and "test embed" as text
         embedVar = discord.Embed(title="TEST EMBED: YACPDB Problem >>"+id, description="test embed", url='https://www.yacpdb.org/#'+id)
@@ -96,7 +95,6 @@ async def on_message(message):
              description="Post the newest YACPDB problem",
              guild_ids=GUILDS)	
 async def newest(ctx): # Defines a new "context" (ctx) command called "newest"
-    await ctx.defer()
     print(ctx)
 
     # get new problem ID

@@ -1,0 +1,16 @@
+Required Scopes:
+	bot
+	applications.commands
+	
+Required Bot Permissions:
+	View Channels
+	Send Messages
+	Embed Links
+	Attach Files
+	Use Slash Commands
+	
+Optional Bot Permissions:
+	Public Threads
+	Private Threads
+	Send Messages in Threads [[These permissions are for if you want the bot to work in threads.]]
+	Add Reactions [[These permissions are for reaction-based commands, which will be coming in a future update.]]

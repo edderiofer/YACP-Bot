@@ -17,7 +17,7 @@
 #   * Check for bugs involving Popeye Output Format parser
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
-#   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
+#   * Add a "contest mode" (where /sol is disabled and there's no link/ID given)
 
 #   * Figure out why the bot is so slow (and what can be done to speed it up). (This is probably because calling YACPDB's API is slow, but I'm not 100% sure on this; using MongoDB from below might help.)
 #   * Download the entirety of YACPDB and load it into MongoDB. Find some way to sync it. Use MongoDB's API instead.

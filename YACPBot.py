@@ -789,7 +789,7 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
         Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=False)
 
     # bug reports and suggestions server
-    embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (http://discord.me/chessproblems) or to the GitHub (https://github.com/edderiofer/YACP-Bot)!",inline=True)
+    embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (<http://discord.me/chessproblems>) or to the GitHub (<https://github.com/edderiofer/YACP-Bot>)!",inline=True)
 
     await ctx.send(embed=embedVar)
 	

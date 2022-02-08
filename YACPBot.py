@@ -8,16 +8,20 @@
 
 ### TODO LIST:
 
+#	* Figure out why main branch doesn't work on Heroku but beta branch does.
+#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920).
+#		** This can be done with (B[piece])
+#	* Incorporate needsfix (https://www.yacpdb.org/json.php?needsfix) into code.
+#	* In case of an error, also send in Discord the input that led to the error.
 #   * Consider reformatting/trimming long solutions.
 #   * Check properly if code is commented well enough.
 #   * Add some check for fairy problems when newesting or searching.
-#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920).
 #   * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
 #	* When /lookup [random number] yields a nonexistent problem, consider posting the problem with the next highest ID that exists?
 #   * Check for bugs involving Popeye Output Format parser
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
-#   * Add an [[I had something here but I never typed it out fully and now I don't remember what I was going to add.]]
+#   * Add a contest solving mode.
 
 #   * Figure out why the bot is so slow (and what can be done to speed it up). (This is probably because calling YACPDB's API is slow, but I'm not 100% sure on this; using MongoDB from below might help.)
 #   * Download the entirety of YACPDB and load it into MongoDB. Find some way to sync it. Use MongoDB's API instead.
@@ -39,6 +43,7 @@
 #   * y!help is case-sensitive. Should this be the case?
 #		* This is no longer an issue since y! commands will be deprecated.
 #   * Alias e.g. `Directmate` to `#.*` or whatever.
+#	* If /newest stip:[stip] returns no results, YACPBot continues to type for some reason, and then the interaction fails. Investigate.
 
 
 import os
@@ -120,6 +125,7 @@ async def AlgToXFEN(alg, channel):
         try:
             piece = piecesMatrix[piece].upper()
         except KeyError:
+        # TODO: Replace unknown pieces (e.g. Magic Queen) with `(BQ)` (bordered Queen) instead 
             await channel.send("Warning: Piece 'white " + piece + "' in diagram not recognised. Replacing with 'x'.")
             piece = 'x'
         # bracket piece if multiple characters long
@@ -147,6 +153,7 @@ async def AlgToXFEN(alg, channel):
             try:
                 piece = piecesMatrix[piece].lower()
             except KeyError:
+            # TODO: Replace unknown pieces (e.g. Magic Queen) with `(Bq)` (bordered Queen) instead 
                 await channel.send("Warning: Piece 'black " + piece + "' in diagram not recognised. Replacing with 'x'.")
                 piece = 'x'
             if len(piece) > 1:
@@ -169,6 +176,7 @@ async def AlgToXFEN(alg, channel):
             try:
                 piece = '!' + piecesMatrix[piece].lower()
             except KeyError:
+            # TODO: Replace unknown pieces (e.g. Magic Queen) with `(B!q)` (bordered Queen) instead 
                 await channel.send("Warning: Piece 'neutral " + piece + "' in diagram not recognised. Replacing with 'x'.")
                 piece = 'x'
             if len(piece) > 1:
@@ -789,7 +797,7 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
         Chess problems are by their respective constructors. Neither I nor Dmitri claim ownership over them otherwise.",inline=False)
 
     # bug reports and suggestions server
-    embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (<http://discord.me/chessproblems>) or to the GitHub (<https://github.com/edderiofer/YACP-Bot>)!",inline=True)
+    embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (http://discord.me/chessproblems) or to the GitHub (https://github.com/edderiofer/YACP-Bot)!",inline=True)
 
     await ctx.send(embed=embedVar)
 	

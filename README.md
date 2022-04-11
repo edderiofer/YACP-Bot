@@ -1,9 +1,6 @@
 # YACPBot
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
-# Note on downtime (2022-03-03):
-[YACPDB is currently moving domain registrars](https://groups.google.com/g/yacpdb/c/v9tQnJq8ccE/m/HUAUgIJkBAAJ), and thus may experience intermittent downtime. During such downtime periods, the bot may return some HTTP 500 error or similar, or may completely fail to work. There's nothing I can do about this until domain registrars have been moved, sorry.
-
 # To run this:
 1. Download the repository.
 2. Put your environment variables into the `.env` file.

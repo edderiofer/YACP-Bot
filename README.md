@@ -1,7 +1,14 @@
 # YACPBot
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
-# To run this:
+# To add this bot to your server:
+1. Click [this link](https://discord.com/api/oauth2/authorize?client_id=843945577741156393&permissions=277025508416&scope=bot%20applications.commands).
+2. Select your server.
+3. Give it all the permissions you think it needs. At minimum it needs "Send Messages", "Embed Links", "Attach Files", and either "Use Application Commands" (for slash commands) or "Read Messages" (for `y!` commands) or both. Eventually reaction roles will be implemented, so you should consider checking "Add Reactions" for until then as well. The other two permissions ("Send Messages in Threads", "Read Message History") are there just in case the bot doesn't work without them.
+4. Click "Authorise".
+5. Type /help in Discord to start things off.
+
+# To run your own copy of this:
 1. Download the repository.
 2. Put your environment variables into the `.env` file.
 3. Make sure the bot has the right permissions in the Discord Developer Portal (see `Required Permissions.txt`), and invite it to any server necessary.

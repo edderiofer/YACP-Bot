@@ -30,7 +30,7 @@ A: Because YACPDB uses "S" for knight and not "N". "N" is already reserved for t
 
 **Q: The diagrams look tiny! Can you make them bigger?**
 
-A: Not by much, unfortunately. Discord has a size limit on embedded images (something like 256x256) and YACPDB's xfen-to-image converter outputs a 258x258 image, which Discord decides to downscale to 206x206. I have no idea why this is or how to get around it. If you know any way to do so, please let me know.
+A: Not by much, unfortunately. Discord has a size limit on embedded image previews (something like 256x256) and YACPDB's xfen-to-image converter outputs a 258x258 image. If you know any way to embed larger images, or to make YACPDB's xfen-to-image converter output a larger image, please let me know. Also, check your Discord zoom settings (App Settings > Appearance > Zoom Level), as the previews scale with this.
 
 **Q: Could you please add the ability for Discord users to solve the problem move by move (like with other Discord chess puzzle bots)?**
 

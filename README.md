@@ -1,23 +1,26 @@
 # YACPBot
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
-![image](https://user-images.githubusercontent.com/16442480/177005652-835e2de9-cdcd-4c7e-a702-c6e90d53b5e9.png)
+## Gallery
+![image](https://user-images.githubusercontent.com/16442480/177006133-5ebf780b-cb9c-4c9f-9823-e3a2a077e2f0.png) | ![image](https://user-images.githubusercontent.com/16442480/177006112-f9522259-4924-492a-b8a7-8802baf32115.png)
+--- | ---
+*White mates in two; how?* | *This bot also supports fairy problems!*
 
-# To add this bot to your server:
+## To add this bot to your server:
 1. Click [this link](https://discord.com/api/oauth2/authorize?client_id=843945577741156393&permissions=277025508416&scope=bot%20applications.commands).
 2. Select your server.
 3. Give it all the permissions you think it needs. At minimum it needs "Send Messages", "Embed Links", "Attach Files", and either "Use Application Commands" (for slash commands) or "Read Messages" (for `y!` commands) or both. Eventually reaction roles will be implemented, so you should consider checking "Add Reactions" for until then as well. The other two permissions ("Send Messages in Threads", "Read Message History") are there just in case the bot doesn't work without them.
 4. Click "Authorise".
 5. Type /help in Discord to start things off.
 
-# To run your own copy of this:
+## To run your own copy of this:
 1. Download the repository.
 2. Put your environment variables into the `.env` file.
 3. Make sure the bot has the right permissions in the Discord Developer Portal (see `Required Permissions.txt`), and invite it to any server necessary.
 4. Run YACPBot.py.
 5. Type /help in Discord to start things off.
 
-# FAQ:
+## FAQ:
 **Q: Why aren't you using FEN to store the positions/PGN to store the solutions?**
 
 A: YACPBot doesn't just post orthodox chess problems. It also posts fairy problems with nonstandard pieces (e.g. Nightrider, Grasshopper, Camel), fairy conditions (e.g. Circe, Madrasi, Take & Make), and seriesmovers (where one side moves multiple times in a row). FEN and PGN simply aren't compatible with these sorts of problems. Further, YACPBot pulls from YACPDB, which already uses its own notation systems. It's fine, just leave it.
@@ -58,7 +61,7 @@ A: Yes, I'm an amateur coder. If you're willing to help improve my code at your 
 
 A: This one's on me. Some of this is just test files you can ignore and some of it is stuff I'm planning on using later. I'll clean up this repository at some point.
 
-# Planned future updates:
+## Planned future updates:
 The following is a rough outline of planned future updates. This is not set in stone and very much subject to change.
 
 v1.5: Fully deprecate `y!` commands, transition to slash commands only to reduce confusion.

@@ -1,6 +1,8 @@
 # YACPBot
 A repository for YACPBot, a Discord bot that posts problems from [YACPDB](https://www.yacpdb.org/).
 
+![image](https://user-images.githubusercontent.com/16442480/177005652-835e2de9-cdcd-4c7e-a702-c6e90d53b5e9.png)
+
 # To add this bot to your server:
 1. Click [this link](https://discord.com/api/oauth2/authorize?client_id=843945577741156393&permissions=277025508416&scope=bot%20applications.commands).
 2. Select your server.

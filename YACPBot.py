@@ -5,23 +5,29 @@
 #	* Added support for slash commands.
 #	* Added a warning for if a problem's database entry lacks the solution.
 #	* Updated help command to point to GitHub and the Chess Problems & Studies Discord.
+# 	* If a user generates an error, the bot will in some cases state the input that caused the error.
+#	* Magic Queen and other pieces represented with bordered pieces in YACPDB are now supported.
 
 ### TODO LIST:
 
+#	* Fix security errors on GitHub.
+#		** Probably doable by just updating the package prerequisites or whatever they're called.
+#	* Incorporate needsfix (https://yacpdb.org/json.php?needsfix) into code.
+#   * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
+#		** First put the username into the embed itself (e.g. "Problem posed by ...").
+#		** Then add a :wastebasket: react on the embed.
+#		** When a user reacts with :wastebasket: or similar, the bot checks if that user is the user in question.
+#	* When /lookup [random number] or /newest yields a nonexistent problem, consider posting the problem with the next highest/lowest ID that exists?
 #	* Figure out why main branch doesn't work on Heroku but beta branch does.
-#   * Allow for parsing Magic Queen as fairy piece (e.g. >>411920).
-#		** This can be done with (B[piece])
-#	* Incorporate needsfix (https://www.yacpdb.org/json.php?needsfix) into code.
-#	* In case of an error, also send in Discord the input that led to the error.
 #   * Consider reformatting/trimming long solutions.
 #   * Check properly if code is commented well enough.
 #   * Add some check for fairy problems when newesting or searching.
-#   * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
-#	* When /lookup [random number] yields a nonexistent problem, consider posting the problem with the next highest ID that exists?
-#   * Check for bugs involving Popeye Output Format parser
+#	* Figure out how to make proof games work.
+#   * Check for bugs involving Popeye Output Format parser.
 #   * Safeguard bot against various type/input errors (return error messages!).
 #   * Keep up to date on the list of "bad" keywords (e.g. Cooked/Unsound/Shortmate/Attention).
 #   * Add a contest solving mode.
+#	* Add a daily puzzle mode, configurable per-server.
 
 #   * Figure out why the bot is so slow (and what can be done to speed it up). (This is probably because calling YACPDB's API is slow, but I'm not 100% sure on this; using MongoDB from below might help.)
 #   * Download the entirety of YACPDB and load it into MongoDB. Find some way to sync it. Use MongoDB's API instead.
@@ -32,9 +38,10 @@
 #   * Improve /search functionality to give something OTHER than just the first result. Maybe try reverse chronological order?
 #       * Add exception for if there are no search results.
 #       * Else: Add a /random command, or maybe make /search return a random result.
+#			*** Probably do this after MongoDB transition.
 #       * Else: Use reaction roles to allow users to page through results (but this is probably really really inefficient!)
 #   * If possible, deprecate /newest? Or alias it to /search?
-#       * Else: add failsafe for if YACPDB has too few new problems for /newest (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
+#       * Else: add failsafe for if YACPDB has too few new problems for /newest (maybe load more latest edits (https://yacpdb.org/json.php?changes&p=2, https://yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
 #   * Find hosting solution: Repl.it / your own computer aren't permanent solutions and both require you to be online.
 #   * Add other sources for problems (e.g. PDB, EG Didok, (Lichess, Chess.com, ChessTempo) (these last three are sacreligious))
 #   * Consider translating stipulations into English, for the benefit of other servers? (e.g. "White to mate in two" instead of "#2")
@@ -116,16 +123,21 @@ async def AlgToXFEN(alg, channel):
     White = alg.get("white")
     for x in White:
         piece = x[0:len(x)-2].lower()
-        
         file = ord(x[-2]) - 97
         # WARNING: Remember to turn "10" back into "8" here.
         rank = 8 - int(x[-1])
         
         # convert piece into XFEN piece format
         try:
+            bordered = False
+            if " " in piece:
+                piece = piece.split()[-1]
+                bordered = True
+                print(piece)
             piece = piecesMatrix[piece].upper()
+            if bordered:
+                piece = "B"+piece
         except KeyError:
-        # TODO: Replace unknown pieces (e.g. Magic Queen) with `(BQ)` (bordered Queen) instead 
             await channel.send("Warning: Piece 'white " + piece + "' in diagram not recognised. Replacing with 'x'.")
             piece = 'x'
         # bracket piece if multiple characters long
@@ -151,9 +163,15 @@ async def AlgToXFEN(alg, channel):
             rank = 8 - int(x[-1])
             
             try:
+                bordered = False
+                if " " in piece:
+                    piece = piece.split()[-1]
+                    bordered = True
+                    print(piece)
                 piece = piecesMatrix[piece].lower()
+                if bordered:
+                    piece = "B"+piece
             except KeyError:
-            # TODO: Replace unknown pieces (e.g. Magic Queen) with `(Bq)` (bordered Queen) instead 
                 await channel.send("Warning: Piece 'black " + piece + "' in diagram not recognised. Replacing with 'x'.")
                 piece = 'x'
             if len(piece) > 1:
@@ -174,9 +192,15 @@ async def AlgToXFEN(alg, channel):
             file = ord(x[-2]) - 97
             rank = 8 - int(x[-1])
             try:
+                bordered = False
+                if " " in piece:
+                    piece = piece.split()[-1]
+                    bordered = True
+                    print(piece)
                 piece = '!' + piecesMatrix[piece].lower()
+                if bordered:
+                    piece = "B"+piece
             except KeyError:
-            # TODO: Replace unknown pieces (e.g. Magic Queen) with `(B!q)` (bordered Queen) instead 
                 await channel.send("Warning: Piece 'neutral " + piece + "' in diagram not recognised. Replacing with 'x'.")
                 piece = 'x'
             if len(piece) > 1:
@@ -203,18 +227,18 @@ async def AlgToXFEN(alg, channel):
     return(FEN)
 
 
-# UPDATE: API is something like this: https://www.yacpdb.org/gateway/ql?q=Stip(%22h%232%22)&p=1 (URL is encoded)
+# UPDATE: API is something like this: https://yacpdb.org/gateway/ql?q=Stip(%22h%232%22)&p=1 (URL is encoded)
 # Note: I'm not too sure why this section of code is here, but I'm keeping it here just in case.
 async def searchForProblem(stip, n):
     return 0;
     
 # gets the problem ID of the nth newest problem on YACPDB (if n < 1, clamps to 1)
-# TODO: Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits (https://www.yacpdb.org/json.php?changes&p=2, https://www.yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
+# TODO: Add failsafe for if YACPDB has too few new problems for search (maybe load more latest edits (https://yacpdb.org/json.php?changes&p=2, https://yacpdb.org/json.php?changes&p=3, etc.) instead of just giving an error message?)
 async def newProblemID(stip, n):
     n = int(n)
-    with urllib.request.urlopen('https://www.yacpdb.org/json.php?changes&p=1') as url:
+    with urllib.request.urlopen('https://yacpdb.org/json.php?changes&p=1') as url:
         
-        # loads JSON from https://www.yacpdb.org/json.php?changes&p=1 as a long dictionary, sifts through the "changes" array to find a problem with diff_len == 12 (indicates new problem and not edit to previous problem)
+        # loads JSON from https://yacpdb.org/json.php?changes&p=1 as a long dictionary, sifts through the "changes" array to find a problem with diff_len == 12 (indicates new problem and not edit to previous problem)
         data = json.loads(url.read().decode())
         changes = data.get("changes")
         
@@ -240,7 +264,7 @@ async def prettifiedSearchEmbed(query, channel):
     # NOTE TO SELF: encode query URL
     print(query)
     encodedQuery = urllib.parse.quote(query, safe="(\"\*\,\>\<)")
-    with urllib.request.urlopen('https://www.yacpdb.org/gateway/ql?q='+encodedQuery) as url:
+    with urllib.request.urlopen('https://yacpdb.org/gateway/ql?q='+encodedQuery) as url:
         # gets data about the problem
         try:
             data = json.loads(url.read().decode())
@@ -326,7 +350,7 @@ async def prettifyKeywords(keywords):
 # takes problem ID and info about y!newest/y!lookup commands, spits out a prettified embed of the problem in the channel where the command was run
 async def prettifiedProblemEmbed(id, channel):
     id = str(id)
-    with urllib.request.urlopen('https://www.yacpdb.org/json.php?entry&id='+id) as url:
+    with urllib.request.urlopen('https://yacpdb.org/json.php?entry&id='+id) as url:
         
         # gets data about the problem (TODO: Add fairy condition support, e.g. >>1015 >>258194 for testing)
         data = json.loads(url.read().decode())
@@ -459,7 +483,7 @@ async def prettifiedProblemEmbed(id, channel):
                                 + legend\
                                 + twins\
                                 + solutionWarning\
-                                , url='https://www.yacpdb.org/#'+id)
+                                , url='https://yacpdb.org/#'+id)
         # embedVar.set_image(url='https://www.janko.at/Retros/d.php?ff='+FFEN)
         embedVar.set_image(url='https://yacpdb.org/xfen/?'+XFEN)
 
@@ -470,7 +494,7 @@ async def prettifiedProblemEmbed(id, channel):
 
 # takes problem ID and info about y!sol command, spits out a prettified embed of the problem in the channel where the command was run
 async def prettifiedSolutionEmbed(id, channel):
-    with urllib.request.urlopen('https://www.yacpdb.org/json.php?entry&id='+id) as url:
+    with urllib.request.urlopen('https://yacpdb.org/json.php?entry&id='+id) as url:
         
         # gets data about the problem
         data = json.loads(url.read().decode())
@@ -487,7 +511,7 @@ async def prettifiedSolutionEmbed(id, channel):
             solution = '||' + solution + '||'
 
             # creates embed with solution
-            embedVar = discord.Embed(title="YACPDB Problem >>"+id, description=solution, url='https://www.yacpdb.org/#'+id)
+            embedVar = discord.Embed(title="YACPDB Problem >>"+id, description=solution, url='https://yacpdb.org/#'+id)
 
             # sends embed
             await channel.send(embed=embedVar)
@@ -612,7 +636,7 @@ async def on_message(message):
 
         # pass query to other functions (if doesn't exist, throw error)
         if len(query) == 0:
-            await message.channel.send('**WARNING**: No query specified. Syntax is `y!search [query]` Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.')
+            await message.channel.send('**WARNING**: No query specified. Syntax is `y!search [query]` Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.')
 
         # else send prettified results as an embed
         else:
@@ -634,7 +658,7 @@ async def on_message(message):
             `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
             `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
             `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
-            `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
+            `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
             `y!help` or `/help`: Displays these commands.")
         
         # credits
@@ -668,15 +692,15 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
     try: 
         await prettifiedProblemEmbed(id, ctx)
     except ValueError:
-        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead?')
+        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead? (User input that led to this error: `/lookup id:'+id+'`)')
         print(id)
     except UnboundLocalError:
-        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/lookup id:'+id+'`)')
         print(id)
     except TimeoutError:    
-        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/lookup id:'+id+'`)')    
     except urllib.error.URLError:    
-        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/lookup id:'+id+'`)')
 		
 @slash.slash(name="sol",
              description="Look up a YACPDB entry's solution by ID",
@@ -699,15 +723,15 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
     try: 
         await prettifiedSolutionEmbed(id, ctx)
     except ValueError:
-        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead?')
+        await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead? (User input that led to this error: `/sol id:'+id+'`)')
         print(id)
     except UnboundLocalError:
-        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/sol id:'+id+'`)')
         print(id)
     except TimeoutError:    
-        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/sol id:'+id+'`)')    
     except urllib.error.URLError:    
-        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/sol id:'+id+'`)')
 	
 @slash.slash(name="newest",
              description="Post the nth newest YACPDB problem with a given stipulation",
@@ -735,16 +759,16 @@ async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command ca
     try: 
         id = await newProblemID(stip,n)
         if id == 0:
-            await ctx.channel.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.**')
+            await ctx.channel.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.** (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
         else:
             await prettifiedProblemEmbed(id, ctx)
     except UnboundLocalError:
-        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
         print(id)
     except TimeoutError:    
-        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')    
     except urllib.error.URLError:    
-        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
 		
 @slash.slash(name="search",
              description="Search YACPDB using the YACPDB Search Query Language",
@@ -765,12 +789,12 @@ async def search(ctx, query: str): # Defines a new "context" (ctx) command calle
     try: 
         await prettifiedSearchEmbed(query, ctx)
     except UnboundLocalError:
-        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713!')
+        await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/search query:'+query+'`)')
         print(query)
     except TimeoutError:    
-        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
+        await ctx.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/search query:'+query+'`)')    
     except urllib.error.URLError:    
-        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
+        await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/search query:'+query+'`)')
 	
 @slash.slash(name="help",
              description="Help for using this bot")	
@@ -788,7 +812,7 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
         `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
         `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
         `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
-        `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://www.yacpdb.org/#static/ql-cheatsheet>.\n\
+        `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
         `y!help` or `/help`: Displays these commands.")
         
     # credits

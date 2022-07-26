@@ -64,13 +64,15 @@ A: This one's on me. Some of this is just test files you can ignore and some of 
 ## Planned future updates:
 The following is a rough outline of planned future updates. This is not set in stone and very much subject to change.
 
-v1.5: Fully deprecate `y!` commands, transition to slash commands only to reduce confusion.
+v1.5: Run maintenance on the bot's code; more specifically, update the prerequisite packages and possibly reformat any code to deal with such updates if necessary.
 
-v1.6: Prettify certain stipulations into more readable English (for the benefit of people who don't do chess problems very often).
+v1.6: Add reaction-commands, so that users can delete the bot's responses to them.
 
-v1.7: Add reaction-commands, so that users can delete the bot's responses to them.
+v1.7: Fully deprecate `y!` commands, transition to slash commands only to reduce confusion.
 
-v1.8: Fully implement `/search`, using reaction commands to page results.
+v1.8: Prettify certain stipulations into more readable English (for the benefit of people who don't do chess problems very often).
+
+v1.9: Fully implement `/search`, using reaction commands to page results.
 
 v2.0: Transition the bot to a permanent host (e.g. Heroku) instead of running it off my own computer.
 

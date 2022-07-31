@@ -9,11 +9,13 @@
 #    * Magic Queen and other pieces represented with bordered pieces in YACPDB are now supported.
 #    * Added "needsfix" command, which will return a random problem in YACPDB whose solution needs to be edited into the correct format.
 #    * Changed all tabs into quadruple-spaces. Hopefully this will reduce the risk of me making a spacing error?
+#    * Updated `discord_slash` to `interactions`, which broke a bunch of things. Fixed the resulting brokenness. Bleugh.
+#    * Fixed a bug where, if /newest didn't return a problem, the bot wouldn't post the error message as a reply to the command, and would continue thinking forever.
 
 ### TODO LIST:
 
-#    * Update "discord_slash" to "interactions".
-#    * Figure out why /newest on invalid stipulation causes the bot to send the error warning NOT as a reply to the original command (and continues to cause YACPBot to be thinking in the reply).
+#    * Phase out either `discord.py` or `discord-interactions.py`. Not sure which one yet, but my money's on the latter as it has a community and the owner hopefully isn't prone to just abandoning the repository. Then again, its updates don't seem to be backwards-compatible...
+#        ** Might want to update `discord.py` (and fix any brokenness there) before you decide which though.
 #    * Fix security errors on GitHub.
 #        ** Probably doable by just updating the package prerequisites or whatever they're called.
 #    * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
@@ -61,10 +63,11 @@ import os
 import sys
 import json
 import discord
+from discord.ext import commands
+import interactions
 import urllib.request
 from dotenv import load_dotenv
-from discord_slash import SlashCommand
-from discord_slash.utils.manage_commands import create_option
+import asyncio
 
 # this is to make sure that any olive-gui functions i call work properly; it's crude and will almost certainly break at some point, but i don't know any other solution
 sys.path.append(os.path.join(os.path.dirname(__file__), 'olive_gui_master'))
@@ -76,8 +79,8 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 # note: .env files don't support lists natively, so we have to use this code to turn the guild IDs into a list
 #GUILDS = ast.literal_eval(os.getenv('GUILD_IDS'))
 
+slash = interactions.Client(token=TOKEN)
 client = discord.Client()
-slash = SlashCommand(client, sync_commands=True)
 
 # this and the next section prints to the command line that YACPBot is online and ready
 @client.event
@@ -89,9 +92,6 @@ async def on_connect():
 @client.event
 async def on_ready():
     print('YACPBot is ready!')
-
-
-    
     
 # converts piece from algebraic list format to XFEN
 async def AlgToXFEN(alg, channel):
@@ -229,7 +229,6 @@ async def AlgToXFEN(alg, channel):
             FEN=FEN.replace('1'*i,str(i))
     return(FEN)
 
-
 # UPDATE: API is something like this: https://yacpdb.org/gateway/ql?q=Stip(%22h%232%22)&p=1 (URL is encoded)
 # Note: I'm not too sure why this section of code is here, but I'm keeping it here just in case.
 async def searchForProblem(stip, n):
@@ -287,11 +286,7 @@ async def needsfixid(channel):
             problemid = data.get("id")
 
     return problemid
-
-        # sends embed
-        # await channel.send(embed=embedVar)
     
-
 # takes query and info about y!search commands, spits out a prettified embed of the search in the channel where the command was run
 async def prettifiedSearchEmbed(query, channel):
     # NOTE TO SELF: encode query URL
@@ -326,12 +321,9 @@ async def prettifiedSearchEmbed(query, channel):
             
             queryId = queryEntries[i].get("id")
 
-        await prettifiedProblemEmbed(queryId,channel)
+        embedVar = await prettifiedProblemEmbed(queryId,channel)
+        return embedVar
 
-        # sends embed
-        # await channel.send(embed=embedVar)
-    
-    
 # takes date as dict, returns prettified date as string
 async def prettifyDate(date):
 
@@ -522,9 +514,9 @@ async def prettifiedProblemEmbed(id, channel):
         # embedVar.set_image(url='https://www.janko.at/Retros/d.php?ff='+FFEN)
         embedVar.set_image(url='https://yacpdb.org/xfen/?'+XFEN)
 
-        # sends embed
+        # returns embedVar to top level function
         print(embedVar)
-        await channel.send(embed=embedVar)
+        return embedVar
         print("Embed send")
 
 # takes problem ID and info about y!sol command, spits out a prettified embed of the problem in the channel where the command was run
@@ -548,15 +540,222 @@ async def prettifiedSolutionEmbed(id, channel):
             # creates embed with solution
             embedVar = discord.Embed(title="YACPDB Problem >>"+id, description=solution, url='https://yacpdb.org/#'+id)
 
-            # sends embed
-            await channel.send(embed=embedVar)
+            # returns embedVar to top level function
+            return embedVar
+            
+        except TypeError:
+            await channel.send('Problem ID not found. If you performed y!sol, please ensure the problem is in the database.')
+    
+# takes query and info about y!search commands, spits out a prettified embed of the search in the channel where the command was run. NOTE: THIS IS HERE FOR DISCORD-INTERACTIONS COMPATIBILITY.
+async def prettifiedSearchEmbedInteractions(query, channel):
+    # NOTE TO SELF: encode query URL
+    print(query)
+    encodedQuery = urllib.parse.quote(query, safe="(\"\*\,\>\<)")
+    with urllib.request.urlopen('https://yacpdb.org/gateway/ql?q='+encodedQuery) as url:
+        # gets data about the problem
+        try:
+            data = json.loads(url.read().decode())
+        except TypeError:
+            await channel.send('Search did not return a JSON object. I don\'t know what you entered to achieve this error, because this really shouldn\'t ever happen? Congratulations, I guess!')
+            print(encodedQuery)
+            print(data)
+        
+        # if fail to get data about the problem, throw error
+        if not data.get('success'):
+            await channel.send('ERROR: search failed. The error given was: ```\n'\
+                + data.get('error')\
+                + '```')
+            print(encodedQuery)
+            print(data)
+            return
+
+        # else output the first entry in search results? I can't remember what this does, why didn't I comment this earlier, aaaaaaaa
+        else:
+            queryResult = data.get("result")
+            queryCount = queryResult.get("count")
+            # Sample entry in Entries: {"transliterations": {"Abdurahmanovi\u0107, Fadil": "Abdurahmanovic, Fadil"}, "authors": ["Abdurahmanovi\u0107, Fadil"], "id": 29740, "ash": "057cc5382cdfe62b5ba24ef54a8d932c", "stipulation": "h#2", "options": ["SetPlay"], "algebraic": {"black": ["Ke3", "Bh8", "Sf3"], "white": ["Ka1", "Rh2", "Bf8", "Ba8", "Pe5"]}, "legend": {}, "award": {"tourney": {"name": "30th TT"}, "distinction": "3rd Prize"}, "solution": "1...Rh2-d2   2.Sf3-e1 Bf8-h6 #\n1...Rh2-d2   2.Sf3-g1 Bf8-h6 #\n1...Rh2-d2   2.Sf3-h2 Bf8-h6 #\n1...Rh2-d2   2.Sf3-h4 Bf8-h6 #\n1...Rh2-d2   2.Sf3*e5 Bf8-h6 #\n1...Rh2-d2   2.Sf3-d4 Bf8-h6 #\n\n1.Sf3-d4 Rh2-d2   2.Sd4-b5 Bf8-h6 #", "source": {"date": {"year": 1960}, "name": "problem (Zagreb)"}}
+            queryEntries = queryResult.get("entries")
+            
+            i = 0
+            
+            queryId = queryEntries[i].get("id")
+
+        embedVar = await prettifiedProblemEmbedInteractions(queryId,channel)
+        return embedVar
+
+# takes problem ID and info about y!newest/y!lookup commands, spits out a prettified embed of the problem in the channel where the command was run. NOTE: THIS IS HERE FOR DISCORD-INTERACTIONS COMPATIBILITY.
+async def prettifiedProblemEmbedInteractions(id, channel):
+    id = str(id)
+    with urllib.request.urlopen('https://yacpdb.org/json.php?entry&id='+id) as url:
+        
+        # gets data about the problem (TODO: Add fairy condition support, e.g. >>1015 >>258194 for testing)
+        data = json.loads(url.read().decode())
+        # print("data = " + str.(data))
+        try:
+            ash = data.get('ash') + '1'
+        except TypeError:
+            await channel.send('Problem ID not found. If you performed y!lookup, please ensure the problem is in the database. If you performed y!newest, something has gone horribly wrong with this bot\'s code.')
+
+        # gets authors; if multiple authors, then concatenate into a string with each author on its own line
+        authorsArray = data.get('authors')
+        try:
+            authors = '\n'.join("**" + str(x) + "**" for x in authorsArray)
+        except Exception:
+            authors = "**WARNING: AUTHOR UNKNOWN**"
+        authors = authors + "\n"
+        # print(authors)
+
+        # finds source and spits it out as a dictionary; if it doesn't exist, indicates so
+        if data.get('source'):
+            sourceDict = data.get('source')
+            sourcedate = sourceDict.get('date')
+            sourcedate = await prettifyDate(sourcedate)
+        else:
+            sourceDict = {"name":"Source Unknown Or Not Added"}
+        # DEBUG PURPOSES
+        # print(sourceDict)
+        if sourceDict.get('date'):
+            sourceDict['date'] = sourcedate
+        
+        # concatenates dictionary into a string, hopefully
+        source = ', '.join(str(sourceDict.get(x)) for x in sourceDict) + '\n'
+        
+        # finds awards and spits them out as a dictionary
+        if data.get('award'):
+            awardDict = data.get('award')
+        else:
+            awardDict = {}
+        tourneyDict = awardDict.get('tourney')
+        tourney = await prettifyTourney(tourneyDict)
+        if tourney == 'ditto':
+            tourney = source
+        # DEBUG PURPOSES
+        print(awardDict)
+        print(tourney)
+        # concatenates dictionary into a string, hopefully (TODO: Tinker with this so that subdictionaries like "date" don't break)
+        if awardDict:
+            awardDict['tourney'] = tourney
+            award = ', '.join(str(awardDict.get(x)) for x in awardDict) + '\n\n'
+        else:
+            award = '\n'
+            
+        if data.get('keywords'):
+            keywordsArray = data.get('keywords')
+            badWordsArray = await prettifyKeywords(keywordsArray)
+            if badWordsArray:
+                keywords = 'Bad Keywords: ' + ', '.join("**" + str(x) + "**" for x in badWordsArray) + '\n\n'
+            else:
+                keywords = ''
+        else:
+            keywords = ''
+        
+        # gets stipulation and no. of solutions (if multiple)
+        stip = data.get('stipulation')
+
+        # tacks on no. of intended solutions, if multiple (replacing * with \* is required due to Discord formatting)
+        if data.get('intended-solutions'):
+            intendedSols = str(data.get('intended-solutions')) + ' solutions'
+            stip = "**" + stip.replace("*", "\*") + ", " + intendedSols + "**\n"
+        # else doesn't tack anything on
+        else:
+            stip = "**" + stip.replace("*", "\*") + "**\n"
+        
+        # gets options (e.g. duplex)
+        if data.get('options'):
+            optionsArray = data.get('options')
+            options = ', '.join("" + str(x) + "" for x in optionsArray)
+            options = options + "\n"
+        else:
+            options = ''
+        
+        # gets legend (piece names)
+        if data.get('legend'):
+            legendDict = data.get('legend')
+            print(legendDict)
+            for x in legendDict:
+                legendDict[x] = ", ".join(legendDict[x])
+            legend = ',\n'.join("**" + x + "**: " + str(legendDict.get(x)) for x in legendDict)
+            legend = legend + "\n"
+        else:
+            legend = ''
+
+        # gets twins
+        if data.get('twins'):
+            twinsDict = data.get('twins')
+            twins = '\n'.join(x + ") " + str(twinsDict.get(x)) + "" for x in twinsDict)
+        else:
+            twins = ''
+        
+        # gets solution
+        solution = data.get('solution')
+        # calls parser
+        from p2w.parser import parser
+        try:
+            solution = parser.parse(data["solution"], debug=0)
+            solutionWarning = ""
+            if solution == "":
+                solutionWarning = "\n\
+                    **WARNING! Problem's solution is not in the database! Please edit the entry to add the solution.**\
+                    \n"
+        except Exception as ex:
+            # we could not parse it, write id to file
+            solutionWarning = "\n\
+                **WARNING! Problem's solution is not in Popeye Output Format! Please edit the entry accordingly.**\
+                \n"
+
+        # converts position from algebraic into FEN
+        position = data.get("algebraic")
+        # FEN = await AlgToFEN(position, channel)
+        XFEN = await AlgToXFEN(position, channel)
+
+        # creates embed with title, author, source, stipulation, and position as image (NOTE: Doesn't really seem possible to increase image size. :C)
+        embedVar = interactions.Embed(title="YACPDB Problem >>"+id, description=\
+                                authors + source\
+                                + award\
+                                + keywords\
+                                + stip\
+                                + options\
+                                + legend\
+                                + twins\
+                                + solutionWarning\
+                                , url='https://yacpdb.org/#'+id)
+        # embedVar.set_image(url='https://www.janko.at/Retros/d.php?ff='+FFEN)
+        embedVar.set_image(url='https://yacpdb.org/xfen/?'+XFEN)
+
+        # returns embedVar to top level function
+        print(embedVar)
+        return embedVar
+        print("Embed send")
+
+# takes problem ID and info about y!sol command, spits out a prettified embed of the problem in the channel where the command was run. NOTE: THIS IS HERE FOR DISCORD-INTERACTIONS COMPATIBILITY.
+async def prettifiedSolutionEmbedInteractions(id, channel):
+    with urllib.request.urlopen('https://yacpdb.org/json.php?entry&id='+id) as url:
+        
+        # gets data about the problem
+        data = json.loads(url.read().decode())
+        try:
+            ash = data.get('ash') + '1'
+            
+            # gets stipulation
+            solution = data.get('solution')
+
+            # reformatting * to \* so it doesn't screw with Discord's formatting
+            solution = solution.replace("*", "\*")
+        
+            # adding spoiler tags
+            solution = '||' + solution + '||'
+
+            # creates embed with solution
+            embedVar = interactions.Embed(title="YACPDB Problem >>"+id, description=solution, url='https://yacpdb.org/#'+id)
+
+            # returns embedVar to top level function
+            return embedVar
             
         except TypeError:
             await channel.send('Problem ID not found. If you performed y!sol, please ensure the problem is in the database.')
 
 # main event loop
 @client.event
-
 # listens for new messages
 async def on_message(message):
 
@@ -584,7 +783,8 @@ async def on_message(message):
                 # throw an error if problemid isn't an integer; else, get prettified problem as embed
                 try: 
                     int(str(input[1]))
-                    await prettifiedProblemEmbed(problemid, message.channel)
+                    embedVar = await prettifiedProblemEmbed(problemid, message.channel)
+                    await message.channel.send(embed=embedVar)
                 except ValueError:
                     await message.channel.send('**WARNING**: Specified YACPDB problem ID "' + problemid + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + problemid + '` instead?')
                     print(problemid)
@@ -594,8 +794,7 @@ async def on_message(message):
         except TimeoutError:    
             await message.channel.send('**WARNING**: Timeout error. Please check that YACPDB isn\'t down, then try again.')    
         except urllib.error.URLError:    
-            await message.channel.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')    
-            
+            await message.channel.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again.')
 
     # response to y!newest
     if message.content.startswith('y!newest'):
@@ -632,7 +831,8 @@ async def on_message(message):
 
         # else send prettified problem as an embed
         else:
-            await prettifiedProblemEmbed(problemid, message.channel)
+            embedVar = await prettifiedProblemEmbed(problemid, message.channel)
+            await message.channel.send(embed=embedVar)
             
     # response to y!sol
     if message.content.startswith('y!sol'):
@@ -654,7 +854,8 @@ async def on_message(message):
         # else send prettified problem as an embed
         else:
             problemid = str(input[1])
-            await prettifiedSolutionEmbed(problemid, message.channel)
+            embedVar = await prettifiedSolutionEmbed(problemid, message.channel)
+            await message.channel.send(embed=embedVar)
     
     # response to y!needsfix
     if message.content.startswith('y!needsfix'):
@@ -672,7 +873,8 @@ async def on_message(message):
 
         # else send prettified problem as an embed
         else:
-            await prettifiedProblemEmbed(problemid, message.channel)
+            embedVar = await prettifiedProblemEmbed(problemid, message.channel)
+            await message.channel.send(embed=embedVar)
     
     # response to y!search
     if message.content.startswith('y!search'):
@@ -693,7 +895,8 @@ async def on_message(message):
 
         # else send prettified results as an embed
         else:
-            await prettifiedSearchEmbed(query, message.channel)
+            embedVar = await prettifiedSearchEmbed(query, message.channel)
+            await message.channel.send(embed=embedVar)
         # await message.channel.send('**WARNING**: This function is not yet fully implemented.')
     
     # response to y!help
@@ -722,17 +925,17 @@ async def on_message(message):
         
         await message.channel.send(embed=embedVar)
 
-@slash.slash(name="lookup",
+@slash.command(name="lookup",
              description="Look up a YACPDB entry by ID",
              options=[
-               create_option(
+               interactions.Option(
                  name="id",
                  description="Input the YACPDB entry ID after this",
-                 option_type=3,
+                 type=interactions.OptionType.STRING,
                  required=True
                )
              ])
-async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "lookup"
+async def lookup(ctx: interactions.CommandContext, id: int): # Defines a new "context" (ctx) command called "lookup"
     print("lookup: " + id)
     print(ctx)
 
@@ -741,7 +944,8 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
     await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
-        await prettifiedProblemEmbed(id, ctx)
+        embedVar = await prettifiedProblemEmbedInteractions(id, ctx)
+        await ctx.send(embeds=embedVar)
     except ValueError:
         await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead? (User input that led to this error: `/lookup id:'+id+'`)')
         print(id)
@@ -753,17 +957,17 @@ async def lookup(ctx, id: int): # Defines a new "context" (ctx) command called "
     except urllib.error.URLError:    
         await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/lookup id:'+id+'`)')
     
-@slash.slash(name="sol",
+@slash.command(name="sol",
              description="Look up a YACPDB entry's solution by ID",
              options=[
-               create_option(
+               interactions.Option(
                  name="id",
                  description="Input the YACPDB entry ID after this",
-                 option_type=3,
+                 type=interactions.OptionType.STRING,
                  required=True
                )
              ])
-async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol"
+async def sol(ctx: interactions.CommandContext, id: int): # Defines a new "context" (ctx) command called "sol"
     print("sol: " + id)
     print(ctx)
 
@@ -772,7 +976,8 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
     await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
-        await prettifiedSolutionEmbed(id, ctx)
+        embedVar = await prettifiedSolutionEmbedInteractions(id, ctx)
+        await ctx.send(embeds=embedVar)
     except ValueError:
         await ctx.send('**WARNING**: Specified YACPDB problem ID "' + id + '" is not an integer! If this is a stipulation, perhaps you mean `y!newest ' + id + '` instead? (User input that led to this error: `/sol id:'+id+'`)')
         print(id)
@@ -784,35 +989,35 @@ async def sol(ctx, id: int): # Defines a new "context" (ctx) command called "sol
     except urllib.error.URLError:    
         await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/sol id:'+id+'`)')
     
-@slash.slash(name="newest",
+@slash.command(name="newest",
              description="Post the nth newest YACPDB problem with a given stipulation",
              options=[
-               create_option(
+               interactions.Option(
                  name="stip",
                  description="Input the problem stipulation",
-                 option_type=3,
+                 type=interactions.OptionType.STRING,
                  required=False
                ),
-               create_option(
+               interactions.Option(
                  name="n",
                  description="Find the nth newest problem",
-                 option_type=3,
+                 type=interactions.OptionType.STRING,
                  required=False
                )
              ])
-async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command called "newest"
+async def newest(ctx: interactions.CommandContext, stip='-', n=0): # Defines a new "context" (ctx) command called "newest"
     print("newest: " + stip + ", index: " + str(n))
 
-        
     # turns on typing indicator
     await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
         id = await newProblemID(stip,n)
         if id == 0:
-            await ctx.channel.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.** (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
+            await ctx.send('**Warning: no new problems matching stipulation `' + stip + '` found in the last 100 edits to YACPDB.** (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
         else:
-            await prettifiedProblemEmbed(id, ctx)
+            embedVar = await prettifiedProblemEmbedInteractions(id, ctx)
+            await ctx.send(embeds=embedVar)
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
         print(id)
@@ -821,24 +1026,25 @@ async def newest(ctx, stip='-', n=0): # Defines a new "context" (ctx) command ca
     except urllib.error.URLError:    
         await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/newest stip:'+stip+' n:'+str(n)+'`)')
 
-@slash.slash(name="search",
+@slash.command(name="search",
              description="Search YACPDB using the YACPDB Search Query Language",
              options=[
-               create_option(
+               interactions.Option(
                  name="query",
                  description="Input the search query",
-                 option_type=3,
+                 type=interactions.OptionType.STRING,
                  required=False
                )
              ])    
-async def search(ctx, query: str): # Defines a new "context" (ctx) command called "search"
+async def search(ctx: interactions.CommandContext, query: str): # Defines a new "context" (ctx) command called "search"
     print("search: " + query)
     
     # turns on typing indicator
     await ctx.defer()
     # throw an error if problemid isn't an integer; else, get prettified problem as embed
     try: 
-        await prettifiedSearchEmbed(query, ctx)
+        embedVar = await prettifiedSearchEmbedInteractions(query, ctx)
+        await ctx.send(embeds=embedVar)
     except UnboundLocalError:
         await ctx.send('**WARNING**: Something went wrong, but I\'m not sure what! Please report this to @edderiofer#0713! (User input that led to this error: `/search query:'+query+'`)')
         print(query)
@@ -847,9 +1053,9 @@ async def search(ctx, query: str): # Defines a new "context" (ctx) command calle
     except urllib.error.URLError:    
         await ctx.send('**WARNING**: URL Error. Please check that YACPDB isn\'t down, then try again. (User input that led to this error: `/search query:'+query+'`)')
 
-@slash.slash(name="needsfix",
+@slash.command(name="needsfix",
              description="Find a problem whose solution in YACPDB needs fixing! Your help contributes to YACPDB's accuracy!")
-async def needsfix(ctx): # Defines a new "context" (ctx) command called "needsfix"
+async def needsfix(ctx: interactions.CommandContext): # Defines a new "context" (ctx) command called "needsfix"
     print("needsfix")
 
     # turns on typing indicator
@@ -864,20 +1070,20 @@ async def needsfix(ctx): # Defines a new "context" (ctx) command called "needsfi
 
     # else send prettified problem as an embed
     else:
-        await prettifiedProblemEmbed(problemid, ctx)
+        embedVar = await prettifiedProblemEmbedInteractions(problemid, ctx)
+        await ctx.send(embeds=embedVar)
 
-@slash.slash(name="help",
+@slash.command(name="help",
              description="Help for using this bot")    
-async def help(ctx): # Defines a new "context" (ctx) command called "help"
+async def help(ctx: interactions.CommandContext): # Defines a new "context" (ctx) command called "help"
     print("help")
     print(ctx)
 
-        
     # turns on typing indicator
     await ctx.defer()
     
     # creates help embed
-    embedVar = discord.Embed(title="YACPBot Help")
+    embedVar = interactions.Embed(title="YACPBot Help")
     embedVar.add_field(name="YACPBot Commands", value="`y!newest` or `/newest`: Get the latest problem from YACPDB. \n\
         `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
         `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
@@ -893,8 +1099,13 @@ async def help(ctx): # Defines a new "context" (ctx) command called "help"
     # bug reports and suggestions server
     embedVar.add_field(name="Bug Reports And Suggestions",value="Want to report a bug or suggest a feature? Post it to the main server where this bot is being developed (http://discord.me/chessproblems) or to the GitHub (https://github.com/edderiofer/YACP-Bot)!",inline=True)
 
-    await ctx.send(embed=embedVar)
-    
-    
-        
-client.run(TOKEN)
+    await ctx.send(embeds=embedVar)
+
+
+loop = asyncio.get_event_loop()
+
+task2 = loop.create_task(client.start(TOKEN))
+task1 = loop.create_task(slash._ready())
+
+gathered = asyncio.gather(task1, task2, loop=loop)
+loop.run_until_complete(gathered)

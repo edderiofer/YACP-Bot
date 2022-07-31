@@ -6,7 +6,7 @@ cachetools==4.2.4
 cffi==1.14.6
 chardet==4.0.0
 discord-interactions==0.3.0
-discord-py-interactions==3.0.2
+discord-py-interactions==4.3.0
 discord.py==1.7.3
 distlib==0.3.3
 filelock==3.2.1
@@ -15,7 +15,7 @@ idna==3.1
 imutils==0.5.3
 multidict==5.1.0
 pefile==2021.9.3
-Pillow==8.2.0
+Pillow==9.2.0
 platformdirs==2.4.0
 ply==3.11
 pycparser==2.20

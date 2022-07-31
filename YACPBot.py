@@ -10,7 +10,7 @@
 #    * Added "needsfix" command, which will return a random problem in YACPDB whose solution needs to be edited into the correct format.
 #    * Changed all tabs into quadruple-spaces. Hopefully this will reduce the risk of me making a spacing error?
 #    * Updated `discord_slash` to `interactions`, which broke a bunch of things. Fixed the resulting brokenness. Bleugh.
-#    * Fixed a bug where, if /newest didn't return a problem, the bot wouldn't post the error message as a reply to the command, and would continue thinking forever.
+#    * Fixed a bug where, if /newest didn't return a problem, the bot would post the error message but not as a reply to the command, and would continue thinking forever.
 
 ### TODO LIST:
 

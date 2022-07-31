@@ -16,8 +16,6 @@
 
 #    * Phase out either `discord.py` or `discord-interactions.py`. Not sure which one yet, but my money's on the latter as it has a community and the owner hopefully isn't prone to just abandoning the repository. Then again, its updates don't seem to be backwards-compatible...
 #        ** Might want to update `discord.py` (and fix any brokenness there) before you decide which though.
-#    * Fix security errors on GitHub.
-#        ** Probably doable by just updating the package prerequisites or whatever they're called.
 #    * Allow a way for the person who typed a command to delete YACPBot messages (reaction roles? react with wastebasket emoji).
 #        ** First put the username into the embed itself (e.g. "Problem posed by ...").
 #        ** Then add a :wastebasket: react on the embed.

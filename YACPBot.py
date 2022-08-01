@@ -10,7 +10,7 @@
 #    * Added "needsfix" command, which will return a random problem in YACPDB whose solution needs to be edited into the correct format.
 #    * Changed all tabs into quadruple-spaces. Hopefully this will reduce the risk of me making a spacing error?
 #    * Updated `discord_slash` to `interactions`, which broke a bunch of things. Fixed the resulting brokenness. Bleugh.
-#    * Fixed a bug where, if /newest didn't return a problem, the bot wouldn't post the error message as a reply to the command, and would continue thinking forever.
+#    * Fixed a bug where, if /newest didn't return a problem, the bot would post the error message but not as a reply to the command, and would continue thinking forever.
 
 ### TODO LIST:
 
@@ -910,6 +910,7 @@ async def on_message(message):
             `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
             `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
             `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+            `y!needsfix` or `/needsfix`: Returns a random problem whose solution isn't in Popeye Output Format. Consider fixing it!\n\
             `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
             `y!help` or `/help`: Displays these commands.")
         
@@ -1086,6 +1087,7 @@ async def help(ctx: interactions.CommandContext): # Defines a new "context" (ctx
         `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
         `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
         `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+        `y!needsfix` or `/needsfix`: Returns a random problem whose solution isn't in Popeye Output Format. Consider fixing it!\n\
         `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
         `y!help` or `/help`: Displays these commands.")
         

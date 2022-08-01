@@ -910,6 +910,7 @@ async def on_message(message):
             `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
             `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
             `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+            `y!needsfix` or `/needsfix`: Returns a random problem whose solution isn't in Popeye Output Format. Consider fixing it!\n\
             `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
             `y!help` or `/help`: Displays these commands.")
         
@@ -1086,6 +1087,7 @@ async def help(ctx: interactions.CommandContext): # Defines a new "context" (ctx
         `y!newest [stipulation]` or `/newest stip:[stipulation] n:[n]`: Get the [n]th latest problem with stipulation [stipulation]. If `stip` is not specified, it matches any stipulation. If `n` is not specified, it defaults to 0.\n\
         `y!sol [n]` or `/sol id:[n]`: Gives the solution to YACPDB problem >>[n] in spoilers.\n\
         `y!lookup [n]` or `/lookup id:[n]`: Displays the [n]th problem in the database.\n\
+        `y!needsfix` or `/needsfix`: Returns a random problem whose solution isn't in Popeye Output Format. Consider fixing it!\n\
         `y!search [search]` or `/search query:[search]`: **NOT FULLY IMPLEMENTED.** Searches for the query [search] on YACPDB and returns the first result. Documentation for the search language may be found HERE: <https://yacpdb.org/#static/ql-cheatsheet>.\n\
         `y!help` or `/help`: Displays these commands.")
         
